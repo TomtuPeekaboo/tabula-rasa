@@ -1,0 +1,551 @@
+body {
+    background: rgba(255, 255, 255);
+}
+
+.slideShow {
+    width: 98%;
+    height: 625px;
+    margin: 0 auto;
+    background: rgb(248, 243, 255);
+}
+
+.slideSmall {
+    position: relative;
+    top: 12%;
+    left: 21%;
+    width: 950px;
+    height: 500px;
+    background: skyblue;
+}
+
+a:hover,
+a:link,
+a:visited,
+a:active,
+a:focus {
+    color: rgba(125, 104, 169);
+    text-decoration: none;
+}
+
+/* 左边导航 */
+
+.slideSmall .lift {
+    position: absolute;
+    top: 0;
+    left: -180px;
+    width: 150px;
+    height: 100%;
+    border-left: 3px solid #fff;
+    /* background: pink; */
+}
+
+.slideSmall .lift li {
+    margin: 40px 0;
+    padding: 12px 12px 12px 20px;
+    color: rgb(169, 129, 221);
+    font-size: 21px;
+    font-weight: bold;
+    text-shadow: 0px .5px 1px #fff;
+    /* background: rgb(172, 93, 175); */
+}
+
+/* 右边卡片 */
+.slideSmall .rightImg {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+    /* background: rgb(76, 180, 146); */
+}
+
+.slideSmall .rightImg li {
+    flex: 1;
+    /* width: 950px; */
+    height: 100%;
+
+}
+
+.slideSmall .rightImg li:nth-child(odd) {
+    background: rgb(219, 129, 204);
+}
+
+.slideSmall .rightImg li .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background: rgb(238, 232, 255);
+    border: 2px solid rgb(104, 105, 170);
+    border-radius: 55px;
+}
+
+.slideSmall .rightImg li .card2 {
+    background: rgb(54, 58, 175);
+}
+
+.slideSmall .rightImg li .card h2 {
+    font-size: 30px;
+    color: rgba(125, 104, 169);
+    text-shadow: 2px 5px 2px #fff;
+}
+
+.slideSmall .rightImg li .card .look {
+    position: absolute;
+    top: 50px;
+    right: 53px;
+    width: 138px;
+    height: 50px;
+    padding-left: 18px;
+    background: rgb(129, 103, 169);
+    box-shadow: 3px 3px 3px rgb(223, 197, 255);
+    border-radius: 32px;
+}
+
+.slideSmall .rightImg li .card .look a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.slideSmall .rightImg li .card .look a::after {
+    content: "";
+    position: relative;
+    top: 1px;
+    left: 5px;
+    font-family: 'icomoon';
+    color: #fff;
+}
+
+/* 六个小框框 */
+.slideSmall .rightImg li .card .cell {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 300px;
+    margin-top: 58px;
+}
+
+.slideSmall .rightImg li .card .cell .smallCell {
+    display: flex;
+    width: 265px;
+    height: 123px;
+    padding: 15px;
+    background: rgb(225, 213, 241);
+    border-radius: 20px;
+}
+
+.slideSmall .rightImg li .card .cell .smallCell div.leftCell {
+    width: 30%;
+    height: 100%;
+    /* background: pink; */
+}
+
+.slideSmall .rightImg li .card .cell .smallCell div.leftCell img {
+    width: 60px;
+    padding-top: 15px;
+}
+
+.slideSmall .rightImg li .card .cell .smallCell div.rightCell {
+    width: 70%;
+    height: 100%;
+    padding-top: 5px;
+    /* background: rgb(102, 167, 187); */
+}
+
+.slideSmall .rightImg li .card .cell .smallCell div.rightCell p {
+    margin-bottom: 2px;
+    font-size: 13px;
+    color: rgb(109, 107, 112);
+}
+
+.slideSmall .rightImg li .card .cell .smallCell div.rightCell p.center {
+    font-size: 30px;
+    color: rgb(217, 0, 27);
+}
+
+.slideSmall .rightImg li .card .cell .smallCell:nth-child(2) div.rightCell p.center {
+    color: rgb(236, 181, 128);
+}
+
+.slideSmall .rightImg li .card .cell .smallCell:nth-child(3) div.rightCell p.center {
+    color: rgb(245, 154, 35);
+}
+
+.slideSmall .rightImg li .card .cell .smallCell:nth-child(4) div.rightCell p.center {
+    color: rgb(163, 0, 20);
+}
+
+.slideSmall .rightImg li .card .cell .smallCell:nth-child(5) div.rightCell p.center {
+    color: rgb(75, 121, 2);
+}
+
+.slideSmall .rightImg li .card .cell .smallCell:nth-child(6) div.rightCell p.center {
+    color: rgb(127, 127, 127);
+}
+
+.slideSmall .rightImg li .card .cell .smallCell div.rightCell p.bottom {
+    padding-left: 5px;
+    font-size: 13px;
+}
+
+.slideSmall .rightImg li .card .cell .smallCell div.rightCell p.bottom::before {
+    content: "";
+    position: relative;
+    top: 1px;
+    left: -9px;
+    font-family: 'icomoon';
+    color: rgb(240, 65, 51);
+}
+
+.slideSmall .rightImg li .card .cell .smallCell:nth-child(3) div.rightCell p.bottom::before,
+.slideSmall .rightImg li .card .cell .smallCell:nth-child(6) div.rightCell p.bottom::before {
+    content: "";
+    color: rgb(0, 169, 80);
+}
+
+.slideSmall .rightImg li .card .cell .smallCell div.rightCell p.bottom span {
+    padding-right: 10px;
+    color: rgb(217, 0, 27);
+}
+
+.slideSmall .rightImg li .card .cell .smallCell:nth-child(3) div.rightCell p.bottom span,
+.slideSmall .rightImg li .card .cell .smallCell:nth-child(6) div.rightCell p.bottom span {
+    color: rgb(0, 169, 80);
+}
+
+div.card2 .cell {
+    display: flex;
+}
+
+div.card2 .cell .virusLeft {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    /* background: rgb(71, 126, 148); */
+}
+
+div.card2 .cell .virusLeft .vlTop {
+    width: 100%;
+    height: 50%;
+    /* background: rgb(168, 93, 93); */
+}
+
+div.card2 .cell .virusLeft .vlTop i {
+    line-height: 34px;
+    font-size: 20px;
+    color: #fff;
+}
+
+div.card2 .cell .virusLeft .vlBottom {
+    width: 100%;
+    height: 50%;
+    /* background: rgb(65, 131, 57); */
+}
+
+div.card2 .cell .virusLeft .vlBottom #vlbUl {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+
+div.card2 .cell .virusLeft .vlBottom #vlbUl li {
+    /* display属性会影响到list-style!! */
+    /* display: block; */
+    float: left;
+    width: 33%;
+    height: 67%;
+    padding-left: 34px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    /* background: pink; */
+    /* 使得小圆点在里面 */
+    list-style-position: inside;
+    /* 不同网站显示的圆点效果不同，后期优化可以改称图标 */
+    list-style-type: disc !important;
+}
+
+div.card2 .cell .virusRight {
+    width: 40%;
+    height: 100%;
+    /* background: rgb(71, 148, 112); */
+}
+
+div.card2 .cell .virusRight img {
+    width: 100%;
+    height: 100%;
+}
+
+.slideSmall .rightImg li .card3 {
+    width: 841px;
+    height: 500px;
+    margin-left: 110px;
+    padding: 123px 135px 0 293px;
+}
+
+.slideSmall .rightImg li .card3 .c3L {
+    position: absolute;
+    top: 50%;
+    left: -112px;
+    transform: translateY(-50%);
+    width: 309px;
+    height: 324px;
+    background: linear-gradient(90deg, rgba(248, 243, 255, 1) 0%, rgba(238, 232, 255, 1) 99%);
+    border: 1px solid rgba(169, 129, 221, 1);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(169 129 221);
+    font-family: 'Open Sans',
+        sans-serif;
+}
+
+.slideSmall .rightImg li:nth-child(3) {
+    position: relative;
+}
+
+.slideSmall .rightImg li .card3 .c3R h2 {
+    margin-bottom: 20px;
+}
+
+.slideSmall .rightImg li .card3 .c3R p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 40px;
+}
+
+.slideSmall .rightImg li .c3rCircle {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-100%);
+    z-index: 999;
+}
+
+.slideSmall .rightImg li .c3rc1 {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(169, 129, 221, 1);
+    border-radius: 50%;
+    background: rgb(213, 193, 240);
+}
+
+.slideSmall .rightImg li .c3rc2 {
+    height: 90px;
+    border-radius: 7.5px;
+    background: rgb(169, 129, 221);
+}
+
+.slideSmall .rightImg li .card4 {
+    overflow: hidden;
+}
+
+.slideSmall .rightImg li .card4 .string {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 25px;
+    border-left: 3px solid #fff;
+}
+
+.slideSmall .rightImg li .card4 .string .c4Circle {
+    position: absolute;
+    top: 185px;
+    left: -9px;
+    width: 15px;
+    height: 15px;
+    background: rgb(223, 199, 242);
+    border-radius: 50%;
+}
+
+.slideSmall .rightImg li .card4 .string p {
+    margin-bottom: 114%;
+    font-family: 'Arial Negreta',
+        'Arial Normal',
+        'Arial',
+        sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #AAAAAA;
+}
+
+.slideSmall .rightImg li .card4 .string p.nowTime {
+    word-wrap: break-word;
+    text-shadow: 2px 2px 0px rgb(255 255 255 / 99%);
+    color: #C280FF;
+}
+
+.slideSmall .rightImg li .card4 .case {
+    display: flex;
+    position: absolute;
+    top: 38px;
+    left: 25px;
+    width: 328px;
+    height: 112px;
+    font-family: 'Open Sans SemiBold',
+        'Open Sans Regular',
+        'Open Sans',
+        sans-serif;
+    font-weight: 600;
+    color: #AAAAAA;
+    text-align: center;
+    align-items: center;
+    padding: 0px 19px;
+    border: 2px solid rgba(104, 105, 170, 1);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 40px;
+    box-shadow: 3px 3px rgba(104, 105, 170, 1);
+}
+
+.slideSmall .rightImg li .card4 .case1 {
+    top: 312px;
+    color: #fff;
+    border: 2px solid rgba(104, 105, 170, 1);
+    background-color: rgba(215, 186, 245);
+    box-shadow: 3px 3px rgba(215, 186, 245);
+}
+
+.slideSmall .rightImg li .card4 .case2 {
+    top: 176px;
+    left: 560px;
+    color: #fff;
+    border: 2px solid rgba(104, 105, 170, 1);
+    background-color: rgba(215, 186, 245);
+    box-shadow: 3px 3px rgba(104, 105, 170, 1);
+}
+
+.slideSmall .rightImg li div.card5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    background: rgb(248, 243, 255);
+}
+
+.slideSmall .rightImg li .card5 div.step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48.5%;
+    height: 47%;
+    border: 2px solid rgba(250, 234, 180, 1);
+    border-radius: 30px;
+    background: rgb(255, 255, 255);
+}
+
+.slideSmall .rightImg li .card5 div.step .s1L {
+    width: 100px;
+    height: 100px;
+    /* margin: 20px 20px 0 20px; */
+    /* border: 1px solid #C280FF; */
+}
+
+.slideSmall .rightImg li .card5 div.step .s1L img {
+    width: 100%;
+    height: 100%;
+}
+
+.slideSmall .rightImg li .card5 div.step .s1R {
+    min-width: 100px;
+    height: 100px;
+    margin-left: 46px;
+    padding-top: 3px;
+}
+
+.slideSmall .rightImg li .card5 div.step .s1R p {
+    font-family: 'Open Sans SemiBold',
+        'Open Sans Regular',
+        'Open Sans',
+        sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    font-style: normal;
+    color: #AAAAAA;
+    text-align: center;
+    line-height: 31px;
+}
+
+.slideSmall .rightImg li .card5 div.step2 {
+    background: rgb(238, 232, 255);
+}
+
+.slideSmall .rightImg li .card5 div.step p.s2P {
+    font-family: 'Open Sans SemiBold',
+        'Open Sans Regular',
+        'Open Sans',
+        sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #8167A9;
+    text-align: center;
+    line-height: 30px;
+}
+
+.slideSmall .rightImg li .card5 div.step3 {
+    flex-direction: column;
+}
+
+.slideSmall .rightImg li .card5 div.step3 .s3T {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 55%;
+}
+
+.slideSmall .rightImg li .card5 div.step3 .s3T .s3tImg {
+    width: 80px;
+    height: 80px;
+}
+
+.slideSmall .rightImg li .card5 div.step3 .s3T .s3tImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.slideSmall .rightImg li .card5 div.step3 .s3T .s3tp {
+    font-family: 'Open Sans SemiBold',
+        'Open Sans Regular',
+        'Open Sans',
+        sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #AAAAAA;
+    text-align: center;
+    line-height: 6px;
+}
+
+.slideSmall .rightImg li .card5 div.step3 .s3B {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+    background: rgb(238, 232, 255);
+    border-radius: 0 0 27px 27px;
+}
+
+.slideSmall .rightImg li .card5 div.step3 .s3B p {
+    font-family: 'Open Sans SemiBold',
+        'Open Sans Regular',
+        'Open Sans',
+        sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #8167A9;
+    text-align: center;
+    line-height: 30px;
+}
