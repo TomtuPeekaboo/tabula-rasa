@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: PingFangSC-Regular, Helvetica, Arial, Microsoft Yahei, sans-serif;
+}
+
+body {
+    background-color: #f8f3ff;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: 0;
+    outline: none;
+}
+
+.nav ul {
+    float: right;
+    width: 505px;
+    height: 100%;
+}
+
+.nav ul li {
+    margin: 15px 0;
+    float: left;
+    text-align: center;
+}
+
+.nav ul li a {
+    position: relative;
+    padding: 5px 20px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 43.5px;
+    color: #f8f3ff;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #000;
+    z-index: 2;
+    letter-spacing: 6px;
+}
+
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 43.5px;
+    background: #fff;
+    border-radius: 20px;
+    transform: scaleY(0);
+    transition: .3s ease;
+    z-index: -1;
+}
+
+.nav ul li a:hover {
+    color: #bbaaaf;
+}
+
+.nav ul li a:hover:after {
+    transform: scaleY(1);
+}
+
+.nav {
+    top: 0;
+    left: 0;
+    color: #f8f3ff;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+.nav .logo {
+    padding-left: 38px;
+    padding-top: 10px;
+    width: 354px;
+    height: 50px;
+    line-height: 60px;
+    float: left;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 40px;
+    cursor: context-menu;
+    color: #f8f3ff;
+    text-shadow: #7d68a9 1px 1px 10px;
+    font-family: 'Eras Bold ITC';
+}
+
+.navbutton {
+    position: relative;
+    padding-top: 24px;
+    float: right;
+    height: 50px;
+    width: 50px;
+    padding-right: 70px;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+}
+
+.navbutton span {
+    display: block;
+    width: 40px;
+    height: 8px;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+    background-color: #f8f3ff;
+    box-shadow: #7d68a9 1px 1px 10px;
+}
+
+.navbutton .span1 {
+    margin-bottom: 8px;
+}
+
+div[class^="footer"] {
+    width: 100%;
+    text-align: center;
+}
+
+.footer1 {
+    margin-top: 20px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 18px;
+    background-color: #fff;
+}
+
+.footer1 a {
+    margin-right: 60px;
+    color: #333;
+}
+
+.footer1 a:hover {
+    color: #a981dd;
+}
+
+.footer1 a:last-child {
+    margin-right: 0;
+}
+
+.footer2 {
+    height: 42px;
+    line-height: 42px;
+    background-color: #a981dd;
+    color: #fff;
+}
+
+.returnTop {
+    position: fixed;
+    cursor: pointer;
+    right: 30px;
+    top: -60px;
+    /* bottom: 60px; */
+    width: 60px;
+    height: 60px;
+    transition: .5s;
+}

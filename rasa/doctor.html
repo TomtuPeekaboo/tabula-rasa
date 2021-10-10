@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doctor</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/alibbIcon.css">
+    <link rel="stylesheet" href="css/base1.css">
+    <link rel="stylesheet" href="css/doctor.css">
+    <script src="js/main.js"></script>
+    <script src="js/stopBS.js"></script>
+    <script src="js/doctor.js" type="module"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="banner">
+        <div class="left">
+            <div class="headL iconfont icon-gengduo">通讯录</div>
+            <div class="scrollUl">
+                <ul class="chatList">
+                    <li>
+                        <div class="aurPhoto">
+                            <img src="getUserHeadServlet?userid=3&count=0" alt="">
+                        </div>
+                        <div class="chatContent">
+                            <p class="aurName">Tomtu</p>
+                            <p class="chatSay">老师好久不见</p>
+                        </div>
+                        <div class="time">11-18</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="headChat">
+                <p class="other">Kevin</p>
+                <p class="fk iconfont icon-tianjiayonghu"></p>
+            </div>
+            <div class="show">
+                <!-- <div class="he">
+                    <div class="Photo">
+                        <img src="img/doctorPhoto1.jpg" alt="">
+                    </div>
+                    <div class="Say">hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样</div>
+                </div>
+                <p class="chatTime">2021-11-19 00:00:09</p>
+                <div class="my clearfix">
+                    <div class="Photo">
+                        <img src="img/doctorPhoto2.jpg" alt="">
+                    </div>
+                    <div class="Say">hhi!今天过得怎么样hi!今天过得怎么样</div>
+                </div> -->
+            </div>
+            <div class="edit">
+                <form action="" method="POST" enctype="multipart/form-data" id="form">
+                    <div class="icon">
+                        <p class="iconfont icon-biaoqing"></p>
+                        <p class="iconfont icon-jiandao"></p>
+                        <p class="iconfont icon-charutupian">
+                            <input type="file" name="file" value="+" id="file" multiple="multiple">
+                        </p>
+                    </div>
+                    <div class="spare">
+                        <div class="fuWenBen" contenteditable="true"></div>
+                        <textarea name="message" id="content" style="display: none;"></textarea>
+                    </div>
+                    <div class="button">发送</div>
+
+                    <div class="facePrint" style="display:none">
+                        <ul class="facePrintUl"></ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right">
+            <div class="headR">
+                <div class="headPhoto">
+                    <img src="getUserHeadServlet?userid=3&count=0" alt="">
+                </div>
+                <div class="self">
+                    <p class="PersonName"></p>
+                    <p class="personalSay">平安喜乐!</p>
+                </div>
+            </div>
+            <div class="data">
+                <li class="datali">
+                    <div>账号</div>
+                    <div class="tdphone"></div>
+                </li>
+                <li class="datali">
+                    <div>昵称</div>
+                    <div class="tdname"></div>
+                </li>
+                <li class="datali">
+                    <div>备注</div>
+                    <div class="tdtype"></div>
+                </li>
+                <li class="datali">
+                    <div>所在地</div>
+                    <div class="tdwhere"></div>
+                </li>
+                <li class="datali">
+                    <div>职业</div>
+                    <div class="tdpro"></div>
+                </li>
+                <li class="datali">
+                    <div>邮箱</div>
+                    <div>--</div>
+                </li>
+            </div>
+        </div>
+    </div>
+    <!-- img遮盖罩 -->
+    <div id="image-cover-modal" class="image-cover-modal">
+        <img id="image-cover-image" class="image-cover-modal-content">
+        <div id="image-cover-caption"></div>
+        <div id="return" title="返回">&times;</div>
+        <div id="load"><a href="" download="" title="查看原图" target="_blank">+</a></div>
+        <div id="rightRotate" title="向右旋转">O</div>
+    </div>
+</body>
+
+</html>

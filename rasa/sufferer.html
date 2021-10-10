@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sufferer</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/alibbIcon.css">
+    <link rel="stylesheet" href="css/base1.css">
+    <link rel="stylesheet" href="css/sufferer.css">
+    <script src="js/main.js"></script>
+    <script src="js/sufferer.js" type="module"></script>
+    <script src="js/stopBS.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="nav">
+        <div class="return"><a href="forum.html" class="iconfont icon-return"></a></div>
+        <div class="logo">战疫情！我们在行动</div>
+        <div class="navShow">
+            <div class="ring">
+                <span class="ringTixing redPoint" style="width: 8px;height: 8px;"></span>
+                <p class="iconfont icon-lingdang"></p>
+                <div class="ringContent" style="display: none;">
+                    <span><a href="forumThree.html?type=at" class="forumthree">收到@我<i class="redPoint"></i></a></span>
+                    <span><a href="forumThree.html?type=commit" class="forumthree">收到评论<i
+                                class="redPoint"></i></a></span>
+                    <span><a href="forumThree.html?type=zan" class="forumthree">收到点赞<i class="redPoint"></i></a></span>
+                    <span><a href="sufferer.html" class="forumthree">咨询医生<i class="redPoint"></i></a></span>
+                </div>
+            </div>
+            <div class="write">
+                <p class="iconfont icon-bianji"></p>
+            </div>
+            <div class="person">
+                <p class="Img"><img src="http://localhost:8080/rasaProject_war_exploded/getUserHeadServlet?userid=3&count=0" alt=""></p>
+                <div class="personContent" style="display: none;">
+                    <span><a href="myNew.html" style="color: rgb(133, 144, 166);">关于我的</a></span>
+                    <span>先退出了</span>
+                </div>
+            </div>
+        </div>
+        <div class="navbutton"><span class="span1"></span><span class="span2"></span></div>
+    </div>
+    <div class="mask">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="virus.html">数据</a></li>
+            <li><a href="forum.html">论坛</a></li>
+            <li><a href="makeTecho.html">手账</a></li>
+            <li><a href="signIn.html">登录</a></li>
+        </ul>
+    </div>
+    <div class="banner">
+        <div class="chat">
+            <div class="Cperson">
+                <div class="CPhead">
+                    <p class="now">咨询中</p>
+                    <p class="free">空闲中</p>
+                    <p class="busy">繁忙中</p>
+                </div>
+                <div class="CPbody">
+                    <ul>
+                        <li>
+                            <div class="CPphoto"><img src="http://localhost:8080/rasaProject_war_exploded/getUserHeadServlet?userid=4&count=0" alt=""></div>
+                            <div class="CPintro">
+                                <p class="DoctorN">Kevin<span class="pref">讲师</span></p>
+                                <div class="cute">
+                                    <p>疫情心理</p>
+                                    <p>个人成长</p>
+                                </div>
+                            </div>
+                            <div class="color green"></div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="talk">
+                <div class="Thead">
+                    <p class="other">Kevin讲师</p>
+                    <span id="yinle"></span>
+                    <p class="fk iconfont icon-tianjiayonghu">
+                    </p>
+                </div>
+                <div class="show">
+                    <!-- <div class="he">
+                        <div class="Photo">
+                            <img src="img/person.jpg" alt="">
+                        </div>
+                        <div class="Say">hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样</div>
+                    </div>
+                    <p class="chatTime">2021-11-19 &nbsp;00:00</p>
+                    <div class="my clearfix">
+                        <div class="Photo">
+                            <img src="" alt="">
+                        </div>
+                        <div class="Say">hhi!今天过得怎么样hi!今天过得怎么样</div>
+                    </div>
+                    <div class="my clearfix">
+                        <div class="Photo">
+                            <img src="" alt="">
+                        </div>
+                        <div class="Say">hhi!今天过得怎么样hi!今天过得怎么样</div>
+                    </div>
+                    <div class="my clearfix">
+                        <div class="Photo">
+                            <img src="" alt="">
+                        </div>
+                        <div class="Say">hhi!今天过得怎么样hi!今天过得怎么样</div>
+                    </div>
+                    <div class="he">
+                        <div class="Photo">
+                            <img src="" alt="">
+                        </div>
+                        <div class="Say">hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样hi!今天过得怎么样</div>
+                    </div> -->
+                </div>
+                <div class="edit">
+                    <form action="" method="POST" enctype="multipart/form-data" id="form">
+                        <div class="icon">
+                            <p class="iconfont icon-biaoqing"></p>
+                            <p class="iconfont icon-jiandao"></p>
+                            <p class="iconfont icon-charutupian">
+                                <input type="file" name="file" value="+" id="file" multiple="multiple">
+                            </p>
+                        </div>
+                        <div class="spare">
+                            <!-- <div class="spareImg" style="width: 100%;"></div> -->
+                            <div class="fuWenBen" contenteditable="true"></div>
+                            <textarea name="message" id="content" style="display: none;"></textarea>
+                        </div>
+                        <div class="button">发送</div>
+                        <div class="facePrint" style="display:none">
+                            <ul class="facePrintUl"></ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- img遮盖罩 -->
+        <div id="image-cover-modal" class="image-cover-modal">
+            <img id="image-cover-image" class="image-cover-modal-content">
+            <div id="image-cover-caption"></div>
+            <div id="return" title="返回">&times;</div>
+            <div id="load"><a href="" download="" title="查看原图" target="_blank">+</a></div>
+            <div id="rightRotate" title="向右旋转">O</div>
+        </div>
+    </div>
+    <div class="musicPlayBox">
+        <div class="playTitle">sometime</div>
+        <audio src="" class="audio"></audio>
+        <div class="musicBox">
+            <span class="last"></span>
+            <span class="play"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+</body>
+
+</html>

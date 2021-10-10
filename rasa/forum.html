@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forum</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/forum.css">
+    <link rel=" stylesheet" href="css/base1.css">
+    <link rel="stylesheet" href="css/alibbIcon.css">
+    <script src="js/main.js"></script>
+    <script src="js/forum.js" type="module"></script>
+    <script src="js/returnTop.js"></script>
+    <script src="js/stopBS.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="nav">
+        <div class="logo" id="logo">战疫情！我们在行动</div>
+        <div class="navShow">
+            <div class="search">
+                <input type="text" name="search" placeholder="搜索" id="search">
+                <p class="iconfont icon-sousuo"></p>
+            </div>
+            <div class="ring">
+                <span class="ringTixing redPoint" style="width: 8px;height: 8px;"></span>
+                <p class="iconfont icon-lingdang"></p>
+                <div class="ringContent" style="display: none;">
+                    <span><a href="forumThree.html?type=at" class="forumthree">收到@我<i class="redPoint"></i></a></span>
+                    <span><a href="forumThree.html?type=commit" class="forumthree">收到评论<i
+                                class="redPoint"></i></a></span>
+                    <span><a href="forumThree.html?type=zan" class="forumthree">收到点赞<i class="redPoint"></i></a></span>
+                    <span><a href="sufferer.html" class="forumthree">联系医生<i class="redPoint"></i></a></span>
+                </div>
+            </div>
+            <div class="write">
+                <p class="iconfont icon-bianji"></p>
+            </div>
+            <div class="person">
+                <p class="Img"><img src="images/defaultHeadImg.svg" alt=""></p>
+                <div class="personContent" style="display: none;">
+                    <span><a href="myNew.html" style="color: rgb(133, 144, 166);">关于我的</a></span>
+                    <span id="defaultHeadImg">先退出了</span>
+                </div>
+            </div>
+        </div>
+        <div class="navbutton"><span class="span1"></span><span class="span2"></span></div>
+    </div>
+    <div class="mask">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="virus.html">数据</a></li>
+            <li><a href="makeTecho.html">手账</a></li>
+            <li><a href="forum.html">论坛</a></li>
+            <li><a href="signIn.html">登录</a></li>
+        </ul>
+    </div>
+    <!-- 版心 -->
+    <div class="banner">
+        <!-- 中间 -->
+        <div class="centerC">
+            <div class="say" style="display: none;">
+                <form action="" method="POST" enctype="multipart/form-data" id="form">
+                    <div class="writeArea">
+                        <p>对于疫情，你想说...</p>
+                        <div class="spare">
+                            <div class="fuWenBen" contenteditable="true"></div>
+                            <!-- 同步富文本 -->
+                            <textarea name="content" id="content" style="display: none;"></textarea>
+                            <!-- 话题 -->
+                            <textarea name="topicContent" id="topicContent" style="display: none;"></textarea>
+                            <!-- @ -->
+                            <textarea name="at" id="at" style="display: none;"></textarea>
+                        </div>
+                        <div class="photo clearfix" style="display: none;" id="photoBox">
+                            <div class="role">
+                                <div class="fileinput">
+                                    <input type="file" name="file" value="+" id="file" multiple="multiple">
+                                    <p class="fileAdd">+</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spareIcon">
+                        <div class="siLeft">
+                            <p class="silIcon" id="spareIconface">表情</p>
+                            <p class="silIcon" id="rolePhotoIcon">图片</p>
+                            <p class="silIcon" id="At">呼我</p>
+                            <p class="silIcon" id="hauTi">话题</p>
+                            <p class="silIcon">手账</p>
+                            <p class="silIcon">定时发送</p>
+                            <p class="silIcon" id="publicIcon">公开</p>
+                        </div>
+                        <div class="siRight">
+                            <div class="sirLeft">
+                            </div>
+                            <div class="sirRight"><input type="button" value="发布" id='writeBtn' class="writeB"></input>
+                            </div>
+                        </div>
+                        <!-- 表情画板 -->
+                        <div class="facePrint" style="display:none">
+                            <ul class="facePrintUl"></ul>
+                        </div>
+                        <!-- @我画板 -->
+                        <div class="Atme" id="Atme" style="display: none;"></div>
+                        <!-- #话题画板 -->
+                        <div class="huaTiban" id="huaTiban" style="display: none;"></div>
+                        <!-- 公开范围 -->
+                        <div class="publicArea" id="publicArea" style="display: none;">
+                            <li>公开</li>
+                            <li>粉丝</li>
+                            <li>好友圈</li>
+                            <li>仅自己可见</li>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <p class="hotNewH">热门动态</p>
+            <div class="hotNewBody">
+            </div>
+            <!-- 到底了 -->
+            <div class="forumEnd">———— END ————</div>
+        </div>
+        <!-- 右边 -->
+        <div class="rightC" id="rightC">
+            <div class="notice">
+                <div class="noticeIn">
+                    <ul>
+                        <li>
+                            <p class="noticeKp">疫情公告</p>
+                            <p class="noticeNew">抗疫情抓发展丨努力帮助企业渡过难关——深圳统筹疫情防控和经济社会发展一线见闻</p>
+                        </li>
+                        <li>
+                            <p class="noticeKp">疫情公告</p>
+                            <p class="noticeNew">3月28日0-24时,广东新增本土确诊病例8例,深圳报告3例,东莞报告1例,茂名报告1例,肇庆报告3例</p>
+                        </li>
+                        <li>
+                            <p class="noticeKp">疫情公告</p>
+                            <p class="noticeNew">兰州市七里河区新冠肺炎疫情防控公告</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="make">
+                <div class="makeH">我的手账</div>
+                <div class="makeBtn"><a href="makeTecho.html"
+                        style="display: block;width: 100%;height: 100%;color:#fff;">创建手账</a></div>
+                <div class="makeBody">
+                    <!-- <li class="hand">
+                        <p class="handP"><img src="img/person.jpg" alt=""></p>
+                        <p class="handTime">2021-09-07</p>
+                    </li> -->
+                </div>
+                <div class="tip" id="handTip">
+                    <div class="none"><img src="img/handbg.png" alt=""></div>
+                    <p>每一个写手账的日子都不辜负生活</p>
+                </div>
+            </div>
+            <div class="hotTalk">
+                <div class="hotTalkH">
+                    <p>疫情杂货铺</p>
+                    <span class="renew iconfont icon-icon1">点击刷新</span>
+                </div>
+                <div class="hotTalkB">
+                    <ul>
+                        <li><a href="javascript:;">
+                                <p id="hTp"><span>1</span>兔兔染盲盒</p><i>1111</i>
+                            </a>
+                        </li>
+                        <li><a href="javascript:;"><span>2</span>兔兔染盲盒<i>1111</i></a></li>
+                        <li><a href="javascript:;"><span>3</span>兔兔染盲盒<i>1111</i></a></li>
+                        <li><a href="javascript:;"><span>4</span>兔兔染盲盒<i>1111</i></a></li>
+                        <li><a href="javascript:;"><span>5</span>兔兔染盲盒<i>1111</i></a></li>
+                    </ul>
+                </div>
+                <div class="allnew"><a href="javascript:;">查看完整榜单</a></div>
+            </div>
+
+        </div>
+    </div>
+    <!-- img遮盖罩 -->
+    <div id="image-cover-modal" class="image-cover-modal">
+        <img id="image-cover-image" class="image-cover-modal-content">
+        <div id="image-cover-caption"></div>
+        <div id="return" title="返回">&times;</div>
+        <div id="load"><a href="" download="" title="查看原图" target="_blank">+</a></div>
+        <div id="rightRotate" title="向右旋转">O</div>
+    </div>
+    <div class="returnTop">
+        <img src="images/returnTop.png" alt="">
+    </div>
+</body>
+
+</html>

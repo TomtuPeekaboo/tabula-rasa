@@ -1,0 +1,256 @@
+.nav {
+    position: fixed;
+    /* background: rgb(113, 224, 146); */
+    background: #fff;
+    z-index: 999;
+}
+
+.nav .return {
+    position: absolute;
+    top: 21px;
+    left: 12px;
+}
+
+.navShow {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 900px;
+    height: 100%;
+    /* background: rgb(212, 84, 195); */
+}
+
+.navShow>div {
+    float: left;
+    position: absolute;
+    top: 37%;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    /* background: rgb(122, 53, 150); */
+}
+
+.navShow .search {
+    width: 543px;
+    right: 250px;
+    padding-top: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .search .findBtn,
+.navShow .search p,
+.navShow .ring p,
+.navShow .write p {
+    position: absolute;
+    top: 0%;
+    right: 10px;
+    height: 100%;
+    padding: 0 10px;
+    line-height: 43px;
+    text-align: right;
+    font-size: 30px;
+    color: rgba(0, 0, 0, .5);
+    /* background: rgb(109, 55, 55); */
+}
+
+.navShow .search input {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: none;
+    background: transparent;
+    border-radius: 20px;
+    padding: 0 23px;
+    line-height: 40px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    transition: all .3s;
+}
+
+/* .navShow .search .searchInBox {
+    width: 100%;
+    height: 100%;
+    background: pink;
+} */
+
+
+
+.navShow .search ul#souSuoUl {
+    display: none;
+    position: absolute;
+    top: 49px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.navShow .search ul#souSuoUl li {
+    width: 100%;
+    /* height: 20px; */
+    margin-bottom: 10px;
+    padding: 5px 14px;
+    background: #fff;
+    font-size: 17px;
+    color: rgba(0, 0, 0, .5);
+    text-align: left;
+    font-weight: normal;
+}
+
+.navShow .ring {
+    padding: 8px 0 0 60px;
+    right: 187px;
+    color: rgb(133, 144, 166);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .ring p {
+    color: rgb(133, 144, 166);
+    /* background: pink; */
+}
+
+.navShow .ring .ringContent,
+.navShow .person .personContent {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 44px;
+    left: -32px;
+    width: 111px;
+    border-radius: 0 0 20px 20px;
+    /* background: rgb(22, 156, 173); */
+    background: #fff;
+    z-index: 999;
+}
+
+.navShow .person .personContent {
+    top: 56px;
+    left: -28px;
+}
+
+.navShow .ring .ringContent span,
+.navShow .person .personContent span {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.navShow .ring .ringContent span:nth-child(3),
+.navShow .person .personContent span:last-child {
+    border-radius: 0 0 20px 20px;
+}
+
+.navShow .ring .ringContent span:hover,
+.navShow .person .personContent span:hover {
+    background: rgb(238, 232, 255);
+}
+
+
+
+.navShow .write {
+    padding: 8px 0 0 60px;
+    right: 118px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .write p {
+    color: rgb(245, 193, 21);
+}
+
+.navShow .person {
+    right: 29px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 14px;
+    color: rgb(133, 144, 166);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .person .Img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.navShow .person .Img img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav .navbutton {
+    height: 100%;
+    /* background: rgb(71, 172, 212); */
+}
+
+
+.icon-sousuo1:before {
+    content: "\e613";
+}
+
+.mask {
+    position: relative;
+}
+
+.forumthree {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgb(133, 144, 166);
+}
+
+.icon-return:before {
+    font-size: 33px;
+    color: rgb(202, 171, 235);
+}
+
+.icon-return:hover:before {
+    color: rgba(132, 0, 255, 1);
+}
+
+.banner {
+    position: relative;
+    width: 1345px;
+    height: 100vh;
+    margin: 150px auto;
+    font-family: 'Open Sans',
+        sans-serif;
+    background: #fff;
+    padding: 35px 40px 35px 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(248, 243, 255);
+    box-shadow: 2px 2px 2px rgb(202, 171, 235, .5);
+}
+
+form {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    /* background: #879; */
+}
+
+form p.aurPhoto {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 165, 0);
+    overflow: hidden;
+}
+
+form p.aurPhoto img {
+    width: 100%;
+    height: 100%;
+}

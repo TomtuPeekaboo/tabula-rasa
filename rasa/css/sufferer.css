@@ -1,0 +1,985 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PingFangSC-Regular, Helvetica, Arial, Microsoft Yahei, sans-serif;
+}
+
+body {
+    background-color: #f8f3ff;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    position: fixed;
+    /* background: rgb(113, 224, 146); */
+    background: #fff;
+    z-index: 999;
+}
+
+.nav .return {
+    position: absolute;
+    top: 21px;
+    left: 12px;
+}
+
+.icon-return:before {
+    font-size: 33px;
+    color: rgb(202, 171, 235);
+}
+
+.icon-return:hover:before {
+    color: rgba(132, 0, 255, 1);
+}
+
+
+.navShow {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 900px;
+    height: 100%;
+    /* background: rgb(212, 84, 195); */
+}
+
+.navShow>div {
+    float: left;
+    position: absolute;
+    top: 37%;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    /* background: rgb(122, 53, 150); */
+}
+
+.navShow .search {
+    width: 543px;
+    right: 250px;
+    padding-top: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .search .findBtn,
+.navShow .search p,
+.navShow .ring p,
+.navShow .write p {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    height: 100%;
+    padding: 0 10px;
+    line-height: 43px;
+    text-align: right;
+    font-size: 30px;
+    color: rgba(0, 0, 0, .5);
+    /* background: rgb(109, 55, 55); */
+}
+
+.navShow .search input {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: none;
+    background: transparent;
+    border-radius: 20px;
+    padding: 0 23px;
+    line-height: 40px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    transition: all .3s;
+}
+
+.navShow .search ul#souSuoUl {
+    display: none;
+    position: absolute;
+    top: 49px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.navShow .search ul#souSuoUl li {
+    width: 100%;
+    /* height: 20px; */
+    margin-bottom: 10px;
+    padding: 5px 14px;
+    background: #fff;
+    font-size: 17px;
+    color: rgba(0, 0, 0, .5);
+    text-align: left;
+    font-weight: normal;
+}
+
+.navShow .ring {
+    padding: 8px 0 0 60px;
+    right: 187px;
+    color: rgb(133, 144, 166);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .ring p {
+    color: rgb(133, 144, 166);
+    /* background: pink; */
+}
+
+.navShow .ring .ringContent,
+.navShow .person .personContent {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 44px;
+    left: -32px;
+    width: 111px;
+    border-radius: 0 0 20px 20px;
+    /* background: rgb(22, 156, 173); */
+    background: #fff;
+    z-index: 999;
+}
+
+.navShow .person .personContent {
+    top: 56px;
+    left: -28px;
+}
+
+.navShow .ring .ringContent span,
+.navShow .person .personContent span {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.navShow .ring p.ringNew {
+    display: flex;
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    justify-content: center;
+    align-items: center;
+    left: 32px;
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.forumthree {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgb(133, 144, 166);
+}
+
+.forumthree i.redPoint,
+.navShow .ring span.redPoint {
+    position: absolute;
+    top: 0px;
+    left: 68px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    /*background: rgba(255, 0, 0, .7);*/
+    border-radius: 50%;
+}
+
+.navShow .ring span.ringTixing {
+    top: 0px;
+    left: 34px;
+}
+
+.navShow .ring .ringContent span:last-child,
+.navShow .person .personContent span:last-child {
+    border-radius: 0 0 20px 20px;
+}
+
+.navShow .ring .ringContent span:hover,
+.navShow .person .personContent span:hover {
+    background: rgb(238, 232, 255);
+}
+
+
+
+.navShow .write {
+    padding: 8px 0 0 60px;
+    right: 118px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .write p {
+    color: rgb(245, 193, 21);
+}
+
+.navShow .person {
+    right: 29px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 14px;
+    color: rgb(133, 144, 166);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .person .Img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.navShow .person .Img img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav .navbutton {
+    height: 100%;
+    /* background: rgb(71, 172, 212); */
+}
+
+
+.icon-sousuo1:before {
+    content: "\e613";
+}
+
+
+.banner {
+    display: flex;
+    width: 1023px;
+    height: 600px;
+    margin: 100px auto;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgb(218, 169, 202);
+}
+
+.new {
+    height: 100%;
+}
+
+.newContent {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+}
+
+.newContent .ncHead {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    width: 100%;
+    height: 50px;
+    background: rgb(102, 146, 255);
+    background: rgb(205, 193, 224);
+    font-size: 19px;
+    font-weight: bold;
+    color: #fff;
+    border-right: 4px solid rgb(237, 235, 245);
+}
+
+.ncBody {
+    flex: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: rgb(235, 228, 246);
+}
+
+.icon-login-full::before {
+    position: relative;
+    top: 2px;
+    left: 144px;
+}
+
+.icon-login-full:hover::before {
+    color: rgb(147, 30, 252);
+}
+
+
+.ncBody,
+.ncBody ul,
+.ncBody ul li {
+    width: 100%;
+}
+
+.ncBody ul {
+    min-height: 100%;
+}
+
+.talk .show::-webkit-scrollbar,
+.CPbody::-webkit-scrollbar,
+.ncBody::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 4px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+.talk .edit .facePrint::-webkit-scrollbar,
+.talk .edit .spare::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 0px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+.talk .show::-webkit-scrollbar-thumb,
+.talk .edit .facePrint::-webkit-scrollbar-thumb,
+.talk .edit .spare::-webkit-scrollbar-thumb,
+.CPbody::-webkit-scrollbar-thumb,
+.ncBody::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgb(0, 0, 0, .2);
+    background: rgb(238, 232, 255);
+}
+
+.talk .show::-webkit-scrollbar-thumb,
+.talk .edit .facePrint::-webkit-scrollbar-thumb,
+.talk .edit .spare::-webkit-scrollbar-track,
+.CPbody::-webkit-scrollbar-track,
+.ncBody::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgb(238, 232, 255);
+    border-radius: 10px;
+    background: #ededed;
+
+}
+
+.ncBody ul li {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background: rgb(244, 246, 251);
+}
+
+.ncBody ul li .ncPhoto {
+    position: relative;
+    width: 101px;
+    height: 65px;
+    border-radius: 10px;
+    margin-left: 8px;
+    background: rgb(102, 146, 255);
+}
+
+.ncBody ul li .ncPhoto img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.ncBody ul li .wen {
+    width: 78px;
+    margin-left: 6px;
+}
+
+.ncBody ul li .wen .Wtitle {
+    font-size: 15.5px;
+    width: 63px;
+    height: 20.57px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    cursor: default;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ncBody ul li .wen .Wtime {
+    font-size: 13px;
+    color: rgba(0, 0, 0, .5);
+    font-weight: bold;
+    cursor: default;
+}
+
+.icon-weidu::before,
+.icon-yidu:before {
+    content: "\e6cf";
+    position: absolute;
+    top: 36px;
+    right: -86px;
+    font-size: 23px;
+    color: #13C463;
+    font-weight: bold;
+}
+
+.icon-weidu::before {
+    color: #FD9A08;
+}
+
+.chat {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    background: #fff;
+    background: rgb(248, 243, 255);
+}
+
+.Cperson {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    height: 100%;
+    background: rgb(244, 246, 251);
+    background: rgb(205, 193, 224, .3);
+
+}
+
+.Cperson .CPhead {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    width: 100%;
+    height: 50px;
+    background: rgb(212, 223, 252);
+    background: rgb(205, 193, 224);
+}
+
+.Cperson .CPhead p {
+    padding-left: 23px;
+    position: relative;
+    margin: 0 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(113, 120, 159);
+}
+
+.Cperson .CPhead p::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: orange;
+    border-radius: 50%;
+}
+
+.Cperson .CPhead p:nth-child(2)::before {
+    background: rgb(78, 195, 207);
+}
+
+.Cperson .CPhead p:nth-child(3)::before {
+    background: rgb(246, 117, 121);
+}
+
+.Cperson .CPbody ul li,
+.Cperson .CPbody ul,
+.Cperson .CPbody {
+    width: 100%;
+}
+
+.Cperson .CPbody {
+    flex: 1;
+}
+
+.Cperson .CPbody ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background: #fff;
+}
+
+.Cperson .CPbody ul li:hover {
+    background: rgb(207, 220, 252);
+    background: rgb(205, 193, 224, .5);
+}
+
+.Cperson .CPbody ul li .CPphoto {
+    width: 65px;
+    height: 65px;
+    margin: 0 9px;
+    border-radius: 9px;
+    background: orange;
+    overflow: hidden;
+}
+
+.Cperson .CPbody ul li .CPphoto img {
+    width: 100%;
+    height: 100%;
+}
+
+.Cperson .CPbody ul li .CPintro {
+    flex: 1;
+    height: 100%;
+}
+
+.Cperson .CPbody ul li .CPintro p.DoctorN {
+    position: relative;
+    font-size: 18px;
+    padding: 13px 1px;
+    font-weight: bold;
+    color: rgb(60, 60, 60);
+    cursor: default;
+}
+
+.Cperson .CPbody ul li .CPintro p.DoctorN span.pref {
+    position: relative;
+    left: 15px;
+    font-size: 14px;
+    color: rgb(129, 137, 180);
+    font-weight: normal;
+}
+
+.Cperson .CPbody ul li .CPintro .cute {
+    display: flex;
+}
+
+.Cperson .CPbody ul li .CPintro .cute>p {
+    padding: 1px 5px;
+    line-height: 16px;
+    border: 1.5px solid rgb(212, 167, 255);
+    font-size: 14px;
+    color: rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    margin: 0px 10px;
+    cursor: default;
+}
+
+.Cperson .CPbody ul li .color {
+    position: absolute;
+    right: 0;
+    width: 6px;
+    height: 50%;
+    border-radius: 5px;
+
+}
+
+.Cperson .CPbody ul li .green {
+    background: rgb(78, 195, 207);
+}
+
+.Cperson .CPbody ul li .red {
+    background: rgb(246, 117, 121);
+}
+
+.Cperson .CPbody ul li .yellow {
+    background: orange;
+}
+
+.talk {
+    padding: 0 10px;
+    flex: 1;
+}
+
+.talk .Thead {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgb(212, 223, 252);
+}
+
+.talk .Thead .other {
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    justify-content: center;
+    margin-left: 30px;
+    width: 175px;
+    height: 27px;
+    font-size: 14px;
+    border-radius: 19px;
+    letter-spacing: 2px;
+    background: rgb(243, 245, 253);
+    background: rgb(250, 236, 194);
+}
+
+.talk .Thead .fk {
+    position: absolute;
+    right: 36px;
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+    font-weight: bold;
+    color: orange;
+    padding: 10px 0 0 20px;
+    cursor: pointer;
+}
+
+#yinle {
+    position: absolute;
+    right: 71px;
+    top: 53%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("../img/yinle.png") no-repeat center center;
+    background-size: 40px 40px;
+    cursor: pointer;
+}
+
+.musicPlayBox {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 180px;
+    background-color: #fff;
+    font-size: 30px;
+    box-shadow: -10px -10px 15px #fff,
+    10px 10px 15px rgba(0, 0, 0, .1),
+    inset -5px -5px 15px #fff,
+    inset 5px 5px 15px rgba(0, 0, 0, .1);
+    z-index: 100000;
+}
+.playTitle {
+    width: inherit;
+    height: 50px;
+    text-align: center;
+    color: #caabeb;
+    padding: 20px 0;
+}
+.musicBox {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.musicBox span {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: inset 0 -5px 5px rgba(0, 0, 0, .1),
+    0 5px 10px rgba(0, 0, 0, .1),
+    0 10px 15px rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.musicBox .play {
+    background: url(../img/play.png) no-repeat center center;
+    background-size: 30px 30px;
+}
+.musicBox .pause {
+    background: url(../img/pause.png) no-repeat center center;
+    background-size: 30px 25px;
+    background-color: #caabeb;
+}
+.musicBox .next {
+    background: url(../img/next.png) no-repeat center center;
+    background-size: 28px 35px;
+    margin-left: 20px;
+}
+.musicBox .last {
+    margin-right: 20px;
+    background: url(../img/last.png) no-repeat center center;
+    background-size: 28px 35px;
+}
+
+.talk .Thead .fk {
+
+}
+
+.talk .show {
+    width: 100%;
+    height: 385px;
+    padding: 20px 10px;
+    border-bottom: 1px solid rgb(212, 223, 252);
+    overflow-y: scroll;
+}
+
+.talk .show>div {
+    display: flex;
+    padding: 18px;
+    margin-bottom: 0px;
+}
+
+.talk .show>div.my {
+    flex-direction: row-reverse;
+}
+
+.talk .show>div .Photo {
+    width: 45px;
+    height: 45px;
+    background: #565;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.talk .show>div .Photo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.talk .show>div.he .Say {
+    max-width: 497px;
+    margin: 23px 0 0 10px;
+    border-radius: 0 10px 10px 10px;
+    padding: 8px;
+    color: rgba(0, 0, 0, .7);
+    font-size: 16px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 8px rgb(129, 104, 169);
+}
+
+.talk .show>div .Say img {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+
+.talk .show>div .Say img.picture {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.banner .chat .chatTime {
+    padding: 10px 0 4px 0;
+    text-align: center;
+    color: rgba(0, 0, 0, .7);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.talk .show>div.my .Say {
+    max-width: 497px;
+    margin: 23px 10px 0 0px;
+    /* border: 2px solid rgb(129, 104, 169); */
+    border-radius: 10px 0px 10px 10px;
+    padding: 8px;
+    color: rgba(0, 0, 0, .7);
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: left;
+    background-color: rgba(194, 128, 255, 0.298039215686275);
+    box-shadow: 0 0 8px rgb(129, 104, 169);
+}
+
+.talk .show>div .photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.talk .edit {
+    position: relative;
+    width: 100%;
+    height: 108px;
+    padding: 0 5px;
+    background: #fff;
+    background: rgb(248, 243, 255);
+}
+
+.talk .edit .icon {
+    display: flex;
+}
+
+.talk .edit .icon p {
+    width: 23px;
+    height: 23px;
+    margin: 8px 0px 0 5px;
+    font-size: 18px;
+    color: rgb(127, 127, 127);
+}
+
+.talk .edit .icon p:nth-child(3) {
+    position: relative;
+}
+
+.talk .edit .icon p:nth-child(3) input[type='file'] {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 上传文件的input用width没用,要用font-size */
+    font-size: 71px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    opacity: 0;
+    z-index: 999;
+}
+
+.talk .edit .spare {
+    width: 100%;
+    height: 95px;
+    overflow-y: scroll;
+}
+
+.talk .edit .spare img {
+    width: 50px;
+    max-height: 50px;
+}
+
+.talk .edit .spare .filePhoto {
+    max-height: 50px;
+}
+
+.talk .edit .spare .fuWenBen {
+    width: 100%;
+    min-height: 95px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .6);
+}
+
+.talk .edit .spare .fuWenBen img {
+    width: 20px;
+    vertical-align: bottom;
+}
+
+.talk .edit .facePrint {
+    position: absolute;
+    bottom: 110px;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.talk .edit .facePrint ul {
+    width: 100%;
+    height: 100%;
+}
+
+.talk .edit .facePrint ul li {
+    list-style: none;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+}
+
+.talk .edit .facePrint ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.talk .edit .button {
+    position: absolute;
+    right: 21px;
+    bottom: -48.5px;
+    width: 55px;
+    height: 34px;
+    padding-left: 10.5px;
+    font-weight: bold;
+    line-height: 34px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    border-radius: 6px;
+    color: #fff;
+    background: rgb(255, 165, 0);
+    cursor: pointer;
+}
+
+/* img遮罩 */
+
+.image-cover-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    position: fixed;
+    z-index: 30;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 550px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(37, 39, 42);
+    transition: opacity ease 0.3s;
+    pointer-events: none;
+}
+
+.model-shown {
+    pointer-events: all;
+    opacity: 1;
+    border-radius: 20px;
+}
+
+.image-cover-modal-content {
+    display: block;
+    max-width: 100%;
+    max-height: 80%;
+}
+
+#image-cover-caption {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    background: rgb(8, 8, 9);
+}
+
+#return,
+#load,
+#rightRotate {
+    position: absolute;
+    top: 25px;
+    left: 750px;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#load {
+    left: 25px;
+}
+
+#load a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+}
+
+#rightRotate {
+    left: 85px;
+}
+
+@media only screen and (max-width: 45rem) {
+    .image-cover-modal-content {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/base1.css">
+    <link rel="stylesheet" href="./css/signIn.css">
+    <script src="./js/signIn.js"></script>
+    <script src="js/function.js"></script>
+    <script src="js/stopBS.js"></script>
+</head>
+
+<body>
+    <div class="card">
+        <!-- 表单外面盒子 -->
+        <div class="welcome">
+            <span>战疫情！我们在行动</span><span>还未注册？<a href="register.html">register</a></span>
+        </div>
+        <form action="#" method="GET">
+            <div class="emailBox">
+                <label for="useremail">输入手机号</label>
+                <div class="useremailInput">
+                    <span id="registerFont"></span><input type="text" id="phone" name="phone">
+                </div>
+                <div class="active">活跃值+2</div>
+            </div>
+
+            <div class="password">
+                <label for="password">输入密码</label>
+                <div class="passwordInput">
+                    <span id="registerFont"></span><input type="password" id="password" name="password">
+                </div>
+                <div class="active">成熟度+1</div>
+            </div>
+            <div class="remember">
+                <!-- <label for="remember">记住我</label> -->
+                <div class="usernameInput">
+                    <input type="checkbox" id="remember" name="remember" value="false">
+                    <label for="remember">记住我</label>
+                </div>
+                <span class="wjmm"><a href="javascript:;">忘记密码?</a></span>
+            </div>
+            <div class="cip" id="cip">
+                <span>欢迎来到 战疫情！我们在行动!</span>
+                <button class="button" type="button" id="submit">
+                    <span></span>
+                    <span class="wave"></span>
+                    <span class="wave"></span>
+                    <span class="wave"></span>
+                </button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

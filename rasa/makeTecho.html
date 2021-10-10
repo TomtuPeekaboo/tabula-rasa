@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>制作手账</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/makeTecho.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/makeTecho.js"></script>
+    <script src="js/TechoSend.js"></script>
+    <script src="js/stopBS.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo" id="logo">战疫情！我们在行动</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="virus.html">数据</a></li>
+            <li><a href="makeTecho.html">手账</a></li>
+            <li><a href="forum.html">论坛</a></li>
+            <li><a href="signIn.html">登录</a></li>
+        </ul>
+    </div>
+    <div class="banner">
+        <div class="left">
+            <ul>
+                <li class="atn">
+                    背景
+                </li>
+                <li>贴纸</li>
+                <li>文字</li>
+                <li>图片</li>
+            </ul>
+        </div>
+        <div class="center">
+            <div>
+                <ul>
+                </ul>
+                <ul>
+                </ul>
+                <ul>
+                </ul>
+                <ul class="shangchauntupian">
+                    <li class="putupImg">上传图片<input type="file" multiple="multiple"></li>
+                    <li class="allRemove">全部删除</li>
+                </ul>
+            </div>
+            <span></span>
+        </div>
+        <div class="right">
+            <div class="top">
+                <div class="top-left"><span>复制</span><span>添加文字</span>
+                    <span><i>颜色</i> <input type="color" class="textcolor"></span>
+                    <span>文字大小 <input type="text" class="textfontsize" value="16"></span>
+                </div>
+                <div class="top-right"><span>保存</span><span>下载图片</span><span>发布</span><span><a href="manageTecho.html"
+                            style="color:#fff;text-decoration: none;">管理</a></span></div>
+            </div>
+            <div class="buttom">
+                <input type="text" placeholder="请输入你的标题" autocomplete="off">
+                <div class="make">
+                    <span id="tip">点击背景即可开始制作哦~</span>
+                </div>
+                <!-- <div class="tieBox-frame">
+                <div class="tieBox">
+                    <span class="delect"></span>
+                    <span class="Csize"></span>
+                    <span class="rotate"></span>
+                </div>
+            </div> -->
+                <div class="page">
+                    <ul class="pagema">
+                        <li class="click">1</li>
+                    </ul>
+                    <span class="addPage"></span>
+                    <div class="Pagetask">
+                        <div class="Pagetask-frame">
+                            <ul>
+                                <li>删除</li>
+                                <li>复制</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="changebgsize">
+                    <div class="xiao"></div>
+                    <div class="baifenhao">30 %</div>
+                    <div class="jia"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer1">
+        <a href="index.html">首页</a><a href="virus.html">数据</a><a href="forum.html">动态</a>
+    </div>
+    <div class="footer2">© 2021 made by tabula rasa</div>
+    <div class="tips">已保存</div>
+    <div class="send-frame">
+        <div class="send-header">发布内容
+            <span></span>
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="请输入文字"></textarea>
+        <ul class="send-img">
+            <li><img src="" alt="" width="100%"></li>
+        </ul>
+        <div class="button">
+            <button class="pushTop-right">取消</button>
+            <button class="pushTop-sure">确定</button>
+            <form action="" id="sendform">
+                <input type="hidden" name="file">
+            </form>
+        </div>
+    </div>
+    <div class="big-mask">
+        <div class="img-box"><img src="" alt=""></div>
+        <div class="mask-left">
+        </div>
+        <div class="mask-right"></div>
+        <div class="mask-load"></div>
+        <div class="mask-rotate"></div>
+    </div>
+</body>
+
+</html>

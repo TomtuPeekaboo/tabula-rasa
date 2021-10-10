@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forumthree</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/forumThree.css">
+    <link rel=" stylesheet" href="css/base1.css">
+    <link rel="stylesheet" href="css/alibbIcon.css">
+    <script src="js/main.js"></script>
+    <script src="js/forumThree.js"></script>
+    <script src="js/stopBS.js"></script>
+    <script src="js/returnTop.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="nav">
+        <div class="return"><a href="forum.html" class="iconfont icon-return"></a></div>
+        <div class="logo" id="logo">战疫情！我们在行动</div>
+        <div class="navShow">
+            <div class="ring">
+                <span class="ringTixing redPoint" style="width: 8px;height: 8px;"></span>
+                <p class="iconfont icon-lingdang"></p>
+                <div class="ringContent" style="display: none;">
+                    <span><a href="forumThree.html?type=at" class="forumthree">收到@我<i class="redPoint"></i></a></span>
+                    <span><a href="forumThree.html?type=commit" class="forumthree">收到评论<i
+                                class="redPoint"></i></a></span>
+                    <span><a href="forumThree.html?type=zan" class="forumthree">收到点赞<i class="redPoint"></i></a></span>
+                    <span><a href="sufferer.html" class="forumthree">联系医生<i class="redPoint"></i></a></span>
+                </div>
+            </div>
+            <div class="write">
+                <p class="iconfont icon-bianji"></p>
+            </div>
+            <div class="person">
+                <p class="Img"><img src="images/defaultHeadImg.svg" alt=""></p>
+                <div class="personContent" style="display: none;">
+                    <span><a href="myNew.html" style="color: rgb(133, 144, 166);">关于我的</a></span>
+                    <span>先退出了</span>
+                </div>
+            </div>
+        </div>
+        <div class="navbutton"><span class="span1"></span><span class="span2"></span></div>
+    </div>
+    <div class="mask">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="virus.html">数据</a></li>
+            <li><a href="makeTecho.html">手账</a></li>
+            <li><a href="forum.html">论坛</a></li>
+            <li><a href="signIn.html">登录</a></li>
+        </ul>
+    </div>
+    <!-- 版心 -->
+    <div class="banner">
+        <div class="change">
+            <div class="changeL">收到@我</div>
+            <div class="changeC">收到评论</div>
+            <div class="changeR">收到点赞</div>
+            <div class="changeBtn">收到@我</div>
+        </div>
+        <!-- @-->
+        <div class="atBox">
+            <!-- <div class="forum">
+                <div class="photo">
+                    <img src="img/person.jpg" alt="">
+                </div>
+                <div class="name">一个用户</div>
+                <div class="time">2021-10-30</div>
+                <p class="new" class="atname">@宇宙无敌大美女</p>
+                <div class="content">
+                    <p class="atname">@另外一个用户</p>
+                    <p class="wenAn">这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！</p>
+                    <div class="forumPhoto clearfix">
+                        <li><img src="images/main1.jpg" alt=""></li>
+                        <li><img src="images/main2.jpg" alt=""></li>
+                        <li><img src="images/main3.jpg" alt=""></li>
+                        <li><img src="images/main4.jpg" alt=""></li>
+                    </div>
+                    <p class="fbTime">2021-10-01 00:31</p>
+                </div>
+            </div>
+            <div class="forum">
+                <div class="photo">
+                    <img src="img/person.jpg" alt="">
+                </div>
+                <div class="name">一个用户</div>
+                <div class="time">2021-10-30</div>
+                <p class="new" class="atname">@宇宙无敌大美女</p>
+                <div class="content">
+                    <p class="atname">@另外一个用户</p>
+                    <p class="wenAn">这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！</p>
+                    <div class="forumPhoto clearfix">
+                        <li><img src="images/main1.jpg" alt=""></li>
+                        <li><img src="images/main2.jpg" alt=""></li>
+                        <li><img src="images/main3.jpg" alt=""></li>
+                        <li><img src="images/main4.jpg" alt=""></li>
+                    </div>
+                    <p class="fbTime">2021-10-01 00:31</p>
+                </div>
+            </div> -->
+        </div>
+        <!-- pl -->
+        <div class="pl" style="display: none;">
+            <!-- <div class="forum">
+                <div class="photo">
+                    <img src="img/person.jpg" alt="">
+                </div>
+                <div class="name">一个用户</div>
+                <div class="time">2021-10-30</div>
+                <p class="new">回复<span
+                        class="atname">@另外一个用户：</span>我觉得你说的对,这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！
+                </p>
+                <div class="content">
+                    <p class="atname">@另外一个用户</p>
+                    <p class="wenAn">这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！</p>
+                    <div class="forumPhoto clearfix">
+                        <li><img src="images/main1.jpg" alt=""></li>
+                        <li><img src="images/main2.jpg" alt=""></li>
+                        <li><img src="images/main3.jpg" alt=""></li>
+                        <li><img src="images/main4.jpg" alt=""></li>
+                    </div>
+                    <p class="fbTime">2021-10-01 00:31</p>
+                </div>
+            </div>
+            <div class="forum">
+                <div class="photo">
+                    <img src="img/person.jpg" alt="">
+                </div>
+                <div class="name">一个用户</div>
+                <div class="time">2021-10-30</div>
+                <p class="new">回复<span
+                        class="atname">@另外一个用户：</span>我觉得你说的对,这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！
+                </p>
+                <div class="content">
+                    <p class="atname">@另外一个用户</p>
+                    <p class="wenAn">这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！</p>
+                    <div class="forumPhoto clearfix">
+                        <li><img src="images/main1.jpg" alt=""></li>
+                        <li><img src="images/main2.jpg" alt=""></li>
+                        <li><img src="images/main3.jpg" alt=""></li>
+                        <li><img src="images/main4.jpg" alt=""></li>
+                    </div>
+                    <p class="fbTime">2021-10-01 00:31</p>
+                </div>
+            </div> -->
+        </div>
+        <!-- zan -->
+        <div class="zanBox" style="display: none;">
+            <!-- <div class="forum">
+                <div class="photo">
+                    <img src="img/person.jpg" alt="">
+                </div>
+                <div class="name">一个用户</div>
+                <div class="time">2021-10-30</div>
+                <p class="new">赞了你的动态</p>
+                <div class="content">
+                    <p class="atname">@另外一个用户</p>
+                    <p class="wenAn">这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！</p>
+                    <div class="forumPhoto clearfix">
+                        <li><img src="images/main1.jpg" alt=""></li>
+                        <li><img src="images/main2.jpg" alt=""></li>
+                        <li><img src="images/main3.jpg" alt=""></li>
+                        <li><img src="images/main4.jpg" alt=""></li>
+                    </div>
+                    <p class="fbTime">2021-10-01 00:31</p>
+                </div>
+            </div>
+            <div class="forum">
+                <div class="photo">
+                    <img src="img/person.jpg" alt="">
+                </div>
+                <div class="name">一个用户</div>
+                <div class="time">2021-10-30</div>
+                <p class="new">赞了你的动态</p>
+                <div class="content">
+                    <p class="atname">@另外一个用户</p>
+                    <p class="wenAn">这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！</p>
+                    <div class="forumPhoto clearfix">
+                        <li><img src="images/main1.jpg" alt=""></li>
+                        <li><img src="images/main2.jpg" alt=""></li>
+                        <li><img src="images/main3.jpg" alt=""></li>
+                        <li><img src="images/main4.jpg" alt=""></li>
+                    </div>
+                    <p class="fbTime">2021-10-01 00:31</p>
+                </div>
+            </div> -->
+        </div>
+
+    </div>
+    <div class="footer" style="position: fixed; bottom: 0;">
+        <div class="footer1">
+            <a href="index.html">首页</a><a href="virus.html">数据</a><a href="forum.html">动态</a>
+        </div>
+        <div class="footer2">© 2021 made by tabula rasa</div>
+    </div>
+    <div class="returnTop">
+        <img src="images/returnTop.png" alt="">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+.Box {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.Box .header {
+    margin: 15px auto;
+    align-items: center;
+    background: rgb(248, 243, 255);
+    border-radius: 10px;
+    width: 1190px;
+}
+
+.Box .header form {
+    display: flex;
+    padding: 20px;
+}
+
+.Box .header form>div {
+    margin-right: 24px;
+    color: rgba(0, 0, 0, .5);
+}
+
+.Box .header input {
+    padding: 8px;
+    width: 137px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid rgb(194, 128, 255);
+}
+
+.Box .header form>div:nth-child(2) input {
+    width: 187px;
+}
+
+.Box .header form>div:nth-child(3) input {
+    width: 183px;
+}
+
+
+.Box .header .find {
+    height: 32.57px;
+    margin-right: 0px;
+    display: flex;
+    line-height: 32.57px;
+    justify-content: center;
+    width: 66px;
+    color: #fff;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    background: rgb(169, 129, 221);
+}
+
+.Box .body {
+    width: 1190px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+
+.Box .body table {
+    width: 100%;
+}
+
+.Box .body table th {
+    height: 50px;
+    background: rgb(238, 232, 255);
+    color: rgb(101, 101, 101);
+}
+
+.Box .body table td {
+    height: 43px;
+    border-bottom: 1px solid #ccc;
+    color: #666;
+}
+
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.Box .body table .forumId {
+    width: 100px;
+}
+
+.Box .body table .aurName {
+    width: 290px;
+}
+
+.Box .body table .fbTime {
+    width: 228px;
+}
+
+
+.Box .body table .commit {
+    width: 136px;
+}
+
+.Box .body table .good {
+    width: 136px;
+}
+
+.Box .body table .Status {
+    width: 100px;
+}
+
+.Box .body table .action {
+    width: 200px;
+    padding-left: 74px;
+}
+
+
+
+.Box .body table .action p {
+    float: left;
+    width: 52px;
+    height: 27px;
+    margin: 0 4px;
+    line-height: 26px;
+    color: #fff;
+    border-radius: 6px;
+    background: rgb(194, 128, 255);
+}
+
+.Box .body table .action p a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+}
+
+.Box .page {
+    margin-top: 20px;
+}
+
+.Box .page ul {
+    float: right;
+    width: auto;
+    display: flex;
+    margin-right: 23px;
+}
+
+.Box .page ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.Box .page ul li.purple {
+    background: rgb(194, 128, 255);
+}
+
+.Box .page ul li.beforePage {
+    background: url(../img/before.png);
+    background-size: 100%;
+}
+
+.Box .page ul li.nextPage {
+    background: url(../img/next.png);
+    background-size: 100%;
+}
+
+.Box .page ul li.sum {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.Box .page ul li.leap {
+    position: relative;
+    margin-left: 50px;
+    padding-left: 16px;
+}
+
+.Box .page ul li.sum::after {
+    position: relative;
+    content: "跳至";
+    left: 53px;
+}
+
+.Box .page ul li.leap::after {
+    position: relative;
+    content: "页";
+    left: 18px;
+}
+#pageli{
+    display:flex;
+}
+.Box .body table .action p{
+    cursor:pointer;
+}

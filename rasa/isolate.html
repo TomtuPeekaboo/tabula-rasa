@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isolate</title>
+    <link rel="stylesheet" href="css/alibbIcon.css">
+    <link rel="stylesheet" href="css/isolate.css">
+    <link rel="stylesheet" href="css/base.css">
+    <!-- <link rel="stylesheet" href="css/base2.css"> -->
+    <script src="js/main.js"></script>
+    <script src="js/isolate.js" type="text/javascript"></script>
+    <script src="js/returnTop.js"></script>
+    <script src="js/stopBS.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="nav">
+        <div class="return"><a href="virus.html" class="iconfont icon-return"></a></div>
+        <div class="logo" id="logo">战疫情！我们在行动</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="virus.html">数据</a></li>
+            <li><a href="makeTecho.html">手账</a></li>
+            <li><a href="forum.html">论坛</a></li>
+            <li><a href="signIn.html">登录</a></li>
+        </ul>
+        <div class="navbutton">
+             <span class="span1"></span>
+            <span class="span2"></span>
+        </div>
+    </div>
+    <div class="mask">
+
+    </div>
+    <div class="bigNew">
+        <div class="New">
+            <!-- 政策查询头头 -->
+            <div class="readH">
+                <h1>国内各地区隔离政策查询</h1>
+                <div class="guard" id="guard">
+                    <div class="begin">
+                        <select name="" id="begin_pro">
+                        </select>
+                    </div>
+                    <div class="begin">
+                        <select name="" id="begin_city">
+
+                        </select>
+                    </div>
+                    <div class="mid"><img src="img/arrow.svg" alt=""></div>
+                    <div class="end">
+                        <select name="" id="end_pro">
+
+                        </select>
+                    </div>
+                    <div class="end">
+                        <select name="" id="end_city">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- 结果尾巴 -->
+            <div class="readB">
+                <div class="rbT">
+                    <h3>行程信息</h3>
+                    <div class="tbtB">
+                        <div class="rbtNew">
+                            <div class="rank">风险等级: 低</div>
+                            <p class="rbtnBegin" id="begin_name">出发地: 兰州</p>
+                            <p class="rgtnN">外出政策</p>
+                            <div class="rgbnC" id="begin_policy">
+                                <p>假期临近，为避免对您的行程带来不便，请全省居民密切关注权威部门发布的疫情信息与防疫政策，及时了解全国中高风险疫情地区调整，建议减少不必要出行，如无必须，请不要前往疫情中高风险地区。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rbtNew">
+                            <div class="rank">风险等级: 低</div>
+                            <p class="rbtnBegin" id="end_name">到达地: 北京</p>
+                            <p class="rgtnN">进入政策</p>
+                            <div class="rgbnC" id="end_policy">
+                                <p>1.国内中高风险地区人员暂不允许进京，中高风险地区所在地级市域内其他县（市、区、旗）人员非必要不进京。14日内无中高风险地区旅居史、全国低风险地区人员可持健康码“绿码”通行。
+                                    2.限制疫情中高风险地区所在县（市、区、旗，直辖市为所在区）及14日内有该区域旅居史的待返京人员购买火车票、飞机票，通过公路进京的人员检查站将进行查验劝返。
+                                    3.尚在中高风险地区所在县（市、区、旗）的人员，将对其“北京健康宝”赋码状态调整为黄码。对曾有14日内中高风险地区所在县（市、区、旗）旅居史且尚未返京的人员，将向其“北京健康宝”发送弹窗提示。待返京人员所在地防控政策严于北京的，按照当地政策执行。
+                                    4.对于“黄码”人员，待其所在县（市、区、旗）全域转为低风险地区或14天内无中高风险地区所在县（市、区、旗）旅居史后，恢复绿码。对于“弹窗提示”人员，待其连续14日内无中高风险地区所在县（市、区、旗）旅居史后，恢复绿码。
+                                    5.上述人员恢复“绿码”后，持登机登车前48小时内核酸检测阴性证明即可返京。抵京前要主动向所在单位、居住社区报告，抵京后实施14天健康监测，并在抵京当日及满7天时进行核酸检测。
+                                    5.对于国内中高风险地区所在地级市以外的低风险地区人员，其北京健康宝显示是绿码者，进返京自由，不需要提交48小时内核酸检测阴性证明。北京市疾控中心电话
+                                    010-12345
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rbT">
+                    <h3>返程信息</h3>
+                    <div class="tbtB">
+                        <div class="rbtNew">
+                            <div class="rank">风险等级: 低</div>
+                            <p class="rbtnBegin" id="back_begin">出发地: 北京</p>
+                            <p class="rgtnN">外出政策</p>
+                            <div class="rgbnC" id="back_begin_policy">
+                                <p>继续坚持非必须不出境，不去中高风险及有病例报告的地区旅行。中高风险及有病例报告的地区进（返）京人员自觉配合道路卡口、高铁、机场等公共交通场所检查，及时主动向所在社区、单位和酒店报告行程，配合并支持相关排查、隔离、核酸筛查、健康监测等管控措施。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rbtNew">
+                            <div class="rank">风险等级: 低</div>
+                            <p class="rbtnBegin" id="back_end">到达地: 北京</p>
+                            <p class="rgtnN">进入政策</p>
+                            <div class="rgbnC" id="back_end_policy">
+                                <p>疫情高风险地区来返甘人员，须集中隔离14天，其间进行不少于两次核酸检测。疫情中风险地区来返甘人员，须提供7日内核酸检测阴性证明，落实居家健康监测措施，并于第7～10天进行一次核酸检测。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="footer1">
+        <a href="index.html">首页</a><a href="virus.html">数据</a><a href="forum.html">动态</a>
+    </div>
+    <div class="footer2">© 2021 made by tabula rasa</div>
+    <div class="returnTop"><img src="images/returnTop.png" alt=""></div>
+</body>
+
+</html>

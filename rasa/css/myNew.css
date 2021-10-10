@@ -1,0 +1,1052 @@
+.nav {
+    position: fixed;
+    /* background: rgb(113, 224, 146); */
+    background: #fff;
+    z-index: 999;
+}
+
+.nav #logo {
+    line-height: 50px;
+}
+
+.nav .return {
+    position: absolute;
+    top: 21px;
+    left: 12px;
+}
+
+.navShow {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 900px;
+    height: 100%;
+    /* background: rgb(212, 84, 195); */
+}
+
+.navShow>div {
+    float: left;
+    position: absolute;
+    top: 37%;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    /* background: rgb(122, 53, 150); */
+}
+
+
+
+.navShow .search p,
+.navShow .ring p,
+.navShow .write p {
+    position: absolute;
+    top: 0%;
+    right: 10px;
+    height: 100%;
+    padding: 0 10px;
+    line-height: 43px;
+    text-align: right;
+    font-size: 30px;
+    color: rgba(0, 0, 0, .5);
+}
+
+
+.navShow .ring {
+    padding: 8px 0 0 60px;
+    top: 17px;
+    right: 187px;
+    color: rgb(133, 144, 166);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .ring p {
+    color: rgb(133, 144, 166);
+    /* background: pink; */
+}
+
+.navShow .ring .ringContent,
+.navShow .person .personContent {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 53px;
+    left: -32px;
+    width: 111px;
+    border-radius: 0 0 20px 20px;
+    background: #fff;
+    z-index: 999;
+}
+
+.navShow .person .personContent {
+    top: 59px;
+    left: -28px;
+}
+
+.navShow .ring .ringContent span,
+.navShow .person .personContent span {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.navShow .ring .ringContent span:last-child,
+.navShow .person .personContent span:last-child {
+    border-radius: 0 0 20px 20px;
+}
+
+.navShow .ring .ringContent span:hover,
+.navShow .person .personContent span:hover {
+    background: rgb(238, 232, 255);
+}
+
+/* .forumthree i.redPoint,
+.navShow .ring span.redPoint {
+    position: absolute;
+    top: 8px;
+    left: 89px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 0, 0, .7);
+    border-radius: 50%;
+} */
+
+.navShow .ring span.ringTixing {
+    top: 0px;
+    left: 34px;
+}
+
+
+
+.navShow .write {
+    padding: 8px 0 0 60px;
+    top: 16px;
+    right: 118px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .write p {
+    color: rgb(245, 193, 21);
+}
+
+.navShow .person {
+    right: 29px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 11px;
+    color: rgb(133, 144, 166);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .person .Img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.navShow .person .Img img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav .navbutton {
+    height: 100%;
+    /* background: rgb(71, 172, 212); */
+}
+
+
+.icon-sousuo1:before {
+    content: "\e613";
+}
+
+.mask {
+    position: relative;
+}
+
+.forumthree {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgb(133, 144, 166);
+}
+
+.icon-return:before {
+    font-size: 33px;
+    color: rgb(202, 171, 235);
+}
+
+.icon-return:hover:before {
+    color: rgba(132, 0, 255, 1);
+}
+
+.banner {
+    position: relative;
+    width: 1345px;
+    margin: 150px auto;
+    font-family: 'Open Sans',
+        sans-serif;
+    background: #fff;
+    padding: 35px 40px 35px 120px;
+    border-radius: 10px;
+    border: 1px solid rgb(248, 243, 255);
+    box-shadow: 2px 2px 2px rgb(202, 171, 235, .5);
+}
+
+.banner .inbanner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px 40px 0 125px;
+    background: rgb(196, 146, 173);
+    background: rgb(242, 242, 245);
+    border-radius: 10px;
+    border: 1px solid rgb(248, 243, 255);
+    /* box-shadow: 2px 2px 2px rgb(202, 171, 235, .5); */
+}
+
+.banner .inbanne .aurPHB {
+    position: absolute;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    transform: translate(-50%, -50%);
+}
+
+.banner .inbanner .aurPh {
+    position: absolute;
+    top: 92px;
+    left: 90px;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: orange;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+.banner .inbanner .aurPh img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .inbanner .editor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    width: 102px;
+    height: 34px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: orange;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.banner .inbanner .editor a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+
+.banner .inbanner .aurT .ATname {
+    font-size: 30px;
+    padding: 14px 0 0 76px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, .7);
+    cursor: default;
+}
+
+.banner .inbanner .aurT .relative {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 75px;
+    color: rgba(0, 0, 0, .4);
+}
+
+.banner .inbanner .aurT .relative p {
+    width: 160px;
+    padding: 10px 0;
+    font-size: 25px;
+    cursor: default;
+}
+
+.banner .inbanner .aurT .relative p span {
+    padding-left: 20px;
+    color: #000;
+}
+
+.banner .inbanner .aurT .data {
+    position: relative;
+    left: -42px;
+    background: #fff;
+    color: rgb(157, 153, 149);
+    padding: 30px 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    margin: 40px 0;
+    box-shadow: 0 0 10px rgb(218, 169, 202);
+}
+
+.banner .inbanner .aurT .data>p {
+    padding: 12px 0;
+    font-size: 20px;
+}
+
+.banner .inbanner .aurT .data>p::before {
+    font-size: 22px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.banner .inbanner .aurT .data>p.up {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.banner .inbanner .aurT .data>p.up::before {
+    font-size: 25px;
+}
+
+.banner .aurForum {
+    width: 100%;
+    /* height: 500px; */
+    border-radius: 10px;
+    border-left: 2px dashed orange;
+    background: rgb(242, 242, 245);
+    padding-bottom: 20px;
+}
+
+
+/* 77777777777777777777777777 ---------------------------------------------*/
+.banner .hotNewBody {
+    width: 86%;
+    margin: 0 auto;
+}
+
+
+.banner .hotNewBody .forum {
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 11px 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 3px solid rgba(194, 128, 255, .4);
+    box-shadow: 0 0 10px rgb(218, 169, 202);
+    border: 1px solid rgba(255, 255, 255);
+    background: #fff;
+}
+
+.banner .hotNewBody .circleBefore {
+    position: absolute;
+    top: 0;
+    left: -102px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: orange;
+}
+
+.banner .hotNewBody .forum .aurther {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 0 30px;
+    margin-top: 10px;
+    /* background: rgb(88, 169, 206); */
+}
+
+.banner .hotNewBody .forum .aurther .delete {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    color: #fff;
+    background: oranges;
+}
+
+.banner .hotNewBody .forum .aurther .photo {
+    width: 80px;
+    height: 100%;
+    margin-right: 15px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.banner .hotNewBody .forum .aurther .photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .hotNewBody .forum .aurther .anName {
+    margin-top: 17px;
+    /* background: pink; */
+    font-family: 'Open Sans Bold',
+        'Open Sans Regular',
+        'Open Sans',
+        sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.banner .hotNewBody .forum .aurther .anTime {
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 14px;
+    color: #7F7F7F;
+}
+
+.banner .hotNewBody .forum .aurtherSay,
+.banner .hotNewBody .forum .aurtherTmg,
+.banner .hotNewBody .forum .forumFooter {
+    width: 82%;
+    /* background: #fff; */
+    margin: 20px auto;
+}
+
+
+.banner .hotNewBody .forum .aurtherSay p {
+    font-family: 'Open Sans',
+        sans-serif;
+    line-height: 35px;
+    font-size: 18px;
+    word-wrap: break-word;
+    padding-left: 5px;
+}
+
+.banner .hotNewBody .forum .aurtherSay p img {
+    width: 25px;
+    vertical-align: text-top;
+}
+
+.AtTip {
+    font-weight: bold;
+    color: rgb(194, 128, 255);
+}
+
+.HtTip {
+    font-weight: bold;
+    color: darkorange;
+}
+
+.banner .hotNewBody .forum .aurtherTmg {
+    width: 710px;
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 200px; */
+    /* background: rgb(64, 94, 179); */
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.banner .hotNewBody .forum .aurtherTmg li {
+    float: left;
+    width: 169px;
+    height: 169px;
+    margin: 0 10px 10px 0;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.banner .hotNewBody .forum .aurtherTmg li:last-child {
+    margin-right: 0px;
+}
+
+.banner .hotNewBody .forum .aurtherTmg li img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .hotNewBody .forum .forumFooter {
+    position: relative;
+    height: 50px;
+    /* margin-bottom: 0px; */
+    /* background: pink; */
+}
+
+.banner .hotNewBody .forum .forumFooter>div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* width: 50px; */
+    height: 50px;
+    padding-left: 45px;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 19px;
+    color: #555555;
+    line-height: 50px;
+    /* background: rgb(68, 184, 192); */
+    cursor: pointer;
+}
+
+.banner .hotNewBody .forum .forumFooter>div span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 35px;
+}
+
+.banner .hotNewBody .forum .forumFooter>div:hover,
+.banner .hotNewBody .forum .forumFooter>div span:hover {
+    color: orange;
+    text-shadow: 1px 1px 3px #fff;
+}
+
+.banner .hotNewBody .forum .forumFooter>div span .banner .hotNewBody .forum .forumFooter .zf {
+    left: 0px;
+}
+
+.banner .hotNewBody .forum .forumFooter .pl {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner .hotNewBody .forum .forumFooter .aixin {
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.banner .hotNewBody .forum .forumFooter .aixin span {
+    color: rgb(85, 85, 85);
+}
+
+.banner .hotNewBody .forum .discuss {
+    /* display: none; */
+    width: 100%;
+    /* height: 50px; */
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    /* background: #fff; */
+
+}
+
+.banner .hotNewBody .forum .discuss .disSelf {
+    position: relative;
+    width: 100%;
+    /* height: 116px; */
+    padding-left: 80px;
+    padding-bottom: 20px;
+    /* background: rgb(52, 133, 165); */
+
+}
+
+.banner .hotNewBody .forum .discuss .disSelf .dsPhoto,
+.banner .hotNewBody .forum .discuss .disOther li.doli span.dlPhoto {
+    position: absolute;
+    top: 0%;
+    left: 13px;
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.banner .hotNewBody .forum .discuss .disOther ul.doUl>li.doli {
+    margin-bottom: 30px;
+}
+
+
+.banner .hotNewBody .forum .discuss .disOther li.doli span.dlPhoto {
+    left: -68px;
+}
+
+.banner .hotNewBody .forum .discuss .disSelf .dsPhoto img,
+.banner .hotNewBody .forum .discuss .disOther li.doli span.dlPhoto img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .hotNewBody .forum .discuss .disSelf #disSelf {
+    width: 100%;
+    min-height: 57px;
+    padding: 10px 0;
+    padding-left: 20px;
+    line-height: 32px;
+    border: 2px solid orange;
+    border: 2px solid rgb(194, 128, 255);
+    border-radius: 13px;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 18px;
+    outline: none;
+    color: rgb(134, 134, 134);
+    resize: none;
+    letter-spacing: 2px;
+}
+
+.banner .hotNewBody .forum .discuss .disSelf #disSelf img {
+    width: 25px;
+    vertical-align: text-top;
+}
+
+.banner .hotNewBody .forum .discuss .disSelf .dsButton {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 7px;
+    /* background: rgb(63, 197, 175); */
+    z-index: 1;
+}
+
+.banner .hotNewBody .forum .discuss .disSelf .dsButton>div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banner .hotNewBody .forum .discuss .disSelf .dsButton .face {
+    left: 0px;
+    font-size: 30px;
+    color: rgb(133, 133, 133);
+}
+
+.banner .hotNewBody .forum .discuss .disSelf .dsButton .tsSend {
+    left: 102px;
+    font-size: 20px;
+    color: rgb(106, 106, 106);
+}
+
+.banner .hotNewBody .forum .discuss .disSelf .dsButton .tsSend input {
+    position: absolute;
+    top: 3px;
+    left: -26px;
+    width: 23px;
+    height: 23px;
+}
+
+.banner .hotNewBody .forum .discuss .disSelf .dsButton .bsbbtn {
+    right: 9px;
+    width: 97px;
+    height: 45px;
+    background: rgb(194, 128, 255);
+    background: orange;
+    border-radius: 21px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.banner .hotNewBody .forum .discuss .disSelf .dsButton .facePrint {
+    position: absolute;
+    top: 212px;
+    left: -7px;
+    width: 79%;
+    min-height: 282px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.banner .discuss .disSelf .dsButton .facePrint ul {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .discuss .disSelf .dsButton .facePrint ul li {
+    list-style: none;
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+.banner .discuss .disSelf .dsButton .facePrint ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* 他人评论 */
+.banner .hotNewBody .forum .discuss .disOther {
+    width: 100%;
+    /* height: 100px; */
+    padding-left: 80px;
+    border-top: 1px solid #ccc;
+    /* background: rgb(196, 92, 161); */
+}
+
+.banner .hotNewBody .forum .discuss .disOther .doChoose {
+    display: flex;
+    cursor: pointer;
+}
+
+.banner .hotNewBody .forum .discuss .disOther .doChoose span {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    padding: 12px 0 0 14px;
+    font-size: 20px;
+    color: rgb(106, 106, 106);
+    /* background: pink; */
+}
+
+
+
+.banner .hotNewBody .forum .discuss .disOther .doChoose span.doc {
+    font-weight: bold;
+    color: orange;
+    color: rgba(194, 128, 255);
+}
+
+.banner .hotNewBody .forum .discuss .disOther li.doli {
+    position: relative;
+    width: 100%;
+    /* height: 50px; */
+    /* padding-left: 80px; */
+    /* background: rgb(192, 150, 60); */
+}
+
+.banner .hotNewBody .forum .discuss .disOther li.doli .bigliContent {
+    display: flex;
+}
+
+.banner .hotNewBody .forum .discuss .disOther li.doli .dlName {
+    color: orange;
+    color: rgba(194, 128, 255);
+    font-size: 18px;
+    padding-right: 22px;
+    /* 强制不换行 */
+    white-space: nowrap;
+    margin-top: 5px;
+    /* text-shadow: 1px 1px 3px darkorange; */
+}
+
+.banner .hotNewBody .forum .discuss .disOther li.doli .dlContent {
+    width: 100%;
+    /* background: #fff; */
+    line-height: 27px;
+    margin-top: 5px;
+    color: rgb(117, 117, 117);
+    border-radius: 5px;
+}
+
+.banner .hotNewBody .forum .discuss .disOther li.doli .dlContent img {
+    width: 25px;
+    vertical-align: bottom;
+}
+
+.banner .hotNewBody .forum .discuss .disOther li.doli .dlTime {
+    font-size: 15px;
+    padding: 2px 9px 2px 0px;
+    /* background: #679; */
+    color: rgb(149, 149, 149);
+    margin-top: 2px;
+}
+
+.banner .hotNewBody .forum .discuss .disOther ul.liInUl {
+    border-radius: 7px;
+    background: rgb(3, 3, 3, .1);
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+
+.banner .inbanner .aurT .editData {
+    position: relative;
+    left: -42px;
+    background: #fff;
+    color: rgb(157, 153, 149);
+    padding: 30px 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    margin: 40px 0;
+    box-shadow: 0 0 10px rgb(218, 169, 202);
+}
+
+.banner .inbanner .aurT .editData form>div {
+    display: flex;
+    align-items: center;
+    padding-left: 66px;
+}
+
+.banner .inbanner .aurT .editData form>div label {
+    position: relative;
+    top: -35px;
+    left: -29px;
+    font-size: 20px;
+    color: rgb(157, 153, 149);
+}
+
+.banner .inbanner .aurT .editData form>div input {
+    outline: none;
+    display: block;
+    width: 805px;
+    height: 50px;
+    padding: 5px 20px 5px;
+    font-size: 18px;
+    background: rgb(240, 241, 244);
+    border-radius: 10px;
+    border: none;
+    color: rgb(157, 153, 149);
+}
+
+.banner .inbanner .aurT .editData form>div p.Tip {
+    margin-top: 10px;
+    margin-bottom: 26px;
+    font-size: 18px;
+}
+
+.banner .inbanner .aurT .editData form .editStatus {
+    position: relative;
+    margin-bottom: 55px;
+}
+
+.banner .inbanner .aurT .editData form .editStatus label {
+    top: 0px;
+}
+
+.banner .inbanner .aurT .editData form .esBoxTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 165px;
+    height: 50px;
+    background: rgb(240, 241, 244);
+    border-radius: 10px;
+    cursor: default;
+    font-size: 20px;
+}
+
+.banner .inbanner .aurT .editData form .esBoxTitle p {
+    font-size: 20px;
+}
+
+.banner .inbanner .aurT .editData form .esBoxContent {
+    position: absolute;
+    top: 52px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    z-index: 1;
+    background: rgb(240, 241, 244);
+}
+
+.banner .inbanner .aurT .editData form .esBoxContent p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 144px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgb(240, 241, 244);
+    cursor: default;
+    font-size: 20px;
+}
+
+.banner .inbanner .aurT .editData form .esBoxContent p:hover {
+    background: #ccc;
+}
+
+.banner .inbanner .aurT .editData form div.editSex {
+    margin-top: 20px;
+}
+
+.banner .inbanner .aurT .editData form div.sexBox {
+    display: flex;
+}
+
+.banner .inbanner .aurT .editData form div.sexBox .sexsmall {
+    height: 0;
+    margin-left: 79px;
+    margin-right: 20px;
+    text-align: center;
+
+}
+
+.banner .inbanner .aurT .editData form div.sexBox input {
+    display: none;
+}
+
+.banner .inbanner .aurT .editData form div.sexBox label {
+    display: inline-block;
+    position: relative;
+    line-height: 50px;
+}
+
+.banner .inbanner .aurT .editData form div.editSex label:nth-child(1) {
+    top: -10px;
+}
+
+
+/* .banner .inbanner .aurT .editData form div.sexBox label:active {
+    background: #EEEEEE;
+} */
+
+.banner .inbanner .aurT .editData form div.sexBox label:after {
+    content: "";
+    /*必须设置*/
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(255, 165, 0);
+    position: absolute;
+    top: 15px;
+    left: -43px;
+    border-radius: 20px;
+}
+
+.banner .inbanner .aurT .editData form div.sexBox input:checked+label:after {
+    background-color: rgb(255, 165, 0);
+}
+
+.banner .inbanner .aurT .editData form div.editAddr {
+    margin-top: 38px;
+}
+
+.banner .inbanner .aurT .editData form div.editAddr label {
+    left: -50px;
+    top: -6px;
+}
+
+.banner .inbanner .aurT .editData form div.eaBox {
+    display: flex;
+    position: relative;
+    left: -21px;
+}
+
+.banner .inbanner .aurT .editData form div.eaBox p {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+    background: rgb(240, 241, 244);
+    border-radius: 10px;
+}
+
+.banner .inbanner .aurT .editData form div.eaBox p input {
+    width: 100%;
+    height: 100%;
+    padding-left: 8px;
+}
+
+.banner .inbanner .aurT .editData form div.eaBox p span.icon-xiasanjiaoxing {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 29px;
+    top: 0;
+    left: 159px;
+    cursor: pointer;
+}
+
+.banner .inbanner .aurT .editData form div.eaBox p span.icon-xiasanjiaoxing:before {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.addressShow {
+    position: fixed;
+    bottom: -615px;
+    width: 100%;
+    height: 600px;
+    overflow: auto;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+    z-index: 100;
+    transition: .5s;
+    box-shadow: 0 0 10px rgb(218, 169, 202);
+}
+
+.addressShow .addeSTitle {
+    height: 70px;
+    line-height: 70px;
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    border-bottom: 1px solid rgba(132, 0, 255, 1);
+    box-shadow: 0 2px;
+}
+
+.addressShow .addeSTitle h1 {
+    float: left;
+    margin-left: 30px;
+    height: 70px;
+}
+
+.addressShow .addeSTitle button {
+    width: 30px;
+    margin-top: 20px;
+    border: 0;
+    height: 30px;
+    float: right;
+    background: url(../images/guanbi.png) no-repeat center center;
+    cursor: pointer;
+}
+
+.addressShow ul.selectBox {
+    width: 100%;
+    height: 100%;
+}
+
+.addressShow ul.selectBox li {
+    width: 100%;
+}
+
+.addressShow ul.selectBox li h1 {
+    font-size: 24px;
+    padding: 20px 45px;
+}
+
+.addressShow ul.selectBox li .selectDiv {
+    display: flex;
+    padding-left: 45px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.addressShow ul.selectBox li .selectDiv span {
+    background-color: rgba(255, 165, 0, .5);
+    color: #fff;
+    height: 60px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 227px;
+    letter-spacing: 10px;
+}

@@ -1,0 +1,518 @@
+.contener {
+    position: relative;
+    width: 1324px;
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.book {
+    float: right;
+    width: 400px;
+    height: 566px;
+    margin-top: 35px;
+    margin-right: 200px;
+    position: relative;
+    /* perspective: 1000px; */
+    transition: 1s;
+    box-shadow: -15px 0 15px -15px inset;
+    border-radius: 0 20px 20px 0;
+}
+
+.book:hover .book>div .page-con:nth-child(1) {
+    transform: perspective(1500px) rotateY(-180deg);
+}
+
+.book>div {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+.book>div .page-con {
+    width: inherit;
+    height: inherit;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: 1s;
+    /* 事件穿透属性,这样就能使点击事件忽略上层设置了穿透的DOM节点，从而到达下层DOM 节点 */
+    pointer-events: none;
+    transform: perspective(1000px) rotateY(0deg);
+}
+.book>div .before,.book>div .after {
+    backface-visibility: hidden;
+}
+
+.book>div .page-con:first-of-type .before-header {
+    width: inherit;
+    height: 450px;
+    /* vertical-align: bottom; */
+    border-radius: 8px 20px 0 0;
+    background-image: url(../images/fengmian.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.book>div .page-con:first-of-type .before {
+    position: relative;
+}
+
+.book>div .page-con:first-of-type .before h1 {
+    padding: 15px 0 0px 34px;
+    color: rgba(0, 0, 0, .7);
+    font-size: 30px;
+    /* color: #fff; */
+    font-weight: bolder;
+}
+
+.menuH span {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/guanli.png) no-repeat center center;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+.book>div .page-con:first-of-type .before .pageB {
+    width: 48px;
+    height: 15px;
+    line-height: 15px;
+    margin-top: 10px;
+    margin-left: 30px;
+    padding: 5px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .4);
+    letter-spacing: 2px;
+}
+
+.book>div .page-con:first-of-type .before .zz {
+    position: absolute;
+    top: 20px;
+    right: 34px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px dashed rgb(196, 146, 173);
+    overflow: hidden;
+    background: #fff;
+}
+
+.book>div .page-con:first-of-type .before .zz img {
+    width: 100%;
+    height: 100%;
+}
+
+.book>div .page-con:first-of-type .before .before-buttom {
+    position: relative;
+    width: inherit;
+    height: 115px;
+    border-radius: 0 0 20px 8px;
+    overflow: hidden;
+    background-color: rgb(214, 181, 198)
+}
+
+.book>div .page-con {
+    position: relative;
+    width: inherit;
+    height: inherit;
+}
+
+.book>div .before {
+    box-shadow: inset 10px 0px 5px 0px rgba(0, 0, 0, 0.29);
+    position: absolute;
+    border-radius: 8px 20px 20px 8px;
+    top: 0;
+    background-size: 100%;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    /* background-color: #fff; */
+}
+
+.book>div .after {
+    border-radius: 20px 8px 8px 20px;
+    /* box-shadow: inset 10px 0px 5px 0px rgba(0, 0, 0, 0.29); */
+    position: absolute;
+    background-size: 100%;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    transform: rotateY(180deg);
+    background-color: #fff;
+}
+
+.book .mask-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 66px;
+    height: 100%;
+    z-index: 9;
+    display: none;
+}
+
+.book .mask-left {
+    position: absolute;
+    top: 0;
+    left: -370px;
+    display: inline-block;
+    width: 66px;
+    height: 100%;
+    z-index: 9;
+    display: none;
+}
+
+.book .left,
+.book .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: 25px 25px;
+    z-index: 10;
+    opacity: 0;
+    transition: .3s;
+    cursor: pointer;
+}
+
+/* .book .left:hover,
+.book .right:hover {
+    opacity: 1;
+} */
+
+.book .right {
+    right: 20px;
+    background: url(../images/youjiantou_huaban.png) no-repeat;
+}
+
+.book .left {
+    left: -350px;
+    background: url(../images/zuojiantou_huaban.png) no-repeat;
+}
+
+.contener .addbook {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    background: #a981dd url(../images/jia.svg) no-repeat center center;
+    background-size: 40px 40px;
+    border-radius: 50%;
+}
+
+.menu {
+    position: relative;
+    float: left;
+    margin-top: 35px;
+    margin-left: 160px;
+    width: 400px;
+    transition: 1s;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 40px;
+    top: 0;
+}
+
+.menu .menuH {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: rgb(196, 146, 173);
+    margin-bottom: 20px;
+
+}
+
+.menu .menuH .page,
+.menu .menuH .now {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu .menuH .now {
+    left: 326px;
+}
+
+.menu .menuH .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    /* box-shadow: 0 0 1px rgba(0, 0, 0, .5); */
+}
+
+.menu .menuH .content .lB,
+.menu .menuH .content .rB {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -24px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.menu .menuH .content .rB {
+    left: 117px;
+}
+
+.menu .menuB {
+    width: 100%;
+    height: 450px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background: #fff;
+    overflow-y: scroll;
+    overflow-x: visible;
+}
+
+.menuB::-webkit-scrollbar {
+    display: none;
+}
+
+.menuB li {
+    width: 100%;
+    height: 70px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.menuB li .right {
+    float: right;
+    width: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    height: 70px;
+    color: #333;
+    line-height: 70px;
+    background-color: rgba(196, 146, 173, .3);
+    border-radius: 10px;
+    padding-left: 7px;
+    /* margin-left: 8px; */
+    /* margin-right: 8px; */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border: 2px dashed rgb(196, 146, 173);
+}
+
+.menuImg {
+    width: 55px;
+    height: 55px;
+    /* background: pink; */
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.menuImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.menuTitle {
+    /* width: 80px; */
+    height: 55px;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+
+.menuTitle .Ttop {
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.menuTitle .Tbottom {
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .5);
+    cursor: default;
+}
+
+.menuB li .out {
+    float: left;
+    width: 70px;
+    height: 70px;
+    line-height: 66px;
+    text-align: center;
+    font-size: 30px;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+    border: 2px dashed rgb(196, 146, 173);
+    border-radius: 15px;
+    background: rgba(196, 146, 173, .3);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.menuF {
+    width: 100%;
+    padding-bottom: 18px;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    bottom: 5px;
+    transform: translateX(-50%);
+}
+
+.guanli {
+    position: absolute;
+    height: 570px;
+    width: 400px;
+    left: 160px;
+    top: -605px;
+    transition: 1s;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.changeTitle {
+    margin-top: 20px;
+    position: relative;
+    width: 360px;
+    margin-left: 20px;
+    height: 50px;
+}
+
+.guanli input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 110px);
+    height: 50px;
+    border: 2px solid #a981dd;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #757575;
+}
+
+.guanli button {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 70px;
+    height: 50px;
+    color: #757575;
+    border: 2px solid #a981dd;
+    border-radius: 0px 10px 10px 0;
+    background-color: #fff;
+    line-height: 46px;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.guanli ul {
+    width: inherit;
+    margin-top: 20px;
+    height: calc(100% - 112px);
+    overflow-y: scroll;
+}
+
+.guanli ul::-webkit-scrollbar {
+    display: none;
+}
+
+.changeTitle span {
+    position: absolute;
+    right: -6px;
+    top: 4px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/shejimulu.png) no-repeat center center;
+    background-size: 37px 27px;
+    cursor: pointer;
+}
+
+.guanli ul li {
+    width: calc(100% / 3 - 24px);
+    display: inline-block;
+    height: 110px;
+    border: 2px solid #a981dd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-right: 10px;
+    margin-top: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+.guanli ul li:nth-child(1) {
+    background-image: url(../images/addImages.png);
+    background-size: 64px;
+}
+
+.guanli ul li:nth-child(1) input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.guanli ul li span {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/shanchuImg.png) no-repeat center center;
+    background-size: 15px 15px;
+}
+
+.guanli ul li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.guanli ul li:nth-child(3n-2) {
+    margin-left: 22px;
+}
+
+/* .guanli ul li:nth-child(2n-1) {
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+} */
+
+.guanli ul li:nth-child(1),
+.guanli ul li:nth-child(2),
+.guanli ul li:nth-child(3){
+    margin-top: 0;
+}
+
+.guanli ul li img {
+    width: 100%;
+}

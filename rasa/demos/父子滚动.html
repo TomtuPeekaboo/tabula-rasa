@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滚动父子</title>
+    <style>
+        .box {
+            position: relative;
+            width: 1344px;
+            height: 900px;
+            background: pink;
+        }
+
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20%;
+            height: 450px;
+            background: rgb(150, 101, 156);
+        }
+
+        .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 78%;
+            background: rgb(99, 105, 180);
+        }
+
+        .right .red {
+            width: 100%;
+            height: 500px;
+            background: rgb(206, 134, 134);
+        }
+
+        .right .top {
+            background: rgb(178, 199, 138);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left" id="left"></div>
+        <div class="right">
+            <div class="red top"></div>
+            <div class="red"></div>
+            <div class="red top"></div>
+        </div>
+    </div>
+    <script>
+        const left = document.querySelector('#left');
+        const removeScroll = (idValue) => {
+            const dom = document.getElementById(idValue);
+            console.log(1, dom);
+            let eventType = 'mousewheel';
+            if (document.mozFullScreen !== undefined) {
+                eventType = 'DOMMouseScroll';
+            }
+            if (dom) {
+                dom.addEventListener(eventType, function (event) {
+                    if (event) {
+                        let scrollTop = this.scrollTop,
+                            scrollHeight = this.scrollHeight,
+                            height = this.clientHeight;
+
+                        const delta = (event.wheelDelta) ? event.wheelDelta : -(event.detail || 0);
+
+                        if ((delta > 0 && scrollTop <= delta) || (delta < 0 && scrollHeight - height -
+                                scrollTop <= -1 * delta
+                            )) { // IE浏览器下滚动会跨越边界直接影响父级滚动，因此，临界时候手动边界滚动定位 this.scrollTop=delta> 0 ? 0 : scrollHeight;
+                            // 向上滚 || 向下滚
+                            event.preventDefault();
+                        }
+                    }
+                })
+            }
+        }
+        removeScroll('left'); // domId替换为实际的元素id
+    </script>
+</body>
+
+</html>

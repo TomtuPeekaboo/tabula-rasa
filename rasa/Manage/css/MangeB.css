@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    width: 1464px;
+    height: 100vh;
+}
+
+.left {
+    float: left;
+    width: 224px;
+    height: inherit;
+    background-color: rgba(238, 232, 255, 1);
+}
+
+.left-header {
+    width: 100%;
+    height: 64px;
+    color: #C280FF;
+    line-height: 64px;
+    text-align: center;
+}
+
+.left-header span {
+    display: inline-block;
+    width: 173px;
+    height: 32px;
+    line-height: 32px;
+    background-color: rgba(255, 255, 255, 0.458823529411765);
+    font-family: 'Impact Normal',
+        'Impact',
+        sans-serif,
+        PingFangSC-Regular,
+        Helvetica,
+        Arial,
+        Microsoft Yahei,
+        sans-serif;
+}
+
+.left ul {
+    width: 100%;
+    height: calc(100% - 64px);
+}
+
+.left ul li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.left ul li a {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    padding-left: 45px;
+    box-sizing: border-box;
+    color: rgba(99, 0, 191, 0.447058823529412);
+}
+
+.left ul li:nth-child(1) a {
+    background-image: url(../img/user.svg);
+    background-position: 18px center;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+}
+
+.left ul li:nth-child(2) a {
+    background-image: url(../img/shejiao.svg);
+    background-position: 18px center;
+    background-repeat: no-repeat;
+    background-size: 17px 13px;
+}
+
+.left ul li a.atn {
+    color: #fff;
+    font-weight: 700;
+    background-color: rgba(194, 128, 255, 0.498039215686275);
+    ;
+}
+
+.right {
+    float: left;
+    width: calc(100% - 224px);
+    height: inherit;
+}
+
+.right .right-head {
+    width: 100%;
+    height: 64px;
+    background-color: rgba(248, 243, 255, 1);
+    border: 1px solid rgba(233, 233, 233, 1);
+}
+
+.delete-frame,
+.pushTop-frame {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 492px;
+    height: 303px;
+    background-color: #f8f3ff;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 40%);
+    z-index: 100;
+    border-radius: 10px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.delete-frame .delete-header,
+.pushTop-header {
+    font-size: 20px;
+    height: 62px;
+    line-height: 62px;
+    width: 100%;
+    border-bottom: 1px solid rgba(194, 128, 255, 1);
+}
+
+.delete-frame .delete-header .delete-left,
+.pushTop-frame .pushTop-header .pushTop-left {
+    float: left;
+    font-size: 22px;
+    color: rgba(99, 0, 191, 0.772549019607843);
+}
+
+.delete-frame .delete-header .delete-right,
+.pushTop-frame .pushTop-header .pushTop-right {
+    float: right;
+    width: 18px;
+    height: inherit;
+    background: url(../images/delete.svg) no-repeat center center;
+    background-size: 18px 18px;
+    cursor: pointer;
+}
+
+
+.delete-frame .delete-bottom p,
+.pushTop-frame .pushTop-bottom p {
+    margin-top: 25px;
+    line-height: 30px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.delete-frame .delete-bottom input,
+.pushTop-frame .pushTop-bottom input {
+    width: 440px;
+    height: 44px;
+    border: 0;
+    border: 1px solid rgba(194, 128, 255, 1);
+    outline: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #fff;
+    padding-left: 10px;
+}
+
+.delete-frame .button,
+.pushTop-frame .button {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    width: 400px;
+    transform: translateX(-50%);
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.delete-frame .button button,
+.pushTop-frame .button button {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-frame .button button:nth-child(1),
+.pushTop-frame .button button:nth-child(1) {
+    background-color: #c280ff;
+    color: #fff;
+    margin-right: 40px;
+}
+
+.delete-frame .button button:nth-child(2),
+.pushTop-frame .button button:nth-child(2) {
+    border: 1px solid rgba(194, 128, 255, 1);
+    color: rgba(99, 0, 191, 0.772549019607843);
+    background-color: #fff;
+}

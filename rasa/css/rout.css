@@ -1,0 +1,406 @@
+.start {
+    margin: 0 auto;
+    margin-top: 26px;
+    width: 1345px;
+    font-weight: 700;
+    height: 247px;
+    background-color: rgba(127, 101, 166, 1);
+    border: 1px solid rgba(88, 89, 161, 1);
+    text-shadow: 2px 5px 0px rgb(128 128 255 / 100%);
+    color: #fff;
+    font-size: 42px;
+    text-align: center;
+    line-height: 247px;
+    border-radius: 30px;
+}
+
+.change {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 35px;
+    height: 60px;
+    line-height: 60px;
+    width: 1345px;
+    border: 1px solid rgba(132, 0, 255, 1);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.change-left,
+.change-right {
+    position: relative;
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+    color: #C280FF;
+    z-index: 7;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.change-left {
+    color: #fff;
+}
+
+.changebutton {
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 58px;
+    background-color: rgba(202, 171, 235, 1);
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.tip {
+    width: 1345px;
+    margin: 0 auto;
+    color: #333;
+    font-size: 24px;
+    line-height: 40px;
+    margin-top: 50px;
+}
+
+/* 验证表单 */
+.form {
+    width: 617px;
+    height: 497px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(88, 89, 161, 1);
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    padding: 45px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.form h1 {
+    text-align: left;
+    font-size: 36px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #5859A1;
+}
+
+.form p {
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: #5859A1;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.form input {
+    width: 519px;
+    height: 72px;
+    padding: 3px 2px 3px 2px;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid rgb(118, 118, 118, .5);
+}
+
+.form button {
+    width: 519px;
+    height: 54px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 54px;
+    border: 0;
+    background-color: rgba(88, 89, 161, 0.529411764705882);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* 选择框 */
+.search {
+    width: 1345px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.select {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: calc(100% - 2px);
+    height: 58px;
+    line-height: 60px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    /* box-sizing: border-box; */
+    border: 1px solid rgba(132, 0, 255, 1);
+    margin-bottom: 30px;
+}
+
+.selectCity {
+    display: table;
+    position: fixed;
+    left: 0;
+    font-size: 20px;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    line-height: 30px;
+    /* height: 140px; */
+    background-color: #caabeb;
+    border-radius: 0 10px 10px 0;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.search .tip {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    line-height: 80px;
+    margin-bottom: 50px;
+}
+
+.selectCity span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.select-box {
+    position: fixed;
+    bottom: -600px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+    z-index: 100;
+    transition: .5s;
+}
+
+.select-box .select-box-title {
+    height: 70px;
+    line-height: 70px;
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    border-bottom: 1px solid rgba(132, 0, 255, 1);
+    background: url(../images/qiehuan.png) no-repeat 30px center;
+}
+
+.select-box .select-box-title h1 {
+    float: left;
+    margin-left: 30px;
+    height: 70px;
+}
+
+.select-box .select-box-title p {
+    float: left;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.select-box .select-box-title button {
+    width: 30px;
+    margin-top: 20px;
+    border: 0;
+    height: 30px;
+    float: right;
+    background: url(../images/guanbi.png) no-repeat center center;
+    cursor: pointer;
+}
+
+.select-mask {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.select-frame {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.select-box .select-box-content {
+    width: 1400px;
+    height: 529px;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+.select-box .select-box-content::-webkit-scrollbar {
+    display: none;
+}
+
+.select-box h1 {
+    font-size: 24px;
+}
+
+.select-box .select-box-content li {
+    margin-top: 15px;
+}
+
+.select-box .select-box-content li .city {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select-box .select-box-content li .city span {
+    background-color: #caabeb;
+    color: #fff;
+    height: 60px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: calc(100% / 4 - 50px);
+}
+
+.select div[class^="select-"] {
+    width: calc(100% / 2);
+    height: 58px;
+}
+
+.search .select select {
+    border: 0;
+    outline: none;
+}
+
+.search .search-content,
+.tongbao ul li {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 20px;
+    border: 1px solid rgba(132, 0, 255, 1);
+}
+
+.search .search-content .title {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(132, 0, 255, 1);
+    background: url(../images/yonghu.svg) no-repeat 10px center;
+}
+
+.search .search-content .title h3 {
+    float: left;
+    font-size: 24px;
+}
+
+.search .search-content .title p {
+    font-size: 20px;
+    float: left;
+    margin-left: 10px;
+}
+
+.search .search-content .bottom {
+    width: 100%;
+    height: auto;
+}
+
+.search .search-content .bottom h3 {
+    margin-top: 15px;
+    font-size: 24px;
+    padding-left: 50px;
+    background: url(../images/guijichaxun.png) no-repeat 10px center;
+}
+
+.search .search-content .bottom ul {
+    width: 100%;
+    margin-top: 15px;
+    /* padding: 0 20px; */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.search .search-content .bottom ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 0 44px;
+    background: url(../images/point.png) no-repeat 16px center;
+    background-size: 20px;
+}
+
+.tongbao ul {
+    width: 1290px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.tongbao ul li {
+    width: 100%;
+}
+
+.tongbao ul li h1::before {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: url(../images/biaoti.png) no-repeat center;
+}
+
+.tongbao ul li h1 {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(132, 0, 255, 1);
+}
+
+.tongbao ul li p {
+    display: inline-block;
+    padding: 26px;
+    line-height: 35px;
+    color: rgba(0, 0, 0, 0.647058823529412);
+    font-size: 18px;
+    box-sizing: border-box;
+    padding-bottom: 0;
+}
+
+.tongbao ul li a {
+    padding: 7px 26px;
+    display: inline-block;
+    color: #1890FF;
+    line-height: 22px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tongbao {
+    display: none;
+}

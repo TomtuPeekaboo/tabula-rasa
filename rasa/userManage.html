@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userManage</title>
+    <link rel="stylesheet" href="Manage/css/MangeB.css">
+    <link rel="stylesheet" href="Manage/css/userManage.css">
+    <script src="js/main.js"></script>
+    <script src="Manage/js/userManage.js" type="module"></script>
+    <script src="js/stopBS.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="left-header">
+                <span>战疫情！我们在行动</span>
+            </div>
+            <ul>
+                <li><a href="userManage.html" class="atn">用户管理</a></li>
+                <li><a href="forumManage.html">动态管理</a></li>
+            </ul>        
+        </div>
+        <div class="right">
+            <div class="right-head"></div>
+            <div class="Box">
+                <div class="header">
+                    <form action="">
+                        <div class="userId">
+                            <label for="">用户ID：</label>
+                            <input type="text" placeholder="请输入用户ID" id="id">
+                        </div>
+                        <div class="userPhoto">
+                            <label for="">用户昵称</label>
+                            <input type="text" placeholder="请输入用户昵称" id="username">
+                        </div>
+                        <div class="userTime">
+                            <label for="">用户手机</label>
+                            <input type="text" placeholder="请输入用户手机号码" id="phone">
+                        </div>
+                        <div class="userstatus">
+                            <label for="">账户状态：</label>
+                            <input type="text" placeholder="全部状态" id="statusInput">
+                            <div class="more"></div>
+                            <div class="kinds" style="display: none;">
+                                <ul>
+                                    <li>正常</li>
+                                    <li>已注销</li>
+                                    <li>锁定中</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="find">搜索</div>
+                    </form>
+                </div>
+                <p class="dataNum">共搜索到89条数据</p>
+                <div class="body">
+                    <table cellspacing=0>
+                        <tr>
+                            <th class="square"><span class="bg"></span></th>
+                            <th class="aurId">用户ID</th>
+                            <th class="aurName">用户昵称</th>
+                            <th class="aurPhoto">用户头像</th>
+                            <th class="aurphone">手机号</th>
+                            <th class="aurTime">注册时间</th>
+                            <th class="aurStatus">状态</th>
+                            <th class="action">操作</th>
+                        </tr>
+                        <!-- <tr>
+                            <td class="square"><span></span></td>
+                            <td class="aurId">12455</td>
+                            <td class="aurName">爱喝可乐的一名小志愿者</td>
+                            <td class="aurPhoto">
+                                <div class="aurImg"><img src="" alt=""></div>
+                            </td>
+                            <td class="aurphone">15707685419</td>
+                            <td class="aurTime">2020-22-22</td>
+                            <td class="aurStatus">已注销</td>
+                            <td class="action">
+                                <p class="read"><a href="#">查看</a></p>
+                                <p class="lock"><a href="#">删除</a></p>
+                            </td>
+                        </tr> -->
+                    </table>
+                </div>
+                <div class="page">
+                    <ul>
+                        <li class="beforePage"></li>
+                        <li class="purple">1</li>
+                        <!--                        <li>2</li>-->
+                        <!--                        <li>3</li>-->
+                        <!--                        <li>4</li>-->
+                        <!--                        <li>5</li>-->
+                        <!--                        <li>6</li>-->
+                        <!--                        <li>7</li>-->
+                        <!--                        <li>8</li>-->
+                        <!--                        <li>9</li>-->
+                        <li class="nextPage"></li>
+                        <li class="sum">10条/页</li>
+                        <li class="leap">5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

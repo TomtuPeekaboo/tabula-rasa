@@ -1,0 +1,439 @@
+.nav {
+    position: fixed;
+    /* background: rgb(113, 224, 146); */
+    background: #fff;
+    z-index: 999;
+}
+
+.nav #logo {
+    line-height: 53px;
+}
+
+.nav .return {
+    position: absolute;
+    top: 21px;
+    left: 12px;
+}
+
+.navShow {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 900px;
+    height: 100%;
+    /* background: rgb(212, 84, 195); */
+}
+
+.navShow>div {
+    float: left;
+    position: absolute;
+    top: 37%;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    /* background: rgb(122, 53, 150); */
+}
+
+
+.navShow .search .findBtn,
+.navShow .ring p,
+.navShow .write p {
+    position: absolute;
+    top: 0%;
+    right: 10px;
+    height: 100%;
+    padding: 0 10px;
+    line-height: 43px;
+    text-align: right;
+    font-size: 30px;
+    color: rgba(0, 0, 0, .5);
+}
+
+
+.navShow .ring {
+    padding: 8px 0 0 60px;
+    right: 187px;
+    top: 16px;
+    color: rgb(133, 144, 166);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .ring p {
+    color: rgb(133, 144, 166);
+    /* background: pink; */
+}
+
+.navShow .ring .ringContent,
+.navShow .person .personContent {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 54px;
+    left: -32px;
+    width: 111px;
+    border-radius: 0 0 20px 20px;
+    background: #fff;
+    z-index: 999;
+}
+
+.navShow .person .personContent {
+    top: 59px;
+    left: -28px;
+}
+
+.navShow .ring p.ringNew {
+    display: flex;
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    justify-content: center;
+    align-items: center;
+    left: 32px;
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.forumthree {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgb(133, 144, 166);
+}
+
+/* .forumthree i.redPoint,
+.navShow .ring span.redPoint {
+    position: absolute;
+    top: 0px;
+    left: 68px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 0, 0, .7);
+    border-radius: 50%;
+} */
+
+.navShow .ring span.ringTixing {
+    top: 0px;
+    left: 34px;
+}
+
+.navShow .ring .ringContent span,
+.navShow .person .personContent span {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.navShow .ring .ringContent span:last-child,
+.navShow .person .personContent span:last-child {
+    border-radius: 0 0 20px 20px;
+}
+
+.navShow .ring .ringContent span:hover,
+.navShow .person .personContent span:hover {
+    background: rgb(238, 232, 255);
+}
+
+
+
+.navShow .write {
+    padding: 8px 0 0 60px;
+    right: 118px;
+    top: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .write p {
+    color: rgb(245, 193, 21);
+}
+
+.navShow .person {
+    right: 29px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 11px;
+    color: rgb(133, 144, 166);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navShow .person .Img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.navShow .person .Img img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav .navbutton {
+    height: 100%;
+}
+
+
+.icon-sousuo1:before {
+    content: "\e613";
+}
+
+.mask {
+    position: relative;
+}
+
+.banner {
+    position: relative;
+    width: 1345px;
+    /* height: 500px; */
+    /* min-height: 1500px; */
+    margin: 150px auto;
+    /* border: 1px solid rgba(88, 89, 161, 1); */
+    border-radius: 30px;
+    font-family: 'Open Sans',
+        sans-serif;
+}
+
+.nav .return {
+    position: fixed;
+
+}
+
+
+.icon-return:before {
+    font-size: 33px;
+    color: rgb(202, 171, 235);
+}
+
+.icon-return:hover:before {
+    color: rgba(132, 0, 255, 1);
+}
+
+
+.banner .change {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 35px;
+    height: 60px;
+    line-height: 60px;
+    width: 1345px;
+    border: 1px solid rgba(132, 0, 255, 1);
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    color: #C280FF;
+}
+
+.change>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    z-index: 7;
+    cursor: pointer;
+}
+
+.change .changeBtn {
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+    width: 33.6%;
+    height: 100%;
+    background-color: rgba(202, 171, 235, 1);
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.zanBox,
+.atBox,
+.pl {
+    width: 1345px;
+    /* height: 100px; */
+    margin: 30px auto;
+}
+
+.forum {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 35px;
+    padding: 20px 40px 35px 120px;
+    border-radius: 10px;
+    border: 1px solid rgb(248, 243, 255);
+    box-shadow: 2px 2px 2px rgb(202, 171, 235, .5);
+
+}
+
+.forum .photo {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.forum .photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.forum .name {
+    padding-top: 16px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    /* background: rgb(198, 221, 97); */
+}
+
+.forum .time {
+    padding: 5px 0;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .4);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forum .new {
+    margin: 10px 0;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .7);
+    line-height: 28px;
+}
+
+.forum .content {
+    font-size: 16px;
+    padding: 20px;
+    margin-top: 20px;
+    background: rgb(242, 242, 245);
+    border-radius: 5px;
+}
+
+.forum .content .atname {
+    padding-top: 16px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgba(0, 0, 0, .7);
+}
+
+.forum .wenAn {
+    padding: 20px 0;
+}
+
+.forum .wenAn img {
+    width: 25px;
+    height: 25px;
+    vertical-align: bottom;
+}
+
+.atBox .content {
+    top: 40px;
+    left: -99px;
+}
+
+.forumPhoto {
+    width: 715px;
+    /* height: 150px; */
+    margin-bottom: 20px;
+}
+
+.forumPhoto li {
+    float: left;
+    width: 170px;
+    height: 170px;
+    background: rgb(248, 243, 255);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.forumPhoto li img {
+    width: 100%;
+    height: 100%;
+}
+
+.forumPhoto li:last-child {
+    margin-right: 0px;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fbTime {
+    color: rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+
+.atname {
+    color: rgba(132, 0, 255, .6);
+    cursor: pointer;
+}
+
+.banner div.centerC .hotNewBody .forum .aurtherTmg {
+    width: 710px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.forumPhoto li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 169px;
+    height: 169px;
+    margin: 0 10px 10px 0;
+    background: #fff;
+    border: 1px solid rgb(255, 165, 0);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+#videoli {
+    width: 710px;
+    height: 400px;
+}
+
+.videobox2 {
+    position: relative;
+    top: 3px;
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.videobox2 video::-webkit-media-controls {
+    display: none !important;
+}

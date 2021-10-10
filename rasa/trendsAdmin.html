@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态管理</title>
+    <link rel="stylesheet" href="Manage/css/base.css">
+    <link rel="stylesheet" href="Manage/css/trendsAdmin.css">
+    <script src="Manage/js/trendsAdmin.js" type="module"></script>
+    <script src="js/stopBS.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="left-header">
+                <span>战疫情！我们在行动</span>
+            </div>
+            <ul>
+                <li><a href="userManage.html" class="atn">用户管理</a></li>
+                <li><a href="forumManage.html">动态管理</a></li>
+                <!-- <li><a href="#">疫情公告管理</a></li> -->
+            </ul>
+        </div>
+        <div class="right">
+            <div class="right-head"></div>
+            <div class="right-bottom">
+                <div class="skipLast"><a href="forumManage.html" style="color: #fff;">返回上一级</a></div>
+            </div>
+            <table cellspacing=0>
+                <thead>
+                    <tr>
+                        <th>动态ID</th>
+                        <th>用户昵称</th>
+                        <th>发布时间</th>
+                        <th>热度</th>
+                        <th>评论数</th>
+                        <th>点赞数</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="id"></td>
+                        <td class="user"></td>
+                        <td class="time"></td>
+                        <td class="redu"></td>
+                        <td class="pinglun"></td>
+                        <td class="dianzan"></td>
+                        <td>
+                            <span class="delete">删除</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="trends">
+                <div class="banner-head">动态详情</div>
+                <div class="img">
+                </div>
+                <div class="text"> </div>
+            </div>
+            <!-- 页尾 -->
+            <div class="footer1">
+                <a href="trendsManage.html">动态管理</a><a href="userManage.html">用户管理</a>
+            </div>
+            <div class="footer2">© 2021 made by tabula rasa</div>
+        </div>
+        <div class="clear" style="clear: both;"></div>
+    </div>
+    <div class="delete-frame">
+        <div class="delete-header">
+            <div class="delete-left">删除动态</div>
+            <div class="delete-right"></div>
+        </div>
+        <div class="delete-bottom">
+            <p>确认删除当前动态吗？删除后所有用户将无法看到该动态，但动态的相关互动消息不会消失。</p>
+            <input id="delete-input" type="password" name="" id="" placeholder="请输入管理员密码校验身份" autocomplete="off">
+        </div>
+        <div class="button">
+            <button class="delete-right">取消</button>
+            <button class="sure">确定</button>
+        </div>
+    </div>
+    <div class="big-mask">
+        <div class="img-box"><img src="" alt=""></div>
+        <div class="mask-left">
+        </div>
+        <div class="mask-right"></div>
+        <div class="mask-load"></div>
+        <div class="mask-rotate"></div>
+    </div>
+</body>
+
+</html>

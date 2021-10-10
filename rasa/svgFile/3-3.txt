@@ -1,0 +1,1 @@
+<image class="bg" width="395" x="0" y="0" href="file:///D:/VScode/rs/Techobg/29.png"></image><foreignObject width="395" height="616" style="position:relative"></foreignObject>

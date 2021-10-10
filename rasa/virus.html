@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>virus</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/virus.css">
+    <link rel="stylesheet" href="css/base1.css">
+    <link rel="stylesheet" href="css/base2.css">
+    <script src="js/main.js"></script>
+    <script src="js/virus.js"></script>
+    <script src="js/stopBS.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="nav">
+        <div class="logo">战疫情！我们在行动</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="virus.html">数据</a></li>
+            <li><a href="makeTecho.html">手账</a></li>
+            <li><a href="forum.html">论坛</a></li>
+            <li><a href="signIn.html">登录</a></li>
+        </ul>
+        <div class="navbutton">
+             <span class="span1"></span>
+            <span class="span2"></span>
+        </div>
+    </div>
+    <div class="mask">
+
+    </div>
+    <!-- 轮播图 -->
+    <div class="slideShow">
+        <!-- 框 -->
+        <div class="slideSmall" id="slideSmall">
+            <!-- 轮播部分 -->
+            <div class="box">
+                <ul class="rightImg">
+                    <li>
+                        <div class="card">
+                            <h2>国内疫情数据</h2>
+                            <div class="look">
+                                <a href="dataDetile.html">查看详情数据</a>
+                            </div>
+                            <div class="cell">
+                                <div class="smallCell">
+                                    <div class="leftCell">
+                                        <img src="img/smallCell1.png" alt="1">
+                                    </div>
+                                    <div class="rightCell">
+                                        <p class="top">境外输入</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-up"></span>同比昨天</p>
+                                    </div>
+                                </div>
+                                <div class="smallCell">
+                                    <div class="leftCell">
+                                        <img src="img/smallCell2.png" alt="2">
+                                    </div>
+                                    <div class="rightCell">
+                                        <p class="top">无症状感染者</p>
+                                        <p class="center"></p>
+                                        <p class="bottom" id='wzzgR'><span class="data-rate-up"></span>同比昨天</p>
+                                    </div>
+                                </div>
+                                <div class="smallCell">
+                                    <div class="leftCell">
+                                        <img src="img/smallCell3.png" alt="3">
+                                    </div>
+                                    <div class="rightCell">
+                                        <p class="top">现有确诊</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-up"></span>同比昨天</p>
+                                    </div>
+                                </div>
+                                <div class="smallCell">
+                                    <div class="leftCell">
+                                        <img src="img/smallCell4.png" alt="4">
+                                    </div>
+                                    <div class="rightCell">
+                                        <p class="top">累计确诊</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-up"></span>同比昨天</p>
+                                    </div>
+                                </div>
+                                <div class="smallCell">
+                                    <div class="leftCell">
+                                        <img src="img/smallCell5.png" alt="5">
+                                    </div>
+                                    <div class="rightCell">
+                                        <p class="top">累计治愈</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-down"></span>同比昨天</p>
+                                    </div>
+                                </div>
+                                <div class="smallCell">
+                                    <div class="leftCell">
+                                        <img src="img/smallCell6.png" alt="6">
+                                    </div>
+                                    <div class="rightCell">
+                                        <p class="top">累计死亡</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-up"></span>同比昨天</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card card2">
+                            <h2>新型冠状病毒</h2>
+                            <div class="cell">
+                                <div class="virusLeft">
+                                    <div class="vlTop">
+                                        <i>新型冠状病毒肺炎(Corona Virus Disease 2019,COVID-
+                                            19)，简称“新冠肺炎”，世界卫生组织命名为“2019冠状病毒病”，是指2019新型冠状病毒感染导致的肺炎。<br>其主要症状有:</i>
+                                    </div>
+                                    <div class="vlBottom">
+                                        <ul id="vlbUl">
+                                            <li>发热</li>
+                                            <li>咳嗽</li>
+                                            <li>肌肉酸痛</li>
+                                            <li>头痛</li>
+                                            <li>乏力</li>
+                                            <li>呼吸困难</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="virusRight">
+                                    <img src="img/rightImg2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bigc3r" style="top: 0px;">
+                            <div class="card card3">
+                                <div class="c3L"><img src="img/card31.png" alt=""></div>
+                                <div class="c3R">
+                                    <h2>直接传播</h2>
+                                    <p><span style="font-weight: bold;">direct transmission</span></p>
+                                    <p>通过病人擤鼻涕、吐痰、打喷嚏、咳嗽时候产生的飞沫，携带病毒直接传染健康人。</p>
+                                </div>
+
+                            </div>
+                            <div class="card card3">
+                                <div class="c3L"><img src="img/card32.png" alt=""></div>
+                                <div class="c3R">
+                                    <h2>接触传播</h2>
+                                    <p><span style="font-weight: bold;">contact transmission </span></p>
+                                    <p>病人在用身体的某个部位（通常是手）接触了口鼻眼后携带了大量冰毒，摸到门把手、或者是物品表面，致使该物体被另一个人摸到后，形成了间接传染</p>
+                                </div>
+                            </div>
+                            <div class="card card3">
+                                <div class="c3L"><img src="img/card33.png" alt=""></div>
+                                <div class="c3R">
+                                    <h2>气溶胶传播</h2>
+                                    <p><span style="font-weight: bold;">airborne transmission </span></p>
+                                    <p>病人喷出的含有病毒的飞沫混合在空气中，形成”气溶胶”，吸入后导致感染；与飞沫直接传染不同的是，气溶胶可以在空气中悬浮很久，造成不知不觉的潜在感染</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c3rCircle" id="c3rCircle">
+                            <div class="c3rc1 c3rc2"></div>
+                            <div class="c3rc1"></div>
+                            <div class="c3rc1"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card card4">
+                            <div class="string" id="time">
+                                <div class="c4Circle"></div>
+                                <p>2021-10-01</p>
+                                <p class="nowTime">2021-10-01</p>
+                                <p>2021-10-02</p>
+                            </div>
+                            <div class=" case">
+                                <p>国家卫健委：本次疫情传播链条多、速度快、范围广</p>
+                            </div>
+                            <div class="case1 case">
+                                <p>国家卫健委：全国新冠疫苗完成全程接种超10.7亿人</p>
+                            </div>
+                            <div class="case2 case">
+                                <p>国家卫健委：疫情防控期间，各级医疗机构不得以任何理由推诿、拒绝患者</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card card5">
+                            <div class="step">
+                                <div class="s1L"><img src="img/c5Step1.png" alt=""></div>
+                                <div class="s1R">
+                                    <p>疫情防范要科学</p>
+                                    <p>接种疫苗是关键</p>
+                                    <p>核酸检测不能少</p>
+                                </div>
+                            </div>
+                            <div class="step step2">
+                                <p class="s2P"><a href="query.html" id="ymjz">疫苗接种点及核酸检测点查询</a></p>
+                            </div>
+                            <div class="step step3">
+                                <div class="s3T">
+                                    <div class="s3tImg"><img src="img/c5Step2.png" alt=""></div>
+                                    <p class="s3tp">查看疫情总览，出行更安心</p>
+                                </div>
+                                <div class="s3B">
+                                    <p><a href="rout.html">全球总览及新闻资讯</a></p>
+                                </div>
+                            </div>
+                            <div class="step step3">
+                                <div class="s3T">
+                                    <div class="s3tImg"><img src="img/c5Step3.png" alt=""></div>
+                                    <p class="s3tp">遵守隔离政策</p>
+                                </div>
+                                <div class="s3B">
+                                    <p><a href="isolate.html" name="glzc">国内各地区隔离政策查询</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 左边导航 -->
+
+            <ol class="lift">
+                <li><a href="javascript:;" class="liftText">疫情数据</a></li>
+                <li><a href="javascript:;">疫情症状</a></li>
+                <li><a href="javascript:;">传播途径</a></li>
+                <li><a href="javascript:;">疫情公告</a></li>
+                <li><a href="javascript:;">疫情服务</a></li>
+                <div class="liftCircle"></div>
+            </ol>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer1">
+        <a href="index.html">首页</a><a href="virus.html">数据</a><a href="forum.html">动态</a>
+    </div>
+    <div class="footer2">© 2021 made by tabula rasa</div>
+</body>
+
+</html>

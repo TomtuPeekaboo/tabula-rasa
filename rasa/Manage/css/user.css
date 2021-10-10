@@ -1,0 +1,162 @@
+.right-bottom-mid {
+    width: 1166px;
+    height: 104px;
+    line-height: 104px;
+    color: #666666;
+    background-color: #f8f3ff;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.right-bottom-mid .touxiang {
+    float: left;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: #fff;
+    vertical-align: middle;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+
+.right-bottom-mid .mid {
+    position: relative;
+    float: left;
+    height: 66px;
+    width: 900px;
+}
+
+.right-bottom-mid .mid .tou {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 30px;
+    height: 30px;
+}
+
+.right-bottom-mid .mid .name {
+    display: inline-block;
+    font-weight: 700;
+    margin-right: 8px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.right-bottom-mid .mid .zhaungtai {
+    display: inline-block;
+    width: 46px;
+    height: 21px;
+    text-align: center;
+    line-height: 21px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #a981dd;
+}
+
+.right-bottom-mid .mid .wei {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 21px;
+    line-height: 21px;
+    font-size: 13px;
+    color: #989898;
+}
+
+.right-bottom-mid .mid .wei div {
+    display: inline-block;
+}
+
+.right-bottom-mid .mid .wei .id {
+    margin-right: 40px;
+}
+
+.right-bottom-mid .lockUser {
+    float: right;
+    margin-right: 20px;
+    width: 92px;
+    margin-top: 30px;
+    height: 35px;
+    font-size: 14px;
+    background-color: #a981dd;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.basic,
+.message,
+.dongtai {
+    margin-top: 20px;
+    background-color: #f8f3ff;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 1166px;
+}
+
+.banner-head {
+    margin-top: 5px;
+    font-size: 22px;
+    color: rgba(99, 0, 191, 0.772549019607843);
+    font-weight: 650;
+    text-indent: 2px;
+    margin-bottom: 10px;
+}
+
+.basic ul li,
+.message ul li {
+    font-size: 14px;
+    line-height: 30px;
+    color: #989898;
+}
+
+.dong-header {
+    margin-top: 5px;
+    font-size: 22px;
+    color: rgba(99, 0, 191, 0.772549019607843);
+    font-weight: 650;
+    text-indent: 2px;
+    margin-bottom: 10px;
+}
+
+.dong-left {
+    float: left;
+}
+
+.dong-right {
+    float: right;
+    font-size: 16px;
+    color: #C280FF;
+    margin-right: 30px;
+}
+
+.dong-right a {
+    color: #C280FF;
+}
+
+.dongtai ul {
+    margin-top: 70px;
+}
+
+.dongtai ul li {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+
+.dongtai ul li span {
+    font-size: 20px;
+    color: #A981DD;
+}
+
+.dongtai ul li p {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    color:#7F7F7F;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul {
+            width: 700px;
+            border: 2px solid red;
+            padding: 10px;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: '';
+            overflow: hidden;
+            visibility: hidden;
+            clear: both;
+            height: 0;
+        }
+
+        .content ul li {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+            border: 1px solid #ccc;
+        }
+
+        .addFile {
+            background: url("../img/icon12.png") no-repeat;
+            background-position: center center;
+        }
+
+        #attach {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="formData_test.php" id="form">
+        <div class="content">
+            <ul class="clearfix ul-box">
+                <li class="addFile">
+                    <input type="file" id="attach" multiple require />
+                </li>
+            </ul>
+        </div>
+        <input type="text" name="name" />
+        <input type="text" name="age" />
+        <input type="text" name="sex" />
+        <input type="button" value="上传" class="subBtn" />
+    </form>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    //定义一个数组 把文件数组的值给新数组  对新数组进行操作  然后把新数组传递给后台
+    var curFiles = [];
+    // 上传文件的input
+    $("#attach").change(function () {
+        var fileArr = $(this)[0].files;
+        Array.prototype.push.apply(curFiles, fileArr);
+        //      var fileArr = this.files;
+        console.log(fileArr);
+        //这里展示的话  还是用fileArr
+        for (var i = 0; i < fileArr.length; i++) {
+            console.log(fileArr[i]);
+            var item = fileArr[i];
+            var abc = $("<li class='showf'><p style='overflow:hidden;text-overflow:ellipsis; '>文件名:" + item
+                .name + "</p>" +
+                "<p>大小：" + (item.size / 1024).toFixed(2) + "KB</p></li>");
+            $(".ul-box").prepend(abc);
+        }
+
+    })
+    $(".ul-box").on("click", ".showf", function () {
+        var index = $(".showf").index($(this));
+        alert(index);
+        var name = $(this).find("p").eq(0).html();
+        console.log(curFiles);
+        //  curFiles = curFiles.filter(function(file) {
+        //      return file.name != name;
+        //  });
+        // 删除index上的元素，然后步长=1
+        curFiles.splice(index, 1)
+        console.log(curFiles);
+
+        $(this).remove();
+    })
+
+    // 将新数组发送到后台
+    $(".subBtn").click(function () {
+        // 构建FormData对象
+        var fd = new FormData($('#form')[0]);
+        for (var i = 0, j = curFiles.length; i < j; ++i) {
+            fd.append('attach[]', curFiles[i]);
+        }
+
+        for (var pair of fd.entries()) {
+            console.log(pair[0] + ', ' + pair[1]);
+        }
+
+        $.ajax({
+            url: 'formData_test.php',
+            type: 'post',
+            data: fd,
+            processData: false,
+            contentType: false,
+            success: function (rs) {
+                console.log(rs);
+            },
+            error: function (err) {}
+        });
+    })
+</script>
+
+</html>

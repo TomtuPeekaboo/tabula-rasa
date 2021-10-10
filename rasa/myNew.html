@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myNew</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/myNew.css">
+    <link rel=" stylesheet" href="css/base1.css">
+    <link rel="stylesheet" href="css/alibbIcon.css">
+    <script src="js/main.js"></script>
+    <script src="js/myNew.js" type="module"></script>
+    <script src="js/stopBS.js"></script>
+    <script src="js/returnTop.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="nav">
+        <div class="return"><a href="forum.html" class="iconfont icon-return"></a></div>
+        <div class="logo" id="logo">战疫情！我们在行动</div>
+        <div class="navShow">
+            <div class="ring">
+                <span class="ringTixing redPoint" style="width: 8px;height: 8px;"></span>
+                <p class="iconfont icon-lingdang"></p>
+                <div class="ringContent" style="display: none;">
+                    <span><a href="forumThree.html?type=at" class="forumthree">收到@我<i class="redPoint"></i></a></span>
+                    <span><a href="forumThree.html?type=commit" class="forumthree">收到评论<i
+                                class="redPoint"></i></a></span>
+                    <span><a href="forumThree.html?type=zan" class="forumthree">收到点赞<i class="redPoint"></i></a></span>
+                    <span><a href="sufferer.html" class="forumthree">咨询医生<i class="redPoint"></i></a></span>
+                </div>
+            </div>
+            <div class="write">
+                <p class="iconfont icon-bianji"></p>
+            </div>
+            <div class="person">
+                <p class="Img"><img src="images/defaultHeadImg.svg" alt=""></p>
+                <div class="personContent" style="display: none;">
+                    <span><a href="myNew.html" style="color: rgb(133, 144, 166);">关于我的</a></span>
+                    <span>先退出了</span>
+                </div>
+            </div>
+        </div>
+        <div class="navbutton"><span class="span1"></span><span class="span2"></span></div>
+    </div>
+    <div class="mask">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="virus.html">数据</a></li>
+            <li><a href="forum.html">论坛</a></li>
+            <li><a href="makeTecho.html">手账</a></li>
+            <li><a href="signIn.html">登录</a></li>
+        </ul>
+    </div>
+    <!-- 版心 -->
+    <div class="banner">
+        <div class="inbanner">
+            <div class="aurPHB">
+                <div class="aurPh"><img src="images/defaultHeadImg.svg" alt=""></div>
+            </div>
+            <div class="aurT">
+                <h2 class="ATname">小鸡炖蘑菇</h2>
+                <div class="relative">
+                    <p class="fs">粉丝<span>59</span></p>
+                    <p class="gz">关注<span>57</span></p>
+                </div>
+                <div class="data" style="display: block;">
+                    <p class="zt iconfont icon-zuoxizhuangtai">隔离中...</p>
+                    <p class="qm iconfont icon-qianming">天王盖地虎，我不是老鼠</p>
+                    <p class="birth iconfont icon-shengri">2002-09-09</p>
+                    <p class="address iconfont icon-shouhuodizhi">广州省广州市</p>
+                    <p class="joinT iconfont icon-rili">2021-11-03</p>
+                    <p class="up iconfont icon-xiangshangshouqi-xianxingyuankuang"></p>
+                </div>
+                <div class="editData" style="display: none;">
+                    <form action="" id="editData">
+                        <div class="editName">
+                            <label for="">昵称</label>
+                            <div class="enBox">
+                                <!-- 默认是老的昵称 -->
+                                <input type="text" placeholder="Tomtu">
+                                <p class="nameTip Tip">4-3个字符，支持中英文、数字</p>
+                            </div>
+                        </div>
+                        <div class="editEmail">
+                            <label for="">邮箱</label>
+                            <div class="eeBox">
+                                <input type="text" placeholder="2279710076@qq.com">
+                                <p class="editTip Tip">邮箱格式</p>
+                            </div>
+                        </div>
+                        <div class="editIntru">
+                            <label for="">简介</label>
+                            <div class="eiBox">
+                                <input type="text" placeholder="记得追光走！">
+                                <p class="intruTip Tip">1-40个字符</p>
+                            </div>
+                        </div>
+                        <div class="editStatus">
+                            <label for="">状态</label>
+                            <div class="esBox">
+                                <div class="esBoxTitle iconfont icon-geli">隔离中</div>
+                                <div class="esBoxContent" style="display: none;">
+                                    <p class="iconfont icon-geli">隔离中</p>
+                                    <p class="iconfont icon-pifuzhiliaopifuxiufu">治疗中</p>
+                                    <p class="iconfont icon-zhufu-">祝福中</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editSex">
+                            <label for="">性别</label>
+                            <div class="sexBox">
+                                <div class="sexsmall">
+                                    <input type="radio" id="radio1" name="radio" checked="checked" />
+                                    <label for="radio1">男</label>
+                                </div>
+                                <div class="sexsmall">
+                                    <input type="radio" id="radio2" name="radio" />
+                                    <label for="radio2">女</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editAddr">
+                            <label for="">所在地</label>
+                            <div class="eaBox">
+                                <p class="province"><span class="iconfont icon-xiasanjiaoxing"
+                                        id="editAddrSpan"></span><input type="text" name="" placeholder="四川省"></p>
+                                <p class="city"><span class="iconfont icon-xiasanjiaoxing"
+                                        id="editAddrSpan"></span><input type="text" name="" placeholder="成都市"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="editor"><a href="javascript:;">编辑资料</a></div>
+        </div>
+        <div class="aurForum">
+            <div class="hotNewBody">
+                <!-- <div class="forum">
+                    <div class="circleBefore"></div>
+                    <div class="aurther">
+                        <div class="photo">
+                            <img src="img/person.jpg" alt="">
+                        </div>
+                        <div class="aurtherName">
+                            <p class="anName">Tomtu</p>
+                            <p class="anTime">7-5</p>
+                        </div>
+                        <div class="delete">删除</div>
+                    </div>
+                    <div class="aurtherSay">
+                        <p>这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！</p>
+                    </div>
+                    <div class="clearfix aurtherTmg">
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                    </div>
+                    <div class="forumFooter">
+                        <div class="zf"><span class="iconfont icon-zhuanfa"></span>转发</span></div>
+                        <div class="pl"><span class="iconfont icon-pinglun"></span>评论</div>
+                        <div class="aixin">
+                            <span class="iconfont icon-aixin"></span>
+                            <div class="two">99</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="forum">
+                    <div class="circleBefore"></div>
+                    <div class="aurther">
+                        <div class="photo">
+                            <img src="img/person.jpg" alt="">
+                        </div>
+                        <div class="aurtherName">
+                            <p class="anName">Tomtu</p>
+                            <p class="anTime">7-5</p>
+                        </div>
+                        <div class="delete">删除</div>
+                    </div>
+                    <div class="aurtherSay">
+                        <p>这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！</p>
+                    </div>
+                    <div class="clearfix aurtherTmg">
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                        <li><img src="img/person.jpg" alt=""></li>
+                    </div>
+                    <div class="forumFooter">
+                        <div class="zf"><span class="iconfont icon-zhuanfa"></span>转发</span></div>
+                        <div class="pl"><span class="iconfont icon-pinglun"></span>评论</div>
+                        <div class="aixin">
+                            <span class="iconfont icon-aixin"></span>
+                            <div class="two">99</div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="addressShow">
+        <div class="addeSTitle">
+            <h1>选择切换城市</h1>
+            <button class="close"></button>
+        </div>
+        <ul class="selectBox"></ul>
+    </div>
+    <div class="footer1">
+        <a href="index.html">首页</a><a href="virus.html">数据</a><a href="forum.html">动态</a>
+    </div>
+    <div class="footer2">© 2021 made by tabula rasa</div>
+    <div class="returnTop">
+        <img src="images/returnTop.png" alt="">
+    </div>
+</body>
+
+</html>

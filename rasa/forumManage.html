@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forumManage</title>
+    <!--    <link rel="stylesheet" href="Manage/css/base.css">-->
+    <link rel="stylesheet" href="Manage/css/MangeB.css">
+    <link rel="stylesheet" href="Manage/css/forumManage.css">
+    <script src="js/main.js"></script>
+    <script src="Manage/js/forumManage.js" type="module"></script>
+    <script src="Manage/js/userManage.js"></script>
+    <script src="js/stopBS.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="left-header">
+                <span>战疫情！我们在行动</span>
+            </div>
+            <ul>
+                <li><a href="userManage.html">用户管理</a></li>
+                <li><a href="forumManage.html" class="atn">动态管理</a></li>
+            </ul>        
+        </div>
+        <div class="right">
+            <div class="right-head"></div>
+            <div class="Box">
+                <div class="header">
+                    <form action="" id="searchForum">
+                        <div class="forumId">
+                            <label for="">动态ID：</label>
+                            <input type="text" placeholder="" name="articleid" id="sarticleid">
+                        </div>
+                        <div class="userId">
+                            <label for="">用户昵称：</label>
+                            <input type="text" placeholder="请输入用户昵称" name="username" id="susername">
+                        </div>
+                        <div class="forumTime">
+                            <label for="">发布时间：</label>
+                            <input type="datetime-local" placeholder="请选择时间" name="time" id="stime">
+                        </div>
+                        <!--                        <div class="forumstatus">-->
+                        <!--                            <label for="">动态状态：</label>-->
+                        <!--                            <input type="text" placeholder="全部状态">-->
+                        <!--                        </div>-->
+                        <div class="find">搜索</div>
+                    </form>
+                </div>
+                <p class="dataNum">共搜索到922条数据</p>
+                <div class="body">
+                    <table cellspacing=0>
+                        <tr>
+                            <th class="forumId">动态ID</th>
+                            <th class="aurName">用户昵称</th>
+                            <th class="fbTime">发布时间</th>
+                            <th class="commit">评论数</th>
+                            <th class="good">点赞数目</th>
+                            <th class="action">操作</th>
+                        </tr>
+                        <!--                        <tr>-->
+                        <!--                            <td class="forumId">12455</td>-->
+                        <!--                            <td class="aurName">爱喝可乐的一名小志愿者</td>-->
+                        <!--                            <td class="fbTime">2020-22-22 12:12:12</td>-->
+                        <!--                            <td class="commit">122</td>-->
+                        <!--                            <td class="good">21</td>-->
+                        <!--                            <td class="action">-->
+                        <!--                                <p class="read"><a href="#">查看</a></p>-->
+                        <!--                                <p class="lock"><a href="#">删除</a></p>-->
+                        <!--                            </td>-->
+                        <!--                        </tr>-->
+                    </table>
+                </div>
+                <div class="page">
+                    <ul>
+                        <li class="beforePage"></li>
+                        <!--                        <li class="purple">1</li>-->
+                        <!--                        <li>2</li>-->
+                        <!--                        <li>3</li>-->
+                        <!--                        <li>4</li>-->
+                        <!--                        <li>5</li>-->
+                        <!--                        <li>6</li>-->
+                        <!--                        <li>7</li>-->
+                        <!--                        <li>8</li>-->
+                        <!--                        <li>9</li>-->
+                        <span id="pageli" style="float: left;margin:0px; padding:0px"></span>
+                        <li class="nextPage"></li>
+                        <li class="sum">10条/页</li>
+                        <li class="leap">5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="delete-frame">
+        <div class="delete-header">
+            <div class="delete-left">删除动态</div>
+            <div class="delete-right"></div>
+        </div>
+        <div class="delete-bottom">
+            <p>确认删除当前动态吗？删除后所有用户将无法看到该动态，但动态的相关互动消息不会消失。</p>
+            <input id="delete-input" type="password" name="" id="" placeholder="请输入管理员密码校验身份" autocomplete="off">
+        </div>
+        <div class="button">
+            <button class="delete-right">取消</button>
+            <button class="sure">确定</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

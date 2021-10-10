@@ -1,0 +1,256 @@
+a:hover,
+a:link,
+a:visited,
+a:active,
+a:focus {
+    color: rgba(125, 104, 169);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: rgb(248, 243, 255);
+    background: url(../img/signIn3.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    transform: translateY(-50%);
+    width: 690px;
+    height: 400px;
+    /* height: 300px; */
+    border-radius: 20px;
+    padding: 20px 25px 18px 25px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255));
+    /*设置模糊*/
+    backdrop-filter: blur(8px);
+    /* box-shadow: 10px 10px 20px rgba(0, 0, 0, .2s); */
+    box-shadow: 10px 10px 20px rgba(125, 104, 169);
+    /* 实现渐变边框方法 */
+    border-top: 2px solid rgba(125, 104, 169);
+    border-left: 2px solid rgba(125, 104, 169);
+    font-size: 12px;
+}
+
+.welcome {
+    line-height: 20px;
+    cursor: pointer;
+    color: rgb(182, 87, 191, 0.9);
+    margin-bottom: 35px;
+}
+
+.welcome span:first-child {
+    font-family: 'Bauhaus 93', 'Magneto', 'Kristen ITC';
+    text-shadow: 5px 2px 6px rgba(0, 0, 0, .5);
+    text-shadow: #000 1px 0 0, rgba(255, 255, 255, 0.9) 0 1px 0, rgba(255, 255, 255, 0.9) -1px 0 0, #000 0 -1px 0;
+    font-size: 31px;
+    font-weight: bold;
+    color: rgba(125, 104, 169);
+}
+
+.welcome span:last-child {
+    position: absolute;
+    top: 40px;
+    right: 55px;
+    font-size: 15px;
+    color: rgb(218, 120, 166);
+
+}
+
+form>div {
+    /* display: none; */
+    position: relative;
+    margin: 31px 30px 0px 30px;
+}
+
+form>div:first-child {
+    display: block;
+}
+
+label {
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.active {
+    min-height: 40px;
+    padding: 5px 15px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    cursor: pointer;
+    /* border: 1px solid rgba(255,255,255,.7); */
+    border-radius: 5px;
+    /* color:rgba(255,255,255,.5); */
+    line-height: 30px;
+    color: #fff;
+    background: none;
+    font-size: 13px;
+    background: rgba(67, 89, 206, .5);
+}
+
+form>div:nth-child(2) div.active {
+    background: rgba(249, 200, 115.5);
+}
+
+form>div:nth-child(3) div.active {
+    background: rgba(202, 84, 188.5);
+}
+
+form>div:nth-child(4) div.active {
+    background: rgba(67, 89, 206, .5);
+}
+
+/* .activeAfter{
+            border: 1px solid rgba(142, 135, 169,.7);
+            color:rgba(142, 135, 169,.5);
+        } */
+
+input {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-left: 5px;
+    outline: none;
+    background: none;
+    line-height: 25px;
+    border: 2px solid rgb(133, 113, 174);
+    color: #000;
+    border-radius: 10px;
+    /* border-bottom:1px rgba(255, 255, 255, .5) solid; */
+}
+
+#registerFont {
+    font-family: 'icomoon';
+    width: 8px;
+    color: rgb(29, 156, 115);
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    /* background: rgba(125, 104, 169); */
+}
+
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+.remember label {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+}
+
+.remember span {
+    position: absolute;
+    right: 167px;
+    color: rgba(125, 104, 169);
+}
+
+.remember span a {
+    text-decoration: none;
+}
+
+.remember span a:active {
+    color: rgba(125, 104, 169);
+}
+
+.cip {
+    position: relative;
+    border-top: 1px solid rgba(125, 104, 169);
+    font-weight: bold;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 17px;
+    color: rgba(125, 104, 169);
+}
+
+/* 波浪按钮 */
+.button {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    cursor: pointer;
+}
+
+/* 清除button样式 */
+.button:focus,
+.button:active:focus,
+.button:active:focus,
+.button:focus,
+.button:active.focus,
+.button:active.focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 10px;
+    height: 10px;
+    /* box-shadow: 0 0 12px #fff; */
+    border: 2px solid rgba(125, 104, 169);
+    border-radius: 50%;
+    animation: wave 1.2s linear infinite;
+}
+
+.button span:nth-child(1) {
+    background: #fff;
+    animation: none;
+}
+
+.button span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.button span:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.button span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes wave {
+    0% {
+        opacity: .2;
+    }
+
+    50% {
+        width: 50px;
+        height: 50px;
+        opacity: .5;
+    }
+
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
+}
+
+.wjmm a {
+    font-size: 15px;
+}

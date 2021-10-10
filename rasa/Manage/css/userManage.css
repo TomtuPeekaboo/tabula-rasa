@@ -1,0 +1,289 @@
+.Box {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.Box .header {
+    margin: 15px auto;
+    align-items: center;
+    background: rgb(248, 243, 255);
+    border-radius: 10px;
+    width: 1190px;
+}
+
+.Box .header form {
+    display: flex;
+    padding: 20px;
+}
+
+.Box .header form>div {
+    margin-right: 24px;
+    color: rgba(0, 0, 0, .5);
+}
+
+.Box .header input {
+    padding: 8px;
+    width: 137px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid rgb(194, 128, 255);
+}
+
+.Box .header form>div:nth-child(2) input {
+    width: 187px;
+}
+
+.Box .header form>div:nth-child(3) input {
+    width: 183px;
+}
+
+
+.Box .header .find {
+    height: 32.57px;
+    margin-right: 0px;
+    display: flex;
+    line-height: 32.57px;
+    padding-left: 15.5px;
+    width: 66px;
+    color: #fff;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    background: rgb(169, 129, 221);
+    cursor: pointer;
+}
+
+.Box .header .userstatus {
+    position: relative;
+}
+
+.Box .header .userstatus .kinds {
+    position: absolute;
+    top: 35px;
+    left: 85px;
+    width: 137px;
+    padding: 5px;
+    border: 1px solid rgb(194, 128, 255);
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Box .header .userstatus .kinds ul li {
+    display: flex;
+    align-items: center;
+    width: 127px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.Box .header .userstatus .kinds ul li:hover {
+    background: rgb(217, 181, 255);
+}
+
+.Box .body {
+    width: 1190px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+
+.Box .body table {
+    width: 100%;
+}
+
+.Box .body table th {
+    height: 50px;
+    background: rgb(238, 232, 255);
+    color: rgb(101, 101, 101);
+}
+
+.Box .body table td {
+    height: 43px;
+    border-bottom: 1px solid #ccc;
+    color: #666;
+}
+
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field {
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+.Box .body table .square {
+    width: 60px;
+}
+
+.Box .body table .aurId {
+    width: 87px;
+}
+
+.Box .body table .aurName {
+    width: 361px;
+}
+
+.Box .body table .aurPhoto {
+    width: 132px;
+}
+
+.Box .body table .aurPhoto .aurImg {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #890;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+
+.Box .body table .aurPhoto .aurImg img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.Box .body table .aurphone {
+    width: 173px;
+}
+
+.Box .body table .aurTime {
+    width: 154px;
+}
+
+.Box .body table .aurStatus {
+    width: 100px;
+}
+
+.Box .header .userstatus {
+    position: relative;
+}
+
+.Box .header .more {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    width: 20px;
+    height: 100%;
+    background: url(../img/more.png) center center no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.Box .body table .action {
+    width: 121px;
+}
+
+.Box .body table .action p {
+    float: left;
+    width: 52px;
+    height: 27px;
+    margin: 0 4px;
+    line-height: 26px;
+    color: #fff;
+    border-radius: 6px;
+    background: rgb(194, 128, 255);
+}
+
+.Box .body table .action p a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+}
+
+
+.Box .body table .square span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    line-height: 57px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 1px solid rgb(194, 128, 255);
+}
+
+.Box .body table .square span.bg {
+    background: rgb(194, 128, 255);
+}
+
+.Box .page {
+    margin-top: 20px;
+}
+
+.Box .page ul {
+    float: right;
+    width: auto;
+    display: flex;
+    margin-right: 23px;
+}
+
+.Box .page ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #666;
+    cursor: default;
+}
+
+.Box .page ul li.purple {
+    background: rgb(194, 128, 255);
+}
+
+.Box .page ul li.beforePage {
+    background: url(../img/before.png);
+    background-size: 100%;
+}
+
+.Box .page ul li.nextPage {
+    background: url(../img/next.png);
+    background-size: 100%;
+}
+
+.Box .page ul li.sum {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.Box .page ul li.leap {
+    position: relative;
+    margin-left: 50px;
+    padding-left: 16px;
+}
+
+.Box .page ul li.sum::after {
+    position: relative;
+    content: "跳至";
+    left: 53px;
+}
+
+.Box .page ul li.leap::after {
+    position: relative;
+    content: "页";
+    left: 18px;
+}
+
+#pageli{
+    display:flex;
+}
+
+.Box .body table .action p{
+    cursor:pointer;
+}
