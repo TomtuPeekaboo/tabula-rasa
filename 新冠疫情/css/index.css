@@ -1,0 +1,172 @@
+
+img {
+    display: block;
+}
+
+body,html{
+    height: 100%;
+}
+
+div[class^='img'] {
+    min-height: 100%;
+    background-position:center;
+    background-size: cover;
+    /* 背景图片固定不动 */
+    background-attachment: fixed;
+}
+
+.img1{
+    position: relative;
+    background: url('../images/main1.jpg');
+}
+
+.img2{
+    background: url('../images/main2.jpg');
+}
+
+.img3{
+    background: url('../images/main3.jpg');
+}
+
+.img4{
+    background: url('../images/main4.jpg');
+}
+
+.img5{
+    background: url('../images/main5.jpg');
+}
+
+div[class^='content']{
+    /* text-align: center;
+    font-size: 16px; */
+    width: 100%;
+    height: 300px;
+    background-color: #f8f3ff;
+    box-shadow: 2px 2px 100px #f8f3ff;
+}
+
+.img1 .nav {
+    position: absolute;
+}
+
+/* 大字 */
+.img1 .title {
+    width: 400px;
+    position: absolute;
+    font-weight: 700;
+    font-size: 60px;
+    right: 100px;
+    top: 50%;
+    color: #f8f3ff;
+    text-shadow:#7d68a9 1px 1px 10px;
+    transform: translateY(-50%);
+}
+
+.img1 .title .i1{
+    float: right;
+}
+/* data区 */
+.img1 .data-frame {
+    position: absolute;
+    left: 100px;
+    top: 160px;
+    width: 400px;
+    font-weight: 700;
+    height: 400px;
+    color: #bbaaaf;
+    font-size: 18px;
+}
+
+.img1 .dataBox {
+    position: relative;
+    width: 250px;
+    height: 400px;
+}
+
+.img1 .data-frame div[class^='data-box'] {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    font-size: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #7d68a9;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.img1 .data-frame div[class^='data-box'] .position {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.img1 .data-frame div[class^='data-box']:hover {
+    width: 240px;
+    border-radius: 60px;
+}
+
+.img1 .data-frame div[class^='data-box']:hover i {
+    opacity: 1;
+}
+
+.img1 .data-frame div[class^='data-box'] span {
+    position: absolute;
+    left: 27px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    letter-spacing: 4px;
+    line-height: 40px;
+}
+
+.img1 .data-frame div[class^='data-box'] i {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 110px;
+    transition: .5s ease-in-out;
+}
+
+.img1 .dataBox .data-box1 {
+    left: 140px;
+    top: 0px;
+}
+
+.img1 .dataBox .data-box1::after {
+    position: absolute;
+    display: inline-block;
+    left: -30px;
+    top: 60px;
+    content: '';
+    width: 8px;
+    height: 100px;
+    transform: rotate(45deg);
+    box-shadow: 2px 2px 20px #a79578;
+    border-radius: 3px;
+} 
+
+.img1 .dataBox .data-box2::after {
+    position: absolute;
+    display: inline-block;
+    left: 106px;
+    bottom: -70px;
+    content: '';
+    width: 8px;
+    height: 90px;
+    transform: rotate(-45deg);
+    box-shadow: 2px 2px 20px #a79578;
+    border-radius: 3px;
+} 
+
+.img1 .dataBox .data-box2 {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img1 .dataBox .data-box3 {
+    left: 140px;
+    bottom: 0;
+}

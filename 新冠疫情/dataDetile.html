@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/dataDetile.css">
+    <script src="js/dataDetile.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">TABULS RASA</div>
+        <div class="navbutton">
+            <span class="span1"></span>
+            <span class="span2"></span>
+        </div>
+    </div>
+    <div class="mask">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">资讯</a></li>
+            <li><a href="#">交流</a></li>
+            <li><a href="#">制作</a></li>
+            <li><a href="#">登录</a></li>
+        </ul>
+    </div>
+    <div class="main-data">
+        <div class="main-data-left">
+            <div class="head">
+                国内疫情数据
+            </div>
+            <ul>
+                <li>
+                    <div class="data-img">
+                        <img src="images/data-now.jpg" alt="">
+                    </div>
+                    <div class="data-text">
+                        <p>
+                            <span>现有确诊</span><br>
+                        <span id="data-now-que">123,345</span><br>
+                        <span class="data-rate-down">10%</span>
+                        <span>同比上周</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="data-img">
+                        <img src="images/data-now-yi.jpg" alt="">
+                    </div>
+                    <div class="data-text">
+                        <p>
+                            <span>现有疑似</span><br>
+                        <span >123,345</span><br>
+                        <span class="data-rate-down">10%</span>
+                        <span>同比上周</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="data-img">
+                        <img src="images/data-now-icu.jpg" alt="">
+                    </div>
+                    <div class="data-text">
+                        <p>
+                            <span>现有重症</span><br>
+                        <span>123,345</span><br>
+                        <span class="data-rate-up">10%</span>
+                        <span>同比上周</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="data-img">
+                        <img src="images/data-ji-que.jpg" alt="">
+                    </div>
+                    <div class="data-text">
+                        <p>
+                            <span>累积确诊</span><br>
+                        <span>123,345</span><br>
+                        <span class="data-rate-down">10%</span>
+                        <span>同比上周</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="data-img">
+                        <img src="images/data-ji-good.jpg" alt="">
+                    </div>
+                    <div class="data-text">
+                        <p><span>累计治愈</span><br>
+                            <span>123,345</span><br>
+                            <span class="data-rate-up">10%</span>
+                            <span>同比上周</span></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="data-img">
+                        <img src="images/data-ji-hui.jpg" alt="">
+                    </div>
+                    <div class="data-text">
+                        <p>
+                            <span>累计死亡</span><br>
+                        <span>54,323</span><br>
+                        <span class="data-rate-down">8%</span>
+                        <span>同比上周</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="main-data-right">
+            <div class="head">治愈率</div>
+            <div class="peichart1">
+            </div>
+            <div class="maskpeichart"></div>
+            <!-- 动态的改数字 -->
+            <span id="good-data">80%</span>
+            <p class="good-data">
+                治愈率≈<i id="good-data">80%</i>
+            </p>
+        </div>
+        
+    </div>
+</body>
+</html>

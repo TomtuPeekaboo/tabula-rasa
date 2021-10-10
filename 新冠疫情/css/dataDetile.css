@@ -1,0 +1,173 @@
+/* 数据区部分 */
+.main-data {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 1345px;
+    height: 357px;
+}
+/* 左边 */
+.main-data-left {
+    float: left;
+    width: 72%;
+    height: 357px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.head {
+    width: 100%;
+    color: #666;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 20px 20px 0 0;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 24px;
+    border-bottom: 2px solid #eee;
+    box-sizing: border-box;
+}
+
+.main-data-left ul {
+    width: 100%;
+    height: 275px;
+    display: flex;
+    margin-top: 22px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-data-left ul li {
+    margin-right: 15px;
+    width: 30%;
+    border-radius: 6px;
+    height: 112px;
+    border: 2px solid #eee;
+}
+
+.main-data-left ul li:nth-of-type(3),
+.main-data-left ul li:nth-of-type(6) {
+    margin-right: 0;
+}
+
+.main-data-left .data-img {
+    position: relative;
+    float: left;
+    text-align: center;
+    width: 90px;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.main-data-left .data-img img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 56px;
+}
+
+.main-data-left .data-text {
+    position: relative;
+    float: left;
+    width:calc(100% - 90px) ;
+    height: 100%;
+    text-align: left;
+}
+
+.main-data-left .data-text p {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    font-size: 14.5px;
+    color: #989898;
+    transform: translateY(-50%);
+}
+
+.main-data-left .data-text p span:nth-of-type(2) {
+    font-size: 28px;
+    color: #666;
+    line-height: 36px;
+}
+
+.main-data-left ul li:nth-of-type(1) .data-text p span:nth-of-type(2),
+.main-data-left ul li:nth-of-type(4) .data-text p span:nth-of-type(2){
+    color: #D9001B;
+}
+
+.main-data-left .data-text p span[class^='data-rate'] {
+    display: inline-block;
+    width: 47px;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    background-size: 16px 14px;
+    margin-right: 3px;
+}
+
+.main-data-left .data-text p .data-rate-down {
+    color: #00A950;
+    background: url(../images/xiajiang.png) no-repeat left center;
+}
+
+.main-data-left .data-text p .data-rate-up {
+    color: #F04133;
+    background: url(../images/shangsheng.png) no-repeat left center;
+}
+/* 右边 */
+.main-data-right {
+    position: relative;
+    float: right;
+    width: 26%;
+    height: 357px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.main-data-right div[class^='peichart'] {
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #eee;
+    /* 应用锥形渐变 */
+    background: conic-gradient(#fff 0,#fff 20%,#eee 20%,#eee 100%);
+    transform: translateX(-50%) rotate(145deg);
+    transition: 1s ease-in-out;
+}
+
+.main-data-right .maskpeichart{
+    position: absolute;
+    top: 118px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 134px;
+    width: 134px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.main-data-right span {
+    position: absolute;
+    top: 162px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #666;
+    font-size: 32px;
+}
+
+.main-data-right p {
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #666;
+    font-size: 16px;
+}
+
+.main-data-right p i {
+    font-style: normal;
+}
