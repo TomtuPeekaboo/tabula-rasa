@@ -21,20 +21,21 @@ body {
 .glass {
     font-size: 145px;
     font-weight: bold;
-    background: linear-gradient(to right, rgb(249, 200, 115), rgb(67, 89, 206), rgb(202, 84, 188));
+    /* background: linear-gradient(to right, rgb(249, 200, 115), rgb(67, 89, 206), rgb(202, 84, 188));
     /*文字颜色*/
     /* 1,2实现文字有渐变色效果 */
     /*1 加上这句*/
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     /*2。把原来的颜色变为透明*/
-    color: transparent;
+    /* color: transparent; */
+
 }
 
 .card {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 530px;
+    width: 685px;
     /* height: 300px; */
     border-radius: 20px;
     padding: 20px 25px 18px 25px;

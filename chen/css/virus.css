@@ -2,6 +2,11 @@ body {
     background: rgba(255, 255, 255);
 }
 
+/* .navbutton .span1 {
+    box-sizing: content-box;
+    margin-bottom: 0px !important;
+} */
+
 .slideShow {
     width: 98%;
     height: 625px;
@@ -15,7 +20,14 @@ body {
     left: 21%;
     width: 950px;
     height: 500px;
-    background: skyblue;
+    /* background: skyblue; */
+}
+
+.box {
+    position: absolute;
+    width: 950px;
+    height: 500px;
+    overflow: hidden;
 }
 
 a:hover,
@@ -49,6 +61,16 @@ a:focus {
     /* background: rgb(172, 93, 175); */
 }
 
+.slideSmall .lift .liftCircle {
+    position: absolute;
+    top: 51px;
+    left: -62px;
+    width: 30px;
+    height: 30px;
+    background: rgb(223, 199, 242);
+    border-radius: 50%;
+}
+
 /* 右边卡片 */
 .slideSmall .rightImg {
     display: flex;
@@ -67,9 +89,9 @@ a:focus {
 
 }
 
-.slideSmall .rightImg li:nth-child(odd) {
+/* .slideSmall .rightImg li:nth-child(odd) {
     background: rgb(219, 129, 204);
-}
+} */
 
 .slideSmall .rightImg li .card {
     position: relative;
@@ -285,17 +307,21 @@ div.card2 .cell .virusRight img {
     height: 100%;
 }
 
+.slideSmall .rightImg li .bigc3r {
+    position: relative;
+}
+
 .slideSmall .rightImg li .card3 {
     width: 841px;
     height: 500px;
-    margin-left: 110px;
+    margin-left: 111px;
     padding: 123px 135px 0 293px;
 }
 
 .slideSmall .rightImg li .card3 .c3L {
     position: absolute;
     top: 50%;
-    left: -112px;
+    left: -111px;
     transform: translateY(-50%);
     width: 309px;
     height: 324px;
@@ -305,6 +331,14 @@ div.card2 .cell .virusRight img {
     box-shadow: 5px 5px 5px rgb(169 129 221);
     font-family: 'Open Sans',
         sans-serif;
+}
+
+.slideSmall .rightImg li .card3 .c3L img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
 }
 
 .slideSmall .rightImg li:nth-child(3) {
@@ -433,6 +467,7 @@ div.card2 .cell .virusRight img {
     justify-content: space-between;
     align-content: space-between;
     background: rgb(248, 243, 255);
+    border: none;
 }
 
 .slideSmall .rightImg li .card5 div.step {

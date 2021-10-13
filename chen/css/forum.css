@@ -1,0 +1,392 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    width: 1345px;
+    height: 1000px;
+    margin: 26px auto;
+    border: 1px solid rgba(88, 89, 161, 1);
+    border-radius: 30px;
+    font-family: 'Open Sans',
+        sans-serif;
+}
+
+.banner div.leftC {
+    width: 300px;
+    height: 100%;
+    padding-top: 25px;
+    background: #fff;
+    border-radius: 28px 0 0 0;
+}
+
+
+.banner div.leftC .blTop,
+.banner div.leftC .blBottom {
+    width: 100%;
+}
+
+.banner div.leftC .blTop>div {
+    border-bottom: 1px solid rgb(238, 232, 255);
+    background: #fff;
+}
+
+.banner div.leftC .blTop>div:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+.banner div.leftC .blTop>div ul li {
+    padding: 8px 0 8px 30px;
+    margin-bottom: 6px;
+    background: rgb(255, 255, 255);
+}
+
+.banner div.leftC .blTop>div ul li.light {
+    background: rgb(238, 232, 255);
+    border-radius: 10px 0 0 0;
+}
+
+.banner div.leftC .blTop>div ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    color: #000;
+}
+
+.banner div.leftC .blTop .bltC,
+.banner div.leftC .blTop .bltB {
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.banner div.leftC .blBottom {
+    position: relative;
+    margin-top: 20px;
+}
+
+.banner div.leftC .blBottom .blbH {
+    width: 100%;
+    height: 48px;
+    padding-left: 15px;
+    line-height: 48px;
+    font-size: 18px;
+    background-color: rgba(242, 242, 242, 1);
+}
+
+.banner div.leftC .blBottom .create {
+    display: flex;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 85px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(169, 129, 221, 1);
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 16px;
+}
+
+.banner div.leftC .blBottom .blbBody {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.banner div.leftC .blBottom .blbBody .handNum {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding-left: 30px;
+    line-height: 50px;
+    font-size: 16px;
+    /* background: rgb(60, 111, 134); */
+}
+
+.banner div.leftC .blBottom .blbBody .handNum::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: url(../img/handAccount.png);
+    background-size: 25px 25px;
+}
+
+.banner div.leftC .blBottom .blbBody .setting {
+    position: absolute;
+    top: 58px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+.banner div.leftC .blBottom .blbBody .setting img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner div.leftC .blBottom .blbBody .handAccount {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.banner div.leftC .blBottom .blbBody .handAccount>div {
+    width: 137px;
+    height: 200px;
+    margin-bottom: 6px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.banner div.leftC .blBottom .blbBody .handAccount .handImg {
+    width: 100%;
+    height: 140px;
+    /* background: rgb(59, 114, 160); */
+}
+
+.banner div.leftC .blBottom .blbBody .handAccount .handImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner div.leftC .blBottom .blbBody .handAccount .handTitle {
+    width: 100%;
+    height: 60px;
+    padding: 7px;
+}
+
+.banner div.leftC .blBottom .blbBody .handAccount .handTitle>p {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.banner div.centerC {
+    width: 700px;
+    height: 100%;
+    background: rgb(119, 224, 231);
+}
+
+.banner div.centerC .say {
+    width: 100%;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.banner div.centerC .say>div {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.banner div.centerC .say .spare {
+    height: 100px;
+    background: skyblue;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.banner div.centerC .say .spareIcon {
+    display: flex;
+    height: 40px;
+}
+
+.banner div.centerC .say .spareIcon .siLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    background: #fff;
+}
+
+.banner div.centerC .say .spareIcon .siLeft p {
+    position: relative;
+    padding-left: 25px;
+}
+
+.banner div.centerC .say .spareIcon .siLeft p::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url(../img/silIcon1.svg);
+    background-size: 20px 20px;
+}
+
+.banner div.centerC .say .spareIcon .siLeft p:nth-child(2):before {
+    background: url(../img/silIcon2.svg);
+    background-size: 20px 20px;
+}
+
+.banner div.centerC .say .spareIcon .siLeft p:nth-child(3):before {
+    background: url(../img/silIcon3.svg);
+    background-size: 20px 20px;
+}
+
+.banner div.centerC .say .spareIcon .siLeft p:nth-child(4):before {
+    background: url(../img/spareIcon4.png);
+    background-size: 20px 20px;
+}
+
+.banner div.centerC .say .spareIcon .siLeft p:nth-child(5):before {
+    background: url(../img/silIcon5.svg);
+    background-size: 20px 20px;
+}
+
+.banner div.centerC .say .spareIcon .siLeft p:nth-child(6):before {
+    background: url(../img/silIcon6.svg);
+    background-size: 20px 20px;
+}
+
+.banner div.centerC .say .spareIcon .siRight {
+    width: 25%;
+    height: 100%;
+    /* background: green; */
+}
+
+.banner div.centerC .say .spareIcon .sirLeft {
+    width: 65px;
+    height: 100%;
+    margin-left: 10px;
+    background: blue;
+}
+
+.banner div.centerC .say .spareIcon .siRight {
+    position: relative;
+    display: flex;
+}
+
+.banner div.centerC .say .spareIcon .sirLeft select {
+    width: 100%;
+    height: 100%;
+    padding-left: 5px;
+    font-size: 16px;
+    border: none;
+}
+
+.banner div.centerC .say .spareIcon .sirRight {
+    position: absolute;
+    top: 0px;
+    right: -6px;
+    display: flex;
+    width: 94px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(169, 129, 221);
+    border-radius: 6px;
+    color: #fff;
+}
+
+.banner div.rightC {
+    width: 300px;
+    height: 100%;
+    background: rgb(119, 171, 231);
+    border-radius: 0 28px 0 0;
+}
+
+.banner div.centerC .hotNewH {
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px 5px;
+    background: #ccc;
+    font-weight: bold;
+}
+
+.banner div.centerC .hotNewBody {
+    width: 100%;
+    height: 500px;
+    background: rgb(133, 189, 101);
+}
+
+.banner div.centerC .hotNewBody .forum {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    background: rgb(190, 61, 180);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.banner div.centerC .hotNewBody .forum .aurther {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: rgb(88, 169, 206);
+}
+
+.banner div.centerC .hotNewBody .forum .aurther .photo {
+    width: 50px;
+    height: 100%;
+    margin-right: 15px;
+    background: rgb(65, 161, 137);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.banner div.centerC .hotNewBody .forum .aurther .photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner div.centerC .hotNewBody .forum .aurther .anName {
+    margin-top: 5px;
+    background: pink;
+    font-family: 'Open Sans Bold',
+        'Open Sans Regular',
+        'Open Sans',
+        sans-serif;
+    font-weight: 700;
+}
+
+.banner div.centerC .hotNewBody .forum .aurther .anTime {
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 13px;
+    color: #7F7F7F;
+}
+
+.banner div.centerC .hotNewBody .forum .aurther .gz {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    width: 64px;
+    height: 30px;
+    font-size: 13px;
+    color: rgba(194, 128, 255, 1);
+    border: 1px solid rgba(194, 128, 255, 1);
+    border-radius: 4px;
+}
+
+.banner div.centerC .hotNewBody .forum .aurtherSay {
+    width: 100%;
+    margin: 20px 0;
+    background: #fff;
+}
+
+.banner div.centerC .hotNewBody .forum .aurtherSay p {
+    font-family: 'Open Sans',
+        sans-serif;
+    line-height: 26px;
+    word-wrap: break-word;
+}

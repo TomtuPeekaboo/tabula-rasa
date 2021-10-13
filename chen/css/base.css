@@ -39,6 +39,7 @@ a {
     /* clip-path CSS 属性可以创建一个只有元素的部分区域可以显示的剪切区域。 */
     clip-path: circle(1px at calc(100%) 0);
     transition: all .5s ease;
+    z-index: 100;
 }
 
 .mask ul {
