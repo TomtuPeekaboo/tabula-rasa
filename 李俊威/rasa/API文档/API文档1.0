@@ -1,0 +1,26 @@
+1. 注册功能
+方法：post
+url：registerServlet
+
+情况1：验证码不正确
+{
+    code:104
+    message:"验证码错误"
+    data:null
+}
+
+情况2：用户名已存在
+{
+    code:101
+    message:"用户已存在"
+    data:null
+}
+
+情况3: 成功
+{
+    code:200
+    message:"注册成功！"
+    data：null
+}
+
+

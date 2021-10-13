@@ -1,0 +1,278 @@
+        @font-face {
+            font-family: 'icomoon';
+            src:  url('../fonts/icomoon.eot?icrm6p');
+            src:  url('../fonts/icomoon.eot?icrm6p#iefix') format('embedded-opentype'),
+                  url('../fonts/icomoon.ttf?icrm6p') format('truetype'),
+                  url('../fonts/icomoon.woff?icrm6p') format('woff'),
+                  url('../fonts/icomoon.svg?icrm6p#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, rgb(67, 89, 206), rgb(249, 200, 115), rgb(202, 84, 188)); 
+        }
+
+        .glass {
+            font-size: 145px;
+            font-weight: bold;
+            background: linear-gradient(to right, rgb(249, 200, 115), rgb(67, 89, 206), rgb(202, 84, 188));
+            /*文字颜色*/
+            /* 1,2实现文字有渐变色效果 */
+            /*1 加上这句*/
+            -webkit-background-clip: text;
+            /*2。把原来的颜色变为透明*/
+            color: transparent;
+        }
+
+        .card {
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            width: 530px;
+            /* height: 300px; */
+            border-radius: 20px;
+            padding:20px 25px 18px 25px;
+            background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, .1));
+            /*设置模糊*/
+            backdrop-filter: blur(8px);
+            /* box-shadow: 10px 10px 20px rgba(0, 0, 0, .2s); */
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, .3);
+            /* 实现渐变边框方法 */
+            border-top: 2px solid rgba(255, 255, 255, .8);
+            border-left: 2px solid rgba(255, 255, 255, .8);
+            color:#fff;
+            font-size:12px;
+        }
+
+         form>div{
+            /* display: none; */
+            position: relative;
+            margin:23px 30px 0px 30px;
+        }
+        form>div:first-child{
+            display: block;
+        }
+        
+        label{
+            color:rgba(255,255,255,0.9);
+            font-weight: bold;
+        }
+        .active{
+            padding:5px 15px;
+            position: absolute;
+            right:0px;
+            bottom:0px;
+            cursor: pointer;
+            /* border: 1px solid rgba(255,255,255,.7); */
+            border-radius: 5px;
+            /* color:rgba(255,255,255,.5); */
+            color:#fff;
+            background:none;
+            background: rgba(67, 89, 206,.5);
+        }
+        form>div:nth-child(2) div.active{
+            background: rgba(249, 200, 115.5);
+        }
+        form>div:nth-child(3) div.active{
+            background: rgba(202, 84, 188.5);
+        }
+        form>div:nth-child(4) div.active{
+            background: rgba(67, 89, 206,.5);
+        }
+
+        /* .activeAfter{
+            border: 1px solid rgba(142, 135, 169,.7);
+            color:rgba(142, 135, 169,.5);
+        } */
+
+        input {
+            position: relative;
+            display: inline-block;
+            width: 70%;
+            margin-top: 5px;
+            margin-left: 10px;
+            padding-left: 5px;
+            outline: none;
+            background: none;
+            line-height: 25px;
+            border:none;
+            color:#fff;
+            border-bottom:1px rgba(255, 255, 255, .5) solid;
+        }
+        /* 想给一条获得焦点的线 */
+        /* input::after{
+            content: "|";
+            position: absolute;
+            top:0;
+            left:0;
+            width:1px;
+            height:5px;
+            background: #fff;
+            border: 1px solid #fff;
+            
+        } */
+
+        #registerFont{
+            font-family: 'icomoon';
+            width:8px;
+            color:rgb(29, 156, 115);
+        }
+        .welcome{ 
+            line-height: 20px;
+            cursor: pointer;
+            color:rgb(182, 87, 191,0.9);
+        }
+        .welcome span:first-child{
+            font-family: 'Bauhaus 93','Magneto','Kristen ITC';
+            text-shadow:5px 2px 6px rgba(0, 0, 0, .5);
+            text-shadow:  #000 1px 0 0, rgba(255,255,255,0.9) 0 1px 0, rgba(255,255,255,0.9) -1px 0 0, #000 0 -1px 0;
+            font-size: 31px;
+            font-weight: bold;
+            color:#fff;
+        }
+        .welcome span:last-child{
+           color:rgb(218, 120, 166)
+        }
+        .statusbox{
+            display: flex;
+            justify-content: space-between;
+            padding-right:150px;
+            height:20px;
+            background: #000;
+    
+        }
+        .status{
+           width:60px;
+           height:30px;
+           background: #fff;
+           margin:0px 5px;
+           border:1px solid red;
+           border-radius: 50px;
+           float:left;
+
+        }
+       .cip{
+           position: relative;
+           border-top:1px solid rgba(255,255,255);
+           font-weight:bold ;
+           padding-top:15px;
+           text-align:center;
+           /* background: #fff; */
+       }
+
+
+       /* 波浪按钮 */
+       .button {
+            display: block;
+            position: absolute;
+            top:50px;
+            left:50%;
+            transform: translate(-50%,0%);
+            /* width: 100px;
+            height: 100px;  */
+            cursor: pointer;
+        }
+        /* 清除button样式 */
+        .button:focus,
+        .button:active:focus,
+        .button:active:focus,
+        .button:focus,
+        .button:active.focus,
+        .button:active.focus {
+            outline: none;
+            border-color: transparent;    
+            box-shadow:none;
+        }
+
+        .button span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 10px;
+            height: 10px;
+            /* box-shadow: 0 0 12px #fff; */
+            border: 2px solid #fff;
+            border-radius: 50%;
+            animation: wave 1.2s linear infinite;
+        }
+
+        .button span:nth-child(1) {
+            background: #fff;
+            animation: none;
+        }
+
+        .button span:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .button span:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
+        .button span:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes wave {
+            0% {
+                opacity: .2;
+            }
+
+            50% {
+                width: 50px;
+                height: 50px;
+                opacity: .5;
+            }
+
+            100% {
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+            }
+        }
+
+      .idCode{
+          height: 20px;
+          border:none;
+      }
+      .IDleft,
+      .IDright{
+          position: absolute;
+          top:0px;
+          left:25%;
+          width: 100px;
+          height:35px;
+          background: rgba(235, 191, 121.5);
+          border-radius: 5px;
+      }
+      .IDleft input{
+          border:none;
+      }
+      .IDright{
+          padding:0;
+          left:50%;
+          line-height: 35px;
+      }
+      .IDright img{
+          width: 100%;
+          height: 100%;
+      }
+      
+       
