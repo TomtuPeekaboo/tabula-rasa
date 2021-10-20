@@ -61,6 +61,11 @@ a:focus {
     /* background: rgb(172, 93, 175); */
 }
 
+.slideSmall .lift .liftText {
+    font-size: 28px;
+    text-shadow: 2px 4px 0px rgb(223, 197, 255);
+}
+
 .slideSmall .lift .liftCircle {
     position: absolute;
     top: 51px;
@@ -178,6 +183,7 @@ a:focus {
     width: 70%;
     height: 100%;
     padding-top: 5px;
+    cursor: default;
     /* background: rgb(102, 167, 187); */
 }
 
@@ -309,6 +315,7 @@ div.card2 .cell .virusRight img {
 
 .slideSmall .rightImg li .bigc3r {
     position: relative;
+    transition: all .8px;
 }
 
 .slideSmall .rightImg li .card3 {
@@ -414,6 +421,7 @@ div.card2 .cell .virusRight img {
     font-weight: 700;
     font-size: 20px;
     color: #AAAAAA;
+    cursor: pointer;
 }
 
 .slideSmall .rightImg li .card4 .string p.nowTime {
@@ -442,6 +450,7 @@ div.card2 .cell .virusRight img {
     background-color: rgba(255, 255, 255, 1);
     border-radius: 40px;
     box-shadow: 3px 3px rgba(104, 105, 170, 1);
+    cursor: pointer;
 }
 
 .slideSmall .rightImg li .card4 .case1 {
@@ -479,6 +488,7 @@ div.card2 .cell .virusRight img {
     border: 2px solid rgba(250, 234, 180, 1);
     border-radius: 30px;
     background: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .slideSmall .rightImg li .card5 div.step .s1L {

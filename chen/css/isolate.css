@@ -31,8 +31,9 @@ body {
 
 .readH .guard {
     position: absolute;
-    left: 274px;
+    left: 50%;
     top: 302px;
+    transform: translateX(-50%);
     width: 893px;
     height: 94px;
     font-family: 'Open Sans',
