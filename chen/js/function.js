@@ -2,16 +2,6 @@
 // 引入功能函数并应用
 import { request } from './functionalFunction.js'
 
-// function login(no, pwd) {
-//     return request('url', { no, pwd }, { token: 'aaa' }, 'post');
-// }
-
-// function getDisplayData(id) {
-//     return request('url2', { id }, null, 'get');//返回一个promise对象
-// }
-
-
-
 
 
 // 动态区域第一次发送请求，可获得用户id

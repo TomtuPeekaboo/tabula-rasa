@@ -1,4 +1,5 @@
 import { forumFirst, forumPhotoGain, getAuthor } from './function.js'
+
 window.onload = function () {
 
     const ringp = document.querySelector('.ring p');
@@ -11,9 +12,8 @@ window.onload = function () {
     const searchBtn = document.querySelector('.search p');
     const searchArea = document.querySelector('.search input');
     const searchAreaWidth = searchArea.offsetWidth;
-    const form = document.querySelector('#form');
-    // 获取textarea
-    const textArea = document.querySelector('#content');
+
+
 
 
     var authorId;//用户id,用全局变量
@@ -54,6 +54,8 @@ window.onload = function () {
     const role = document.querySelector('.role');
     // 创建图片预览img元素
     const file = document.querySelector('#file');
+    //定义一个数组 把文件数组的值给新数组  对新数组进行操作  然后把新数组传递给后台
+    var curFiles = [];
     // 文件选择监听事件
     file.onchange = function () {
         // 文件读取对象读取文件
@@ -61,22 +63,29 @@ window.onload = function () {
             const fileReader = new FileReader();
             const img = document.createElement('img');
             fileReader.readAsDataURL(this.files[i]);
+            //在数组中追加每次文件
+            curFiles.push(this.files[i]);
+            // 在控制台打印出文件数组
+            console.log(curFiles);
             fileReader.onload = function () {
                 img.src = fileReader.result;
+                img.setAttribute('index', i);
                 // 将role放入装照片的盒子里，然后在role之前插入新元素
                 photoBox.insertBefore(img, role);
             };
-        }
-    };
-    // 
+        };
+
+        // 点击图片该删除图片
+        photoBox.addEventListener('click', (e) => {
+            const imgRemove = e.target;
+            const index = imgRemove.getAttribute('index');
+            imgRemove.remove();
+            curFiles.splice(index, 1);
+            console.log(curFiles);
+        });
+    }
+
     clickDisplay(rolePhotoIcon, photoBox);
-    form.addEventListener('submit', () => {
-        const formData = new FormData($('#form')[0]);
-
-    });
-
-
-
 
 
 
@@ -107,9 +116,10 @@ window.onload = function () {
     const faceimgs = document.querySelectorAll('.facePrint ul li img');
     const fuwenben = document.querySelector('.fuWenBen');
 
+    // 同步富文本跟文本域的值
     fuwenben.addEventListener('DOMSubtreeModified', () => {
         textArea.value = fuwenben.innerHTML;
-        console.log(textArea.value);
+        // console.log(textArea.value);
     })
 
 
@@ -137,7 +147,32 @@ window.onload = function () {
             // console.log(cloneimg);
             range.insertNode(cloneimg);
         });
-    }
+    };
+
+
+    //4. 提交表单  发布---------------------------------------------------------------------------------
+    // 获取表单
+    const form = document.querySelector('#form');
+    // 获取textarea
+    const textArea = document.querySelector('#content');
+    // 获取编辑区发布按钮
+    const writeBtn = document.querySelector('#writeBtn');
+    writeBtn.addEventListener('click', () => {
+        //将获得的表单元素作为参数，对formData初始化
+        var formdata = new FormData(form);
+        // 通过get获取文本框跟照片文件的value值
+        formdata.get("content");
+        formdata.get("file");
+        const xhr = new XMLHttpRequest();
+        xhr.open('post', 'http://localhost:3000/');
+        xhr.send(formdata);
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                console.log(xhr.responseText);
+                // 具体操作
+            }
+        }
+    });
 
 
 
@@ -169,6 +204,21 @@ window.onload = function () {
         });
     };
 
+    // (3)评论选择
+
+    const choose = document.querySelectorAll('.doChoose');
+    for (let k = 0; k < choose.length; k++) {
+        const chooseSpan = choose[k].children;
+        for (let b = 0; b < chooseSpan.length; b++) {
+            chooseSpan[b].addEventListener('click', () => {
+                for (let l = 0; l < chooseSpan.length; l++) {
+                    chooseSpan[l].className = '';
+                }
+                chooseSpan[b].className = 'doc';
+            });
+        }
+    }
+
     // （2）创建动态模板
 
     // 获取第一个forum作为模板克隆
@@ -183,7 +233,7 @@ window.onload = function () {
     const username = document.querySelectorAll('.forum .anName');//用户名
     const Userphoto = document.querySelectorAll('.forum .photo img');//用户头像
     const UserTime = document.querySelectorAll('.forum .anTime')
-    console.log(Userphoto);
+    // console.log(Userphoto);
 
 
     //---------获取数据---------------
@@ -208,7 +258,7 @@ window.onload = function () {
     // });
 
     //引入模块后直接处理----------------(一)
-    var start;
+    var start;//选择开始的位置
     forumFirst(start).then(res => {
         console.log(res);//返回地址传递过来的所有信息
         const DTArray = res.data;
@@ -242,13 +292,13 @@ window.onload = function () {
 
 
             // 用户发布时间
-            const UserTime = DTArray.time;
+            UserTime.innerText = DTArray.time;
             //  用户图片个数
             const imgcount = DTArray.imgcount;
             // 创建li>img函数  生成存放照片的盒子
-            function creatLi2(num) {
+            function creatLi2(imgcount) {
                 let lis = [];
-                for (let k = 1; k <= num; k++) {//框架
+                for (let k = 1; k <= imgcount; k++) {//框架
                     lis[k] = '<li><img src="" alt=""></li>';//可更换为想要的格式
                 }
                 return lis.join('');//数组转化为字符串

@@ -9,7 +9,7 @@ window.addEventListener('load', function () {
     const liftCircle = document.querySelector('.liftCircle');
     const c3rCircles = document.querySelectorAll('#c3rCircle>div');
     const c4Circle = document.querySelector('.c4Circle');
-    console.log(liftText);
+    // console.log(liftText);
 
 
     //获取当前时间
@@ -179,7 +179,8 @@ window.addEventListener('load', function () {
     };
 
 
-
+    const centers = document.querySelectorAll('.rightCell>p.center');
+    const bottoms = document.querySelectorAll('.rightCell>p.bottom span');
     //传数据部分
     const s = new Promise((resolve, reject) => {
         //创建对象
@@ -201,11 +202,9 @@ window.addEventListener('load', function () {
                 }
             }
         }
-    })
+    });
     s.then(value => {
         console.log(value);
-        const centers = document.querySelectorAll('.rightCell>p.center');
-        const bottoms = document.querySelectorAll('.rightCell>p.bottom');
         value = JSON.parse(value)
         const ss_array = value.data;
         console.log(ss_array);
@@ -225,11 +224,16 @@ window.addEventListener('load', function () {
         bottoms[3].innerHTML = ss_array.chinaTotal.today.dead;//死亡新增
         centers[5].innerHTML = ss_array.chinaTotal.total.heal;//累计治愈
         bottoms[5].innerHTML = ss_array.chinaTotal.today.heal;//治愈新增
-
     }, reason => {
         console.log(reason);
         console.log("出错啦！");
-    })
+    });
+    for (let i = 0; i < bottoms.length - 1; i++) {
+        let innerText = parseInt(bottoms[i].innerHTML);
+
+        console.log(innerText);
+
+    }
 
 
 });

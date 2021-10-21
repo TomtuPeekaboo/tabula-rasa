@@ -3,14 +3,14 @@
 
 export function request(url, data, header = null, method = "get") {
     return new Promise((resolve, reject) => {
-        const DT = new XMLHttpRequest();
-        DT.responseType = 'json';
-        DT.onreadystatechange = function () {
-            if (DT.readyState === 4) {
-                if (DT.status >= 200 && DT.status < 300) {
-                    resolve(DT.response);//成功
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    resolve(xhr.response);//成功
                 } else {
-                    reject(DT.status);//失败
+                    reject(xhr.status);//失败
                 }
             }
         };

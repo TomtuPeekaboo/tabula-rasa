@@ -34,7 +34,7 @@ body {
     left: 50%;
     top: 302px;
     transform: translateX(-50%);
-    width: 893px;
+    width: 1273px;
     height: 94px;
     font-family: 'Open Sans',
         sans-serif;
@@ -48,7 +48,7 @@ body {
 .readH .guard>div {
     position: absolute;
     top: 50%;
-    left: 12%;
+    left: 7%;
     transform: translateY(-50%);
     width: 200px;
     height: 100%;
@@ -58,19 +58,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
 }
 
 .readH .guard>div:nth-child(3) {
-    left: 72%;
+    left: 47%;
+    top:88%
 }
-
+.readH .guard>div:nth-child(4) {
+    left: 63%;
+}
+.readH .guard>div:nth-child(5) {
+    left: 80%;
+}
 .readH .guard>div select {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 130px;
+    width: 170px;
     height: 92px;
     padding: 3px 2px 3px 2px;
     font-family: 'Open Sans',
