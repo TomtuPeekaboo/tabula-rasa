@@ -1,7 +1,8 @@
 .nav {
-    position: relative;
+    position: fixed;
     /* background: rgb(113, 224, 146); */
     background: #fff;
+    z-index: 999;
 }
 
 .navShow {
@@ -32,6 +33,7 @@
     cursor: pointer;
 }
 
+.navShow .search .findBtn,
 .navShow .search p,
 .navShow .ring p,
 .navShow .write p {
@@ -60,8 +62,38 @@
     padding: 0 23px;
     line-height: 40px;
     font-size: 17px;
-    border: 1px solid transparent;
+    border: 1px solid #ccc;
     transition: all .3s;
+}
+
+/* .navShow .search .searchInBox {
+    width: 100%;
+    height: 100%;
+    background: pink;
+} */
+
+
+
+.navShow .search ul#souSuoUl {
+    display: none;
+    position: absolute;
+    top: 49px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.navShow .search ul#souSuoUl li {
+    width: 100%;
+    /* height: 20px; */
+    margin-bottom: 10px;
+    padding: 5px 14px;
+    background: #fff;
+    font-size: 17px;
+    color: rgba(0, 0, 0, .5);
+    text-align: left;
+    font-weight: normal;
 }
 
 .navShow .ring {
@@ -153,17 +185,19 @@
     /* background: rgb(71, 172, 212); */
 }
 
+
 .icon-sousuo1:before {
     content: "\e613";
 }
 
 .banner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 1345px;
-    min-height: 1500px;
-    margin: 70px auto;
-    border: 1px solid rgba(88, 89, 161, 1);
+    /* min-height: 1500px; */
+    margin: 150px auto;
+    /* border: 1px solid rgba(88, 89, 161, 1); */
     border-radius: 30px;
     font-family: 'Open Sans',
         sans-serif;
@@ -178,6 +212,8 @@
 }
 
 .banner div.centerC {
+    position: absolute;
+    left: 7%;
     width: 926px;
     /* height: 100%; */
     /* background: rgb(119, 224, 231); */
@@ -315,9 +351,14 @@
     letter-spacing: 2px;
 }
 
+.banner div.centerC .say .spare .fuWenBen .AtTip {
+    font-weight: bold;
+    color: rgb(194, 128, 255);
+}
+
 .banner div.centerC .say .spare .fuWenBen img {
     width: 24px;
-    vertical-align: top;
+    vertical-align: bottom;
 }
 
 .banner div.centerC .say .spareIcon {
@@ -424,6 +465,7 @@
     color: #fff;
 }
 
+/* 表情面板 */
 .banner div.centerC .say .spareIcon .facePrint {
     position: absolute;
     top: 41px;
@@ -434,6 +476,27 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     z-index: 999;
+}
+
+/* @我面板 */
+.banner div.centerC .say .spareIcon .Atme {
+    position: absolute;
+    top: 41px;
+    left: 225px;
+    width: 100px;
+    height: 100px;
+    background: pink;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 999;
+}
+
+.banner div.centerC .say .spareIcon .Atme select {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    outline: none;
 }
 
 .banner div.centerC .say .spareIcon .facePrint ul {
@@ -457,7 +520,7 @@
 .banner div.rightC {
     width: 300px;
     height: 1000px;
-    background: rgb(119, 171, 231);
+    /* background: rgb(119, 171, 231); */
     border-radius: 0 28px 0 0;
 }
 
@@ -466,13 +529,15 @@
     margin: 0px 0 15px 0;
     padding: 10px 5px;
     background: #ccc;
+    background: rgb(194, 128, 255, .1);
     font-weight: bold;
 }
 
 .banner div.centerC .hotNewBody {
     width: 100%;
     /* height: 500px; */
-    background: rgb(133, 189, 101);
+    /* background: rgb(133, 189, 101);
+    background: rgba(245, 193, 21, .5); */
 }
 
 
@@ -481,9 +546,10 @@
     /* height: 300px; */
     padding: 20px 20px 11px 20px;
     margin-bottom: 30px;
-    background: rgb(190, 61, 180);
-    border: 1px solid #ccc;
+    /* background: radial-gradient(rgb(194, 128, 255), transparent); */
     border-radius: 5px;
+    /* border: 3px solid darkorange; */
+    border: 3px solid rgba(194, 128, 255, .4)
 }
 
 .banner div.centerC .hotNewBody .forum .aurther {
@@ -539,6 +605,8 @@
     font-size: 13px;
     color: rgba(194, 128, 255, 1);
     border: 1px solid rgba(194, 128, 255, 1);
+    /* color: darkorange;
+    border: 1px solid darkorange; */
     border-radius: 4px;
     cursor: pointer;
 }
@@ -547,7 +615,7 @@
 .banner div.centerC .hotNewBody .forum .aurtherTmg,
 .banner div.centerC .hotNewBody .forum .forumFooter {
     width: 80%;
-    background: #fff;
+    /* background: #fff; */
     margin: 20px 20px 20px 64px;
 }
 
@@ -558,6 +626,11 @@
     line-height: 35px;
     font-size: 18px;
     word-wrap: break-word;
+}
+
+.banner div.centerC .hotNewBody .forum .aurtherSay p img {
+    width: 25px;
+    vertical-align: text-top;
 }
 
 .banner div.centerC .hotNewBody .forum .aurtherTmg {
@@ -625,7 +698,8 @@
 
 .banner div.centerC .hotNewBody .forum .forumFooter>div:hover,
 .banner div.centerC .hotNewBody .forum .forumFooter>div span:hover {
-    color: orange;
+    color: darkorange;
+    text-shadow: 1px 1px 3px #fff;
 }
 
 .banner div.centerC .hotNewBody .forum .forumFooter>div span .banner div.centerC .hotNewBody .forum .forumFooter .zf {
@@ -650,7 +724,7 @@
     /* height: 50px; */
     padding-top: 20px;
     border-top: 1px solid #ccc;
-    background: #fff;
+    /* background: #fff; */
 
 }
 
@@ -692,6 +766,7 @@
     padding-left: 20px;
     line-height: 57px;
     border: 2px solid orange;
+    border: 2px solid rgb(194, 128, 255);
     border-radius: 13px;
     font-size: 20px;
     outline: none;
@@ -736,6 +811,7 @@
     width: 97px;
     height: 45px;
     background: orange;
+    background: rgb(194, 128, 255);
     border-radius: 21px;
     text-align: center;
     line-height: 45px;
@@ -773,6 +849,7 @@
 .banner div.centerC .hotNewBody .forum .discuss .disOther .doChoose span.doc {
     font-weight: bold;
     color: orange;
+    color: rgba(194, 128, 255);
 }
 
 .banner div.centerC .hotNewBody .forum .discuss .disOther li.doli {
@@ -789,10 +866,12 @@
 
 .banner div.centerC .hotNewBody .forum .discuss .disOther li.doli .dlName {
     color: orange;
+    color: rgba(194, 128, 255);
     font-size: 18px;
     padding-right: 22px;
     /* 强制不换行 */
     white-space: nowrap;
+    /* text-shadow: 1px 1px 3px darkorange; */
 }
 
 .banner div.centerC .hotNewBody .forum .discuss .disOther li.doli .dlContent {
@@ -823,7 +902,7 @@
     width: 100%;
     height: 150px;
     background: rgb(238, 232, 255);
-    border-radius: 0 29px 0 0;
+    /* border-radius: 0 29px 0 0; */
 }
 
 .bear {
@@ -889,9 +968,10 @@
 
 .rightC .hotTalk {
     width: 100%;
-    height: 600px;
+    /* height: 600px; */
     margin-top: 20px;
     background: rgb(34, 172, 114);
+    background: rgb(243, 231, 255);
 }
 
 .rightC .hotTalk .hotTalkH,
@@ -903,6 +983,8 @@
     font-size: 18px;
     line-height: 50px;
     background: #fff;
+    background: rgb(217, 168, 201);
+    box-shadow: 1px 1px 3px #fff;
     border-bottom: 1px solid #f9f9f9;
 }
 
@@ -934,7 +1016,8 @@
     height: 46px;
     line-height: 46px;
     background: #fff;
-    border-bottom: 1px solid #f9f9f9;
+    background: rgb(243, 231, 255);
+    /* border-bottom: 1px solid #f9f9f9; */
 }
 
 .rightC .hotTalk .hotTalkB li:last-child {
@@ -950,10 +1033,14 @@
     font-size: 15px;
 }
 
+.rightC .hotTalk .hotTalkB li:hover {
+    background: rgba(133, 144, 166, .4);
+}
+
 .rightC .hotTalk .hotTalkB li a span {
     padding: 5px 7px;
     text-align: center;
-    background: #890;
+    /* background: #890; */
     font-size: 20px;
     color: orange;
     white-space: nowrap;

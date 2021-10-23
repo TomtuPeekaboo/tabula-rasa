@@ -140,7 +140,8 @@ input {
 
 .remember label {
     position: absolute;
-    top: 7px;
+    top: 5px;
+    left: 60px;
 }
 
 .remember span {

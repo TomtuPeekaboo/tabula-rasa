@@ -32,6 +32,9 @@ window.addEventListener('load', function () {
         })
     };
 
+    remember.addEventListener("check", function () {
+        remember.value = true;
+    })
 
     // 获取数据
     //传数据部分
@@ -56,7 +59,7 @@ window.addEventListener('load', function () {
                     tip.innerHTML = "用户不存在！";
                 } else if (json.code === 200) {
                     tip.innerHTML = "登录成功！";
-                    window.location.href = "index.jsp";
+                    window.location.href = "forum.html";
                 }
             }
         }

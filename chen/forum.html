@@ -20,8 +20,15 @@
         <div class="logo">TABULS RASA</div>
         <div class="navShow">
             <div class="search">
-                <input type="text" name="search" placeholder="" id="search">
+                <!-- <div class="searchInBox"> -->
+                <input type="text" name="search" placeholder="搜索" id="search">
+                <!-- <div class="iconfont icon-sousuo findBtn"></div> -->
+                <!-- </div> -->
                 <p class="iconfont icon-sousuo"></p>
+                <ul id="souSuoUl">
+                    <li class="souSuoLi">提示文字显示部分</li>
+                    <li class="souSuoLi">提示文字显示部分</li>
+                </ul>
             </div>
             <div class="ring">
                 <p class="iconfont icon-lingdang"></p>
@@ -82,7 +89,7 @@
                         <div class="siLeft">
                             <p class="silIcon" id="spareIconface">表情</p>
                             <p class="silIcon" id="rolePhotoIcon">图片</p>
-                            <p class="silIcon">提问</p>
+                            <p class="silIcon" id="At">呼我</p>
                             <p class="silIcon">话题</p>
                             <p class="silIcon">手账</p>
                             <p class="silIcon">定时发送</p>
@@ -102,14 +109,20 @@
                         <div class="facePrint" style="display:none">
                             <ul class="facePrintUl"></ul>
                         </div>
+                        <!-- @我画板 -->
+                        <div class="Atme" style="display: none;">
+                            <select name="AtmeS" id="AtmeS">
+                                <option value="" class="hh">bh</option>
+                                <option value="">jw</option>
+                                <option value="">jr</option>
+                                <option value="">zx</option>
+                            </select>
+                        </div>
                     </div>
                 </form>
             </div>
             <p class="hotNewH">热门动态</p>
             <div class="hotNewBody">
-
-
-
                 <div class="forum">
                     <div class="aurther">
                         <div class="photo">
@@ -136,7 +149,7 @@
                         <li><img src="img/person.jpg" alt=""></li>
                     </div>
                     <div class="forumFooter">
-                        <div class="zf"><span class="iconfont icon-zhuanfa"></span>转发</span>></div>
+                        <div class="zf"><span class="iconfont icon-zhuanfa"></span>转发</span></div>
                         <div class="pl"><span class="iconfont icon-pinglun"></span>评论</div>
                         <div class="aixin">
                             <span class="iconfont icon-aixin"></span>
@@ -215,7 +228,7 @@
                         <li><img src="img/person.jpg" alt=""></li>
                     </div>
                     <div class="forumFooter">
-                        <div class="zf"><span class="iconfont icon-zhuanfa"></span>转发</div>
+                        <div class="zf"><span class="iconfont icon-zhuanfa"></span>转发</span></div>
                         <div class="pl"><span class="iconfont icon-pinglun"></span>评论</div>
                         <div class="aixin"><span class="iconfont icon-aixin"></span>
                             <div class="two">99</div>
@@ -274,7 +287,7 @@
 
         </div>
         <!-- 右边 -->
-        <div class="rightC">
+        <div class="rightC" id="rightC">
             <div class="bearContent">
                 <div class="bear"></div>
             </div>

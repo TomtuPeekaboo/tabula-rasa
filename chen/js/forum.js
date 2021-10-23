@@ -1,4 +1,4 @@
-import { forumFirst, forumPhotoGain, getAuthor } from './function.js'
+import { forumFirst, getAuthor, getSearchKey, gethotTalk, getFindResult } from './function.js'
 
 window.onload = function () {
 
@@ -28,15 +28,27 @@ window.onload = function () {
     clickDisplay(write, say);
     // 导航栏头像处
     clickDisplay(personp, personC);
-    // 导航栏搜索处
+    //导航栏搜索处-----------------------------------------------------------------------
     searchBtn.addEventListener('click', () => {
+        // 如果出现
         if (searchArea.offsetWidth > 500) {
-            searchArea.style.width = 72 + 'px';
-            searchArea.style.backgroundColor = 'transparent';
-            searchArea.placeholder = "";
-            searchArea.style.borderColor = 'transparent'
-
+            const searchAV = searchArea.value;
+            // 但是没输入，点击隐藏
+            if (searchAV == '') {
+                searchArea.style.width = 72 + 'px';
+                searchArea.style.backgroundColor = 'transparent';
+                searchArea.placeholder = "";
+                searchArea.style.borderColor = 'transparent';
+            } else {
+                // 有输入，，发送请求
+                // 把搜索内容传进去
+                getFindResult(searchAV).then(res => {
+                    console.log(res);//返回地址传递过来的所有信息
+                    // 后续处理
+                });
+            }
         } else {
+            // 如果没出现，让它出现
             searchArea.style.width = searchAreaWidth + 'px';
             searchArea.placeholder = "搜索";
             searchArea.style.backgroundColor = 'rgb(246, 246, 246)';
@@ -99,7 +111,7 @@ window.onload = function () {
     function creatLi1(num) { //要创建多少个li
         let lis = [];
         for (let i = 1; i <= num; i++) { //框架           
-            lis[i] = '<li><img src="../img/emoji/' + i +
+            lis[i] = '<li><img src="./img/emoji/' + i +
                 '.gif" alt=""></li>';
         }
         return lis.join(''); //数组转化为字符串 
@@ -122,9 +134,72 @@ window.onload = function () {
         // console.log(textArea.value);
     })
 
+    // 第一版本
+    // for (let i = 0; i < faceimgs.length; i++) {
+    //     faceimgs[i].addEventListener('click', () => {
+    //         // 判断光标是否在富文本框里面
+    //         if (document.activeElement !== fuwenben) {
+    //             // 如果不是就在富文本框中加上光标
+    //             fuwenben.focus();
+    //         }
+    //         // 记录光标位置对象
+    //         var range;
+    //         var sel = window.getSelection();//得到焦点的地方
+    //         const node = sel.anchorNode;
+    //         // 判断是否有光标
+    //         if (node != null) {
+    //             // 获取光标起始位置
+    //             range = sel.getRangeAt(0);
+    //         } else {
+    //             range = undefined;
+    //         }
+    //         // 克隆被点击的表情的img
+    //         let cloneimg = faceimgs[i].cloneNode(true);
+    //         // console.log(cloneimg);
+    //         range.insertNode(cloneimg);
+    //     });
+    // };
 
+    // /--------------------------------
+    //聊天内容框 插入文本或者其他元素后，移动置光标到最新处
+    function insertHtmlAtCaret(childElement) {
+        var sel, range;
+        // 判断是否有光标
+        if (window.getSelection) {
+            // IE9 and non-IE
+            sel = window.getSelection();//返回一个Selection对象，表示用户选择的文本范围或光标的当前位置
+            if (sel.getRangeAt && sel.rangeCount) {
+                // 获取光标起始位置
+                range = sel.getRangeAt(0);
+                //移除来自 Document的Range 内容。
+                range.deleteContents();
+                // 创建一个div
+                var el = document.createElement("div");
+                // 把目标值写入div
+                el.appendChild(childElement);
+                // -----------------------不会！！！不理解！！！！flag怎么同时声明三个 
+                //创建了一虚拟的节点对象
+                var frag = document.createDocumentFragment(),
+                    node, lastNode;
+                while ((node = el.firstChild)) {
+                    lastNode = frag.appendChild(node);
+                }
 
-
+                range.insertNode(frag);
+                if (lastNode) {
+                    range = range.cloneRange();
+                    range.setStartAfter(lastNode);
+                    range.collapse(true);
+                    sel.removeAllRanges();
+                    sel.addRange(range);
+                }
+            }
+        } else if (document.selection && document.selection.type != "Control") {
+            // IE < 9 兼容性问题
+            document.selection.createRange().pasteHTML(html);
+        }
+    };
+    // 实现表情添加
     for (let i = 0; i < faceimgs.length; i++) {
         faceimgs[i].addEventListener('click', () => {
             // 判断光标是否在富文本框里面
@@ -132,22 +207,58 @@ window.onload = function () {
                 // 如果不是就在富文本框中加上光标
                 fuwenben.focus();
             }
-            // 记录光标位置对象
-            var range;
-            const node = window.getSelection().anchorNode;
-            // 判断是否有光标
-            if (node != null) {
-                // 获取光标起始位置
-                range = window.getSelection().getRangeAt(0);
-            } else {
-                range = undefined;
-            }
             // 克隆被点击的表情的img
             let cloneimg = faceimgs[i].cloneNode(true);
             // console.log(cloneimg);
-            range.insertNode(cloneimg);
+            insertHtmlAtCaret(cloneimg);
         });
     };
+
+    // @跟话题
+    const At = document.querySelector('#At');//获取话题按钮
+    const Atme = document.querySelector('.Atme');//获取select外的盒子
+    const AtSelect = document.querySelector('#AtmeS');//获取select
+    // 获取select里面的所有option
+    const optionAt = AtSelect.children;
+
+
+    // 创建一个话题模板
+    At.addEventListener('click', () => {
+        if (Atme.style.display == 'none') {
+            Atme.style.display = 'block';//点击出现选择框
+
+            // 判断光标是否在富文本框里面
+            if (document.activeElement !== fuwenben) {
+                // 如果不是就在富文本框中加上光标
+                fuwenben.focus();
+            }
+
+            //获取下拉选项中选中的值
+            let ATValue;
+            function changeAt() {
+                const AtDiv = document.createElement('span');
+                AtDiv.className = 'AtTip';
+                let optionNum = AtSelect.selectedIndex;
+                ATValue = optionAt[optionNum].innerHTML;
+
+                console.log(ATValue);
+                AtDiv.innerHTML = '@' + ATValue;
+                //将话题内容插入到
+                fuwenben.appendChild(AtDiv);
+                Atme.style.display = 'none';
+                AtSelect.removeEventListener('change', changeAt, false);
+            }
+            AtSelect.addEventListener('change', changeAt, false);
+
+
+
+
+
+        } else {
+            Atme.style.display = 'none';
+        }
+    });
+
 
 
     //4. 提交表单  发布---------------------------------------------------------------------------------
@@ -164,11 +275,11 @@ window.onload = function () {
         formdata.get("content");
         formdata.get("file");
         const xhr = new XMLHttpRequest();
-        xhr.open('post', 'http://localhost:3000/');
+        xhr.open('post', 'sendDynamicServlet');
         xhr.send(formdata);
         xhr.onload = function () {
             if (xhr.status == 200) {
-                console.log(xhr.responseText);
+                window.location.href = "forum.html";
                 // 具体操作
             }
         }
@@ -184,25 +295,8 @@ window.onload = function () {
         clickDisplay(plbtn[i], discuss[i]);
     }
 
-    // （1）小红心
-    const aixinBtn = document.querySelectorAll('.aixin');
-    const aixin = document.querySelectorAll('.aixin .icon-aixin');
-    const aixinText = document.querySelectorAll('.aixin .two');
-    // console.log(aixinBtn);
-    // console.log(aixin);
-    for (let i = 0; i < aixinBtn.length; i++) {
 
-        aixinBtn[i].addEventListener('click', () => {
-            let aixinNum = parseInt(aixinText[i].innerText);
-            if (aixin[i].style.color == 'red') {
-                aixinText[i].innerText = aixinNum - 1;
-                aixin[i].style.color = 'rgb(85, 85, 85)';
-            } else {
-                aixinText[i].innerText = aixinNum + 1;
-                aixin[i].style.color = 'red';
-            }
-        });
-    };
+
 
     // (3)评论选择
 
@@ -221,141 +315,100 @@ window.onload = function () {
 
     // （2）创建动态模板
 
-    // 获取第一个forum作为模板克隆
-    const forum = document.querySelector('.hotNewBody .forum');
-    // 深克隆动态模板
-    // const forumTemplet = forum.cloneNode(true);
-    // 获取装动态的大盒子
-    const hotNewBody = document.querySelector('.hotNewBody');
-    // 用户文案区域
-    const aurtherSay = document.querySelectorAll('.forum .aurtherSay p');
-    const aurtherTmg = document.querySelectorAll('.forum .aurtherTmg');
-    const username = document.querySelectorAll('.forum .anName');//用户名
-    const Userphoto = document.querySelectorAll('.forum .photo img');//用户头像
-    const UserTime = document.querySelectorAll('.forum .anTime')
-    // console.log(Userphoto);
 
 
     //---------获取数据---------------
     // 引入功能函数并应用
 
-
-    // const p = new Promise((resolve, reject) => {
-    //     const DT = new XMLHttpRequest();
-    //     DT.responseType = 'json';
-    //     DT.open('get', "http://192.168.43.157:8080/rasaProject/getDynamicServlet?start=0");
-    //     DT.send();
-    //     DT.onreadystatechange = function () {
-    //         if (DT.readyState === 4) {
-    //             if (DT.status >= 200 && DT.status < 300) {
-    //                 resolve(DT.response);
-    //             } else {
-    //                 reject(DT.status);
-
-    //             }
-    //         }
-    //     }
-    // });
-
     //引入模块后直接处理----------------(一)
-    var start;//选择开始的位置
+    var start = 0;//选择开始的位置
     forumFirst(start).then(res => {
         console.log(res);//返回地址传递过来的所有信息
         const DTArray = res.data;
         console.log(DTArray);//获得所有返回结果
+        console.log(DTArray.length)
         // 根据返回数据个数复刻forum个数
-        for (let i = 0; i < DTArray.length - 1; i++) {//j=每个forum
+        const forum = document.querySelector('.hotNewBody .forum');
+        // 深克隆动态模板
+        // const forumTemplet = forum.cloneNode(true);
+        // 获取装动态的大盒子
+        const hotNewBody = document.querySelector('.hotNewBody');
+        for (let i = 0; i < DTArray.length; i++) {
             const forumTemplet = forum.cloneNode(true);//深复制forum
             // 将forum装在大盒子里面的末尾        --->这里后面需要一个函数来判断要插到哪里！！！！而不是死板的放在最后
-            hotNewBody.appendChild(forumTemplet);
-            //  用户的id值(后续需要)  其声明在最顶部
-            authorId = DTArray.authodId;
+            // hotNewBody.appendChild(forumTemplet);
+            // 每次都插入到第一个
+            hotNewBody.insertBefore(forumTemplet, hotNewBody.firstChild);
 
+        }
+        // 获取第一个forum作为模板克隆
 
+        // 用户文案区域
+        const aurtherSay = document.querySelectorAll('.forum .aurtherSay p');
+        const aurtherTmg = document.querySelectorAll('.forum .aurtherTmg');
+        const username = document.querySelectorAll('.forum .anName');//用户名
+        const Userphoto = document.querySelectorAll('.forum .photo img');//用户头像
+        const UserTime = document.querySelectorAll('.forum .anTime')
+        const aixinBtn = document.querySelectorAll('.aixin');
+        const aixin = document.querySelectorAll('.aixin .icon-aixin');
+        const aixinText = document.querySelectorAll('.aixin .two');
+        // console.log(aixinBtn);
+        // console.log(aixin);
+        for (let i = 0; i < aixinBtn.length; i++) {
+
+            aixinBtn[i].addEventListener('click', () => {
+                let aixinNum = parseInt(aixinText[i].innerText);
+                if (aixin[i].style.color == 'red') {
+                    aixinText[i].innerText = aixinNum - 1;
+                    aixin[i].style.color = 'rgb(85, 85, 85)';
+                } else {
+                    aixinText[i].innerText = aixinNum + 1;
+                    aixin[i].style.color = 'red';
+                }
+            });
+        };
+
+        for (let i = 0; i < DTArray.length; i++) {//j=每个forum
+            authorId = DTArray[i].authodId;
             // ------------------------------------------（二）
             getAuthor(authorId).then(res => {
                 console.log(res);//返回地址传递过来的所有信息
                 // 后续处理
                 const UserArray = res.data;
                 username[i].innerHTML = UserArray.username;
-                Userphoto[i].src = UserArray.head;
-            })
-
-            // 用户文案
-            aurtherSay[i].innerHTML = DTArray.content;
-            // 用户图片地址(后续这里会有对应的id值判断)
-            const imgFile = DTArray.imgFile;
-            // -------------------------------------------（三）
-            forumPhotoGain().then(res => {
-
+                Userphoto[i].src = "getUserHeadServlet?userid=" + DTArray[i].authodId + "&count=0";
             });
 
+            // 用户文案
+
+            aurtherSay[i].innerHTML = DTArray[i].content;
+
+            // 用户图片地址(后续这里会有对应的id值判断)
+            const imgFile = DTArray[i].imgFiles;
 
             // 用户发布时间
-            UserTime.innerText = DTArray.time;
+            UserTime[i].innerHTML = DTArray[i].time;
             //  用户图片个数
-            const imgcount = DTArray.imgcount;
+            const imgcount = DTArray[i].imgcount;
             // 创建li>img函数  生成存放照片的盒子
             function creatLi2(imgcount) {
                 let lis = [];
-                for (let k = 1; k <= imgcount; k++) {//框架
-                    lis[k] = '<li><img src="" alt=""></li>';//可更换为想要的格式
+                for (let k = 0; k < imgcount; k++) {//框架
+                    let url = "getDynamicImgServlet?imgFiles=" + imgFile + "&count=" + k
+                    lis[k] = "<li><img src=" + url + " alt=''></li>";//可更换为想要的格式
                 }
                 return lis.join('');//数组转化为字符串
             }
-            aurtherTmg.innerHTML = creatLi2(imgcount);
+            aurtherTmg[i].innerHTML = creatLi2(imgcount);
 
             // 用户获赞数
-            aixinText[i] = DTArray.zcount;
+            aixinText[i].innerHTML = DTArray[i].zcount;
 
         }
 
     }).catch(err => {
         console.log(err);
-    })
-
-
-    // 用p.then(function(value){},function(reson){})来完成需要工作，上面的就不用动它
-    // p.then(value => {
-    //     console.log(value);//返回地址传递过来的所有信息
-    //     const DTArray = value.data;
-    //     console.log(DTArray);//获得所有返回结果
-
-
-    //     // 根据返回数据个数复刻forum个数
-    //     for (let i = 0; i < DTArray.length - 1; i++) {//j=每个forum
-    //         const forumTemplet = forum.cloneNode(true);//深复制forum
-    //         // 将forum装在大盒子里面的末尾        --->这里后面需要一个函数来判断要插到哪里！！！！而不是死板的放在最后
-    //         hotNewBody.appendChild(forumTemplet);
-    //         //  用户的id值(后续需要)  其声明在最顶部
-    //         authorId = DTArray.authodId;
-    //         getUser(authorId).then(res => {
-
-    //         })
-
-    //         // 用户文案
-    //         aurtherSay[i].innerHTML = DTArray.content;
-    //         // 用户图片地址(后续这里会有对应的id值判断)----------------
-    //         const imgFile = DTArray.imgFile;
-    //         //  用户图片个数
-    //         const imgcount = DTArray.imgcount;
-    //         // 创建li>img函数  生成存放照片的盒子
-    //         function creatLi2(num) {
-    //             let lis = [];
-    //             for (let k = 1; k <= num; k++) {//框架
-    //                 lis[k] = '<li><img src="" alt=""></li>';//可更换为想要的格式
-    //             }
-    //             return lis.join('');//数组转化为字符串
-    //         }
-    //         aurtherTmg.innerHTML = creatLi2(imgcount);
-
-    //         // 用户获赞数
-    //         aixinText[i] = DTArray.zcount;
-
-    //     }
-    // }, reason => {
-    //     console.log(reason);//0
-    // });
+    });
 
 
 
@@ -385,5 +438,80 @@ window.onload = function () {
         return lis.join('');//数组转化为字符串
     };
 
+    // 滚动定位问题
+    // 获得可视化口内部的大小
+    // 固定条件  滚动距离=盒子高度-可视化窗口高度
+    const rightC = document.querySelector('#rightC');
+    const fixTimeH = rightC.offsetHeight - window.innerHeight;
+    window.addEventListener('scroll', () => {
+        //滚动的距离,距离顶部的距离
+        const topScroll = window.scrollY;
+        if (topScroll >= fixTimeH) {
+            rightC.style.position = "fixed";
+            rightC.style.top = -fixTimeH + 'px';
+            rightC.style.right = 52 + 'px';
+        } else {
+            rightC.style.position = "absolute";
+            rightC.style.top = 0 + 'px';
+            rightC.style.right = 0 + 'px';
+        }
+    });
+
+
+
+    // 搜索框关键字
+    const searchKeyUl = document.querySelector('#souSuoUl');
+    searchArea.oninput = function () {
+        // 获取用户输入的内容
+        const searchText = this.value;
+        // 向服务端发送请求 拿到关键字相关内容
+        getSearchKey(searchText).then(res => {
+            console.log(res);
+            const gskText = res.data;
+            const gskNum = gskText.length;
+            // 创建关键字相关内容的li
+            function creatLi3(num) {
+                let lis = [];
+                for (let k = 1; k <= num; k++) {//框架
+                    lis[k] = '<li class="souSuoLi"></li>';//可更换为想要的格式
+                }
+                return lis.join('');//数组转化为字符串
+            }
+            searchKeyUl.innerHTML = creatLi3(gskNum);
+            // 获取刚刚创建的li，并填入返回的内容
+            const searchKeyLi = document.querySelector('#souSuoUl li');
+            for (let i = 0; i < gskNum; i++) {
+                searchKeyLi.innerHTML = gskText[i];
+            }
+        });
+        searchKeyUl.style.display = 'block';
+    }
+
+
+
+
+    // 热门话题-----------------------------------------------------------------------
+    const hotTalkB = document.querySelector('.hotTalkB');//装话题大盒子
+    gethotTalk().then(res => {
+        console.log(res);
+        const HTArray = res.data;
+        console.log(HTArray);
+        // 获取话题数
+        const HTnum = HTArray.lenght;
+        // 制造放话题的li
+        function creatLi4(num) {
+            let lis = [];
+            for (let k = 1; k <= num; k++) {//框架
+                lis[k] = '<li><a href="javascript:;"></a></li>';//可更换为想要的格式
+            }
+            return lis.join('');//数组转化为字符串
+        }
+        hotTalkB.innerHTML = creatLi4(HTnum);
+        const hotTalkLi = document.querySelectorAll('.hotTalkB ul li a');
+        for (let i = 0; i < hotTalkLi.length; i++) {
+            // 把话题内容加上去
+            hotTalkLi.innerHTML = '<span>' + (i + 1) + '</span>' + HTArray.Content;
+        }
+    });
 
 }

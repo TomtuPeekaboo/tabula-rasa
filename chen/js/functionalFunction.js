@@ -41,7 +41,7 @@ export function request(url, data, header = null, method = "get") {
             xhr.send(param);
         }
         else {
-            xhr.send(null);
+            xhr.send();
         }
     });
 }
