@@ -216,13 +216,18 @@ window.onload = function () {
 
     // @跟话题
     const At = document.querySelector('#At');//获取话题按钮
-    const Atme = document.querySelector('.Atme');//获取select外的盒子
+    const huaTiBtn = document.querySelector('#hauTi');//获得#按钮
+    const Atme = document.querySelector('.Atme');//获取@select外的盒子
     const AtSelect = document.querySelector('#AtmeS');//获取select
-    // 获取select里面的所有option
+    const huaTi = document.querySelector('.huaTiban');//获取#select外的盒子
+    const huaTiSelect = document.querySelector('#huaTibanS');//获取select
+    // 获取@select里面的所有option
     const optionAt = AtSelect.children;
+    // 获取#select里面的所有option
+    const optionHt = huaTiSelect.children;
 
 
-    // 创建一个话题模板
+    // 创建一个@模板
     At.addEventListener('click', () => {
         if (Atme.style.display == 'none') {
             Atme.style.display = 'block';//点击出现选择框
@@ -249,15 +254,42 @@ window.onload = function () {
                 AtSelect.removeEventListener('change', changeAt, false);
             }
             AtSelect.addEventListener('change', changeAt, false);
-
-
-
-
-
         } else {
             Atme.style.display = 'none';
         }
     });
+    // 创建话题#
+    huaTiBtn.addEventListener('click', () => {
+        if (huaTi.style.display == 'none') {
+            huaTi.style.display = 'block';//点击出现选择框
+
+            // 判断光标是否在富文本框里面
+            if (document.activeElement !== fuwenben) {
+                // 如果不是就在富文本框中加上光标
+                fuwenben.focus();
+            }
+
+            //获取下拉选项中选中的值
+            let HTValue;
+            function changeHt() {
+                const HtDiv = document.createElement('span');
+                HtDiv.className = 'HtTip';
+                let optionNumH = huaTiSelect.selectedIndex;
+                HTValue = optionHt[optionNumH].innerHTML;
+
+                console.log(HTValue);
+                HtDiv.innerHTML = '#' + HTValue;
+                //将话题内容插入到
+                fuwenben.appendChild(HtDiv);
+                huaTi.style.display = 'none';
+                huaTiSelect.removeEventListener('change', changeHt, false);
+            }
+            huaTiSelect.addEventListener('change', changeHt, false);
+        } else {
+            huaTi.style.display = 'none';
+        }
+    });
+
 
 
 
@@ -510,7 +542,7 @@ window.onload = function () {
         const hotTalkLi = document.querySelectorAll('.hotTalkB ul li a');
         for (let i = 0; i < hotTalkLi.length; i++) {
             // 把话题内容加上去
-            hotTalkLi.innerHTML = '<span>' + (i + 1) + '</span>' + HTArray.Content;
+            hotTalkLi.innerHTML = '<span>' + (i + 1) + '</span>' + HTArray.topicContent + '<i>' + HTArray.hot + '</i>';
         }
     });
 

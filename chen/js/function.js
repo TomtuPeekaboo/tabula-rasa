@@ -29,7 +29,7 @@ function getFindResult(value) {
 
 // 话题获取
 function gethotTalk() {
-    return request('getUserServlet', {});
+    return request('getTopicServlet', {});
 }
 // 统一暴露
 export { forumFirst, getAuthor, getSearchKey, gethotTalk, getFindResult };
