@@ -351,12 +351,12 @@
     letter-spacing: 2px;
 }
 
-.banner div.centerC .say .spare .fuWenBen .AtTip {
+.AtTip {
     font-weight: bold;
     color: rgb(194, 128, 255);
 }
 
-.banner div.centerC .say .spare .fuWenBen .HtTip {
+.HtTip {
     font-weight: bold;
     color: darkorange;
 }

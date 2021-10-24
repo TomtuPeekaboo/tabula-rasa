@@ -1,4 +1,4 @@
-import { forumFirst, getAuthor, getSearchKey, gethotTalk, getFindResult } from './function.js'
+import { forumFirst, getAuthor, getSearchKey, gethotTalk, getFindResult, getFansServlet } from './function.js'
 
 window.onload = function () {
 
@@ -41,10 +41,12 @@ window.onload = function () {
                 searchArea.style.borderColor = 'transparent';
             } else {
                 // 有输入，，发送请求
+
                 // 把搜索内容传进去
-                getFindResult(searchAV).then(res => {
+                getFindResult(start, searchAV).then(res => {
                     console.log(res);//返回地址传递过来的所有信息
-                    // 后续处理
+                    // 后续处理------------------------------------------------------
+
                 });
             }
         } else {
@@ -128,11 +130,8 @@ window.onload = function () {
     const faceimgs = document.querySelectorAll('.facePrint ul li img');
     const fuwenben = document.querySelector('.fuWenBen');
 
-    // 同步富文本跟文本域的值
-    fuwenben.addEventListener('DOMSubtreeModified', () => {
-        textArea.value = fuwenben.innerHTML;
-        // console.log(textArea.value);
-    })
+
+
 
     // 第一版本
     // for (let i = 0; i < faceimgs.length; i++) {
@@ -228,6 +227,17 @@ window.onload = function () {
 
 
     // 创建一个@模板
+    forumFirst().then(res => {
+        console.log(res);//返回地址传递过来的所有信息
+        const fanData = res.data;
+        for (let g = 0; g < fanData.length; g++) {
+            const optionA = document.createElement('option');//创建option标签
+            AtSelect.appendChild(optionA);
+            //获取所有@的option
+            const optionAt = AtSelect.children;
+            optionAt[g].innerHTML = fanData[g];
+        }
+    });
     At.addEventListener('click', () => {
         if (Atme.style.display == 'none') {
             Atme.style.display = 'block';//点击出现选择框
@@ -258,7 +268,20 @@ window.onload = function () {
             Atme.style.display = 'none';
         }
     });
+
     // 创建话题#
+    gethotTalk().then(res => {
+        console.log(res);
+        const hotTalkData = res.data;
+        for (let g = 0; g < hotTalkData.length; g++) {
+            const optionH = document.createElement('option');
+            huaTiSelect.appendChild(optionH);
+            // 获取#select里面的所有option
+            const optionHt = huaTiSelect.children;
+            optionHt[g].innerHTML = hotTalkData[g].topicContent;
+        }
+
+    });
     huaTiBtn.addEventListener('click', () => {
         if (huaTi.style.display == 'none') {
             huaTi.style.display = 'block';//点击出现选择框
@@ -296,8 +319,32 @@ window.onload = function () {
     //4. 提交表单  发布---------------------------------------------------------------------------------
     // 获取表单
     const form = document.querySelector('#form');
-    // 获取textarea
-    const textArea = document.querySelector('#content');
+    // 获取textarea内容的文本域
+    const textArea1 = document.querySelector('#content');
+    // 同步富文本跟文本域的值
+    fuwenben.addEventListener('DOMSubtreeModified', () => {
+        textArea1.value = fuwenben.innerHTML;
+        // console.log(textArea1.value);
+    });
+    // @的文本域
+    const topicContent = document.querySelector('#topicContent');
+    const HtTip = document.querySelectorAll('.fuWenBen span.HtTip');
+    for (let h = 0; h < HtTip.length; h++) {
+        const HtTipC = HtTip[h].innerHTML + HtTipC;
+        topicContent.innerHTML = HtTipC;
+    }
+
+
+    // #的文本域
+    const at = document.querySelector('#at');
+    const AtTip = document.querySelectorAll('.fuWenBen span.AtTip');
+    for (let w = 0; w < AtTip.length; w++) {
+        const AtTipC = AtTip[w].innerHTML + AtTipC;
+        at.innerHTML = AtTipC;
+    }
+
+
+
     // 获取编辑区发布按钮
     const writeBtn = document.querySelector('#writeBtn');
     writeBtn.addEventListener('click', () => {
@@ -312,7 +359,6 @@ window.onload = function () {
         xhr.onload = function () {
             if (xhr.status == 200) {
                 window.location.href = "forum.html";
-                // 具体操作
             }
         }
     });
@@ -331,7 +377,6 @@ window.onload = function () {
 
 
     // (3)评论选择
-
     const choose = document.querySelectorAll('.doChoose');
     for (let k = 0; k < choose.length; k++) {
         const chooseSpan = choose[k].children;
@@ -354,7 +399,7 @@ window.onload = function () {
 
     //引入模块后直接处理----------------(一)
     var start = 0;//选择开始的位置
-    forumFirst(start).then(res => {
+    forumFirst(start, msg).then(res => {
         console.log(res);//返回地址传递过来的所有信息
         const DTArray = res.data;
         console.log(DTArray);//获得所有返回结果
@@ -529,7 +574,7 @@ window.onload = function () {
         const HTArray = res.data;
         console.log(HTArray);
         // 获取话题数
-        const HTnum = HTArray.lenght;
+        const HTnum = HTArray.length;
         // 制造放话题的li
         function creatLi4(num) {
             let lis = [];
