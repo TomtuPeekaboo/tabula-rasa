@@ -1,11 +1,14 @@
 window.addEventListener('load', function () {
+    // 服务器地址
+    var address = 'http://192.168.0.161:8080/rasaProject';
+    // var address = 'http://172.20.10.2:8080/rasaProject';//队长热点
     const inputs = document.querySelectorAll('input');
     const active = document.querySelectorAll('.active');
     const registerFont = document.querySelectorAll('#registerFont');
     const phone = document.querySelector('#phone');
     const password = document.querySelector('#password');
-    const remember = document.querySelector('#remember')
-    const submit = document.querySelector('button#submit')
+    const remember = document.querySelector('#remember');
+    const submit = document.querySelector('button#submit');
     const tip = document.querySelector('#cip>span');
     console.log(inputs);
     var flag = 0;
@@ -42,7 +45,7 @@ window.addEventListener('load', function () {
     submit.addEventListener('click', function () {
         const login = new XMLHttpRequest;
         //创建对象
-        login.open("post", "loginServlet", true);
+        login.open("post", address + '/loginServlet', true);
         login.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         let s = "phone=" + phone.value + "&password=" + password.value + "&remember=" + remember.value;
         login.send(s);

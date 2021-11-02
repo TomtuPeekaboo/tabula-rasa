@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-
+    var address = 'http://192.168.0.161:8080/rasaProject';
     const slideSmall = document.querySelector('#slideSmall');
     const Ul = document.querySelector('ul.rightImg');
     const Ullis = Ul.children;
@@ -186,7 +186,7 @@ window.addEventListener('load', function () {
         //创建对象
         const slideshow = new XMLHttpRequest();
         slideshow.responseType = 'json';
-        slideshow.open('get', "requestAPIServlet");
+        slideshow.open('get', address + "/requestAPIServlet");
         // slideshow.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
         //发送请求
@@ -220,19 +220,17 @@ window.addEventListener('load', function () {
         bottoms[2].innerHTML = ss_array.chinaTotal.today.storeConfirm;//现有确诊较昨日
         centers[3].innerHTML = ss_array.chinaTotal.total.confirm;//累计确诊
         bottoms[3].innerHTML = ss_array.chinaTotal.today.confirm;//确诊新增
-        centers[4].innerHTML = ss_array.chinaTotal.total.dead;//累计死亡
-        bottoms[3].innerHTML = ss_array.chinaTotal.today.dead;//死亡新增
-        centers[5].innerHTML = ss_array.chinaTotal.total.heal;//累计治愈
-        bottoms[5].innerHTML = ss_array.chinaTotal.today.heal;//治愈新增
+        centers[5].innerHTML = ss_array.chinaTotal.total.dead;//累计死亡
+        bottoms[5].innerHTML = ss_array.chinaTotal.today.dead;//死亡新增
+        centers[4].innerHTML = ss_array.chinaTotal.total.heal;//累计治愈
+        bottoms[4].innerHTML = ss_array.chinaTotal.today.heal;//治愈新增
     }, reason => {
         console.log(reason);
         console.log("出错啦！");
     });
     for (let i = 0; i < bottoms.length - 1; i++) {
         let innerText = parseInt(bottoms[i].innerHTML);
-
         console.log(innerText);
-
     }
 
 

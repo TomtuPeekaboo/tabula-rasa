@@ -6,6 +6,15 @@ body {
     box-sizing: content-box;
     margin-bottom: 0px !important;
 } */
+.data-rate-down {
+    color: #00A950;
+    background: url(../images/xiajiang.png) no-repeat left center;
+}
+
+.data-rate-up {
+    color: #F04133;
+    background: url(../images/shangsheng.png) no-repeat left center;
+}
 
 .slideShow {
     width: 98%;
@@ -169,14 +178,14 @@ a:focus {
 }
 
 .slideSmall .rightImg li .card .cell .smallCell div.leftCell {
-    width: 30%;
+    width: 68px;
     height: 100%;
     /* background: pink; */
 }
 
 .slideSmall .rightImg li .card .cell .smallCell div.leftCell img {
-    width: 60px;
-    padding-top: 15px;
+    width: 67px;
+    padding-top: 14px;
 }
 
 .slideSmall .rightImg li .card .cell .smallCell div.rightCell {
@@ -187,13 +196,15 @@ a:focus {
     height: 100%;
     padding-top: 5px;
     padding-bottom: 10px;
+    margin-left: 15px;
+    margin-top: 5px;
     cursor: default;
     /* background: rgb(102, 167, 187); */
 }
 
 .slideSmall .rightImg li .card .cell .smallCell div.rightCell p {
     margin-bottom: 2px;
-    font-size: 13px;
+    font-size: 14.5px;
     color: rgb(109, 107, 112);
 }
 
@@ -223,11 +234,10 @@ a:focus {
 }
 
 .slideSmall .rightImg li .card .cell .smallCell div.rightCell p.bottom {
-    padding-left: 5px;
     font-size: 13px;
 }
 
-.slideSmall .rightImg li .card .cell .smallCell div.rightCell p.bottom::before {
+/* .slideSmall .rightImg li .card .cell .smallCell div.rightCell p.bottom::before {
     content: "";
     position: relative;
     top: 1px;
@@ -240,17 +250,17 @@ a:focus {
 .slideSmall .rightImg li .card .cell .smallCell:nth-child(6) div.rightCell p.bottom::before {
     content: "";
     color: rgb(0, 169, 80);
-}
+} */
 
 .slideSmall .rightImg li .card .cell .smallCell div.rightCell p.bottom span {
-    padding-right: 10px;
-    color: rgb(217, 0, 27);
+    padding-right: 25px;
+    padding-left: 15px;
 }
 
-.slideSmall .rightImg li .card .cell .smallCell:nth-child(3) div.rightCell p.bottom span,
+/* .slideSmall .rightImg li .card .cell .smallCell:nth-child(3) div.rightCell p.bottom span,
 .slideSmall .rightImg li .card .cell .smallCell:nth-child(6) div.rightCell p.bottom span {
     color: rgb(0, 169, 80);
-}
+} */
 
 div.card2 .cell {
     display: flex;
@@ -590,6 +600,8 @@ div.card2 .cell .virusRight img {
 }
 
 .slideSmall .rightImg li .card5 div.step3 .s3B p {
+    width: 100%;
+    height: 100%;
     font-family: 'Open Sans SemiBold',
         'Open Sans Regular',
         'Open Sans',
@@ -599,4 +611,12 @@ div.card2 .cell .virusRight img {
     color: #8167A9;
     text-align: center;
     line-height: 30px;
+}
+
+.slideSmall .rightImg li .card5 div.step3 .s3B p a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }

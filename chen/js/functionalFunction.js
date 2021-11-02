@@ -36,7 +36,7 @@ export function request(url, data, header = null, method = "get") {
         xhr.open(method, url, true);
 
         if (method == 'post') {
-            xhr.setRequestHeader("content-Type", "application/x-www-fprm-urlencoded");
+            xhr.setRequestHeader("content-Type", "application/x-www-form-urlencoded");
             //发送请求
             xhr.send(param);
         }

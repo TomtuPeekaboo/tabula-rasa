@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>virus</title>
     <link rel="stylesheet" href="css/virus.css">
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/base1.css">
+    <link rel="stylesheet" href="css/base2.css">
     <script src="js/main.js"></script>
     <script src="js/virus.js"></script>
 </head>
@@ -16,18 +17,20 @@
     <!-- 头部 -->
     <div class="nav">
         <div class="logo">TABULS RASA</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="virus.html">数据</a></li>
+            <li><a href="forum.html">论坛</a></li>
+            <li><a href="makeTecho.html">手账</a></li>
+            <li><a href="signIn.html">登录</a></li>
+        </ul>
         <div class="navbutton">
-             <span class="span1"></span><span class="span2"></span>
+             <span class="span1"></span>
+            <span class="span2"></span>
         </div>
     </div>
     <div class="mask">
-        <ul>
-            <li><a href="#">数据</a></li>
-            <li><a a href="#">资讯</a></li>
-            <li><a a href="#">论坛</a></li>
-            <li><a a href="#">制作</a></li>
-            <li><a href="#">登录</a></li>
-        </ul>
+
     </div>
     <!-- 轮播图 -->
     <div class="slideShow">
@@ -40,7 +43,7 @@
                         <div class="card">
                             <h2>国内疫情数据</h2>
                             <div class="look">
-                                <a href="javascript:;">查看详情数据</a>
+                                <a href="dataDetile.html">查看详情数据</a>
                             </div>
                             <div class="cell">
                                 <div class="smallCell">
@@ -49,8 +52,8 @@
                                     </div>
                                     <div class="rightCell">
                                         <p class="top">境外输入</p>
-                                        <p class="center">9337</p>
-                                        <p class="bottom"><span>10%</span>较昨日</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-up"></span>同比昨天</p>
                                     </div>
                                 </div>
                                 <div class="smallCell">
@@ -59,8 +62,8 @@
                                     </div>
                                     <div class="rightCell">
                                         <p class="top">无症状感染者</p>
-                                        <p class="center">359</p>
-                                        <p class="bottom"><span>10%</span>较昨日</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-up"></span>同比昨天</p>
                                     </div>
                                 </div>
                                 <div class="smallCell">
@@ -69,8 +72,8 @@
                                     </div>
                                     <div class="rightCell">
                                         <p class="top">现有确诊</p>
-                                        <p class="center">2482</p>
-                                        <p class="bottom"><span>8%</span>较昨日</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-up"></span>同比昨天</p>
                                     </div>
                                 </div>
                                 <div class="smallCell">
@@ -79,8 +82,8 @@
                                     </div>
                                     <div class="rightCell">
                                         <p class="top">累计确诊</p>
-                                        <p class="center">125115</p>
-                                        <p class="bottom"><span>10%</span>较昨日</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-up"></span>同比昨天</p>
                                     </div>
                                 </div>
                                 <div class="smallCell">
@@ -88,9 +91,9 @@
                                         <img src="img/smallCell5.png" alt="5">
                                     </div>
                                     <div class="rightCell">
-                                        <p class="top">累计死亡</p>
-                                        <p class="center">5695</p>
-                                        <p class="bottom"><span>10%</span>较昨日</p>
+                                        <p class="top">累计治愈</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-down"></span>同比昨天</p>
                                     </div>
                                 </div>
                                 <div class="smallCell">
@@ -98,9 +101,9 @@
                                         <img src="img/smallCell6.png" alt="6">
                                     </div>
                                     <div class="rightCell">
-                                        <p class="top">累计治愈</p>
-                                        <p class="center">116938</p>
-                                        <p class="bottom"><span>8%</span>较昨日</p>
+                                        <p class="top">累计死亡</p>
+                                        <p class="center"></p>
+                                        <p class="bottom"><span class="data-rate-up"></span>同比昨天</p>
                                     </div>
                                 </div>
                             </div>
@@ -197,7 +200,7 @@
                                 </div>
                             </div>
                             <div class="step step2">
-                                <p class="s2P">疫苗接种点及核酸检测点查询</p>
+                                <p class="s2P"><a href="javascript:;">疫苗接种点及核酸检测点查询</a></p>
                             </div>
                             <div class="step step3">
                                 <div class="s3T">
@@ -205,7 +208,7 @@
                                     <p class="s3tp">查询轨迹信息，出现更安心</p>
                                 </div>
                                 <div class="s3B">
-                                    <p>轨迹查询及通报</p>
+                                    <p><a href="rout.html">轨迹查询及通报</a></p>
                                 </div>
                             </div>
                             <div class="step step3">
@@ -214,7 +217,7 @@
                                     <p class="s3tp">遵守隔离政策</p>
                                 </div>
                                 <div class="s3B">
-                                    <p><a href="./isolate.html">国内各地区隔离政策查询</a></p>
+                                    <p><a href="isolate.html" name="glzc">国内各地区隔离政策查询</a></p>
                                 </div>
                             </div>
                         </div>
@@ -233,11 +236,11 @@
             </ol>
         </div>
     </div>
-    <script>
-        function handleResponse(response) {
-            console.log(response);
-        }
-    </script>
+    <!-- footer -->
+    <div class="footer1">
+        <a href="index.html">首页</a><a href="virus.html">疫情</a><a href="dongtai.html">动态</a>
+    </div>
+    <div class="footer2">© 2021 made by tabuls rasa</div>
 </body>
 
 </html>

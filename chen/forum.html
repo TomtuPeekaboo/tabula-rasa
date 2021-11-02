@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>forum</title>
     <link rel="stylesheet" href="css/forum.css">
-    <link rel=" stylesheet" href="css/base.css">
+    <link rel=" stylesheet" href="css/base1.css">
     <link rel="stylesheet" href="css/alibbIcon.css">
     <script src="js/main.js"></script>
     <script src="js/forum.js" type="module"></script>
-
 </head>
 
 <body>
@@ -33,9 +32,9 @@
             <div class="ring">
                 <p class="iconfont icon-lingdang"></p>
                 <div class="ringContent" style="display: none;">
-                    <span>是谁@我</span>
-                    <span>评我论我</span>
-                    <span>要偷你心</span>
+                    <span><a href="forumThree.html" class="forumthree">是谁@我</a></span>
+                    <span><a href="forumThree.html" class="forumthree">评我论我</a></span>
+                    <span><a href="forumThree.html" class="forumthree">要偷你心</a></span>
                 </div>
             </div>
             <div class="write">
@@ -44,7 +43,6 @@
             <div class="person">
                 <p class="Img"><img src="img/person.jpg" alt=""></p>
                 <div class="personContent" style="display: none;">
-                    <!-- <span>我的收藏</span> -->
                     <span>我的点赞</span>
                     <span>编辑资料</span>
                     <span>先退出了</span>
@@ -55,17 +53,17 @@
     </div>
     <div class="mask">
         <ul>
-            <li><a href="javascript:;">数据</a></li>
-            <li><a href="javascript:;">资讯</a></li>
-            <li><a href="javascript:;">论坛</a></li>
-            <li><a href="javascript:;">制作</a></li>
-            <li><a href="javascript:;">登录</a></li>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="virus.html">数据</a></li>
+            <li><a href="forum.html">论坛</a></li>
+            <li><a href="makeTecho.html">手账</a></li>
+            <li><a href="signIn.html">登录</a></li>
         </ul>
     </div>
     <!-- 版心 -->
     <div class="banner">
         <!-- 左边 -->
-        <div class="leftC"></div>
+        <!-- <div class="leftC"></div> -->
         <!-- 中间 -->
         <div class="centerC">
             <div class="say" style="display: none;">
@@ -74,8 +72,11 @@
                         <p>对于疫情，你想说...</p>
                         <div class="spare">
                             <div class="fuWenBen" contenteditable="true"></div>
+                            <!-- 同步富文本 -->
                             <textarea name="content" id="content" style="display: none;"></textarea>
+                            <!-- 话题 -->
                             <textarea name="topicContent" id="topicContent" style="display: none;"></textarea>
+                            <!-- @ -->
                             <textarea name="at" id="at" style="display: none;"></textarea>
                         </div>
                         <div class="photo clearfix" style="display: none;" id="photoBox">
@@ -112,22 +113,16 @@
                             <ul class="facePrintUl"></ul>
                         </div>
                         <!-- @我画板 -->
-                        <div class="Atme" style="display: none;">
-                            <select name="AtmeS" id="AtmeS">
-                                <!-- <option value="">bh</option>
-                                <option value="">jw</option>
-                                <option value="">jr</option>
-                                <option value="">zx</option> -->
-                            </select>
+                        <div class="Atme" id="Atme" style="display: none;">
+                            <!-- <li>不要焦虑</li>
+                            <li>没事的</li>
+                            <li>先退出了</li> -->
                         </div>
                         <!-- #话题画板 -->
-                        <div class="huaTiban" style="display: none;">
-                            <select name="huaTibanS" id="huaTibanS">
-                                <!-- <option value="">bh</option>
-                                <option value="">jw</option>
-                                <option value="">jr</option>
-                                <option value="">zx</option> -->
-                            </select>
+                        <div class="huaTiban" id="huaTiban" style="display: none;">
+                            <!-- <li>不要焦虑</li>
+                            <li>没事的放心吧</li>
+                            <li>先退出了</li> -->
                         </div>
 
                     </div>
@@ -135,7 +130,7 @@
             </div>
             <p class="hotNewH">热门动态</p>
             <div class="hotNewBody">
-                <div class="forum">
+                <!-- <div class="forum">
                     <div class="aurther">
                         <div class="photo">
                             <img src="img/person.jpg" alt="">
@@ -171,11 +166,16 @@
                     <div class="discuss" style="display: none;">
                         <div class="disSelf">
                             <span class="dsPhoto"><img src="img/person.jpg" alt=""></span>
-                            <input type="text" name="disSelf" id="disSelf" placeholder="唠嗑一下">
+                            <div id="disfuwenbenBox">
+                                <div id="disSelf" placeholder="唠嗑一下" contenteditable="true"></div>
+                            </div>
                             <div class="dsButton">
-                                <div class="face iconfont icon-biaoqing"></div>
+                                <div class="face iconfont icon-biaoqing" id="faceTwoBtn"></div>
                                 <div class="tsSend"><input type="checkbox">同时转发</div>
                                 <div class="bsbbtn">评论</div>
+                                <div class="facePrint" id="faceTwoBox">
+                                    <ul class="facePrintUl" id="faceTwo"></ul>
+                                </div>
                             </div>
                         </div>
                         <div class="disOther">
@@ -186,141 +186,64 @@
                                 <li class="doli">
                                     <span class="dlPhoto"><img src="img/person.jpg" alt=""></span>
                                     <div class="bigliContent">
-                                        <div class="dlName">Dayorr</div>
-                                        <p class="dlContent">:番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！v番薯真可爱！
-                                        </p>
-                                    </div>
-                                    <div class="dlTime">10-15 12:31</div>
-                                    <!-- 回复 在点击的li的末尾复制一次li，作为其子盒子-->
-                                    <!-- <div class="liIn"> -->
-                                    <ul class="liInUl">
-                                        <li class="doli">
-                                            <div class="bigliContent">
-                                                <!-- 这里要用字符串拼接上回复+被回复的人的账号 -->
-                                                <div class="dlName"><span id="dlName">Tomtu</span>回复</div>
-                                                <p class="dlContent">
-                                                    :番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！v番薯真可爱！
-                                                </p>
-                                            </div>
-                                            <div class="dlTime">10-15 12:31</div>
-                                        </li>
-                                    </ul>
-                                    <!-- </div> -->
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="forum">
-                    <div class="aurther">
-                        <div class="photo">
-                            <img src="img/person.jpg" alt="">
-                        </div>
-                        <div class="aurtherName">
-                            <p class="anName">Tomtu</p>
-                            <p class="anTime">7-5</p>
-                        </div>
-                        <div class="gz">关注</div>
-                    </div>
-                    <div class="aurtherSay">
-                        <p>这个也太好看了吧，这么会有这么好看的作品，巧夺天工、人间奇迹、感动上天的作品大概就是这样的吧！！！</p>
-                    </div>
-                    <div class="clearfix aurtherTmg">
-                        <li><img src="img/person.jpg" alt=""></li>
-                        <li><img src="img/person.jpg" alt=""></li>
-                        <li><img src="img/person.jpg" alt=""></li>
-                        <li><img src="img/person.jpg" alt=""></li>
-                        <li><img src="img/person.jpg" alt=""></li>
-                        <li><img src="img/person.jpg" alt=""></li>
-                        <li><img src="img/person.jpg" alt=""></li>
-                        <li><img src="img/person.jpg" alt=""></li>
-                        <li><img src="img/person.jpg" alt=""></li>
-                    </div>
-                    <div class="forumFooter">
-                        <div class="zf"><span class="iconfont icon-zhuanfa"></span>转发</span></div>
-                        <div class="pl"><span class="iconfont icon-pinglun"></span>评论</div>
-                        <div class="aixin"><span class="iconfont icon-aixin"></span>
-                            <div class="two">99</div>
-                        </div>
-                    </div>
-                    <div class="discuss" style="display: none;">
-                        <div class="disSelf">
-                            <span class="dsPhoto"><img src="img/person.jpg" alt=""></span>
-                            <input type="text" name="disSelf" id="disSelf" placeholder="唠嗑一下">
-                            <div class="dsButton">
-                                <div class="face iconfont icon-biaoqing"></div>
-                                <div class="tsSend"><input type="checkbox">同时转发</div>
-                                <div class="bsbbtn">评论</div>
-                            </div>
-                        </div>
-                        <div class="disOther">
-                            <div class="doChoose">
-                                <span>按时间</span><span class="doc"> 按热度</span>
-                            </div>
-                            <ul class="doUl">
-                                <li class="doli">
-                                    <span class="dlPhoto"><img src="img/person.jpg" alt=""></span>
-                                    <div class="bigliContent">
-                                        <div class="dlName">Dayorr</div>
-                                        <p class="dlContent">
+                                        <div class="dlName" id="dlname1">Dayorr</div>
+                                        <p class="dlContent" id="dlContent1">
                                             :番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！v番薯真可爱！
                                         </p>
                                     </div>
-                                    <div class="dlTime">10-15 12:31</div>
-                                    <!-- 回复 在点击的li的末尾复制一次li，作为其子盒子-->
-                                    <!-- <div class="liIn"> -->
+                                    <div class="dlTime" id="dlTime1">10-15 12:31</div>
                                     <ul class="liInUl">
                                         <li class="doli">
                                             <div class="bigliContent">
-                                                <!-- 这里要用字符串拼接上回复+被回复的人的账号 -->
-                                                <div class="dlName"><span id="dlName">Tomtu</span>回复
+                                                <div class="dlName"><span id="dlName" class="dlname2">Tomtu</span>回复
                                                 </div>
-                                                <p class="dlContent">
+                                                <p class="dlContent" id="dlContent2">
                                                     :番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！番薯真可爱！v番薯真可爱！
                                                 </p>
                                             </div>
-                                            <div class="dlTime">10-15 12:31</div>
+                                            <div class="dlTime" id="dlTime2">10-15 12:31</div>
                                         </li>
-
                                     </ul>
-                                    <!-- </div> -->
                                 </li>
                             </ul>
 
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
-
-
         </div>
         <!-- 右边 -->
         <div class="rightC" id="rightC">
-            <div class="bearContent">
-                <div class="bear"></div>
+            <div class="notice">
+                <p class="noticeKp">疫情公告</p>
+                <p class="noticeNew">白云机场设置了核酸检测点，为重点管控的国内航班来穗旅客提供免费核酸检测服务</p>
             </div>
-            <div class="data">
-                <div class="gz">
-                    <p class="gzNum">144</p>
-                    <p class="gzText">关注</p>
+            <div class="make">
+                <div class="makeH">我的手账</div>
+                <div class="makeBtn">创建手账</div>
+                <div class="makeBody">
+                    <!-- <li class="hand">
+                        <p class="handP"><img src="img/person.jpg" alt=""></p>
+                        <p class="handTime">2021-09-07</p>
+                    </li> -->
                 </div>
-                <div class="fs">
-                    <p class="fsNum">144</p>
-                    <p class="fsText">粉丝</p>
+                <div class="tip" id="handTip">
+                    <div class="none"><img src="img/handbg.png" alt=""></div>
+                    <p>每一个写手账的日子都不辜负生活</p>
                 </div>
             </div>
             <div class="hotTalk">
                 <div class="hotTalkH">
-                    <p>刷新一波</p>
+                    <p>疫情杂货铺</p>
                     <span class="renew iconfont icon-icon1">点击刷新</span>
                 </div>
                 <div class="hotTalkB">
                     <ul>
-                        <li><a href="javascript:;"><span>1</span>兔兔染盲盒<i>1111</i></a></li>
+                        <li><a href="javascript:;">
+                                <p id="hTp"><span>1</span>兔兔染盲盒</p><i>1111</i>
+                            </a>
+                        </li>
                         <li><a href="javascript:;"><span>2</span>兔兔染盲盒<i>1111</i></a></li>
                         <li><a href="javascript:;"><span>3</span>兔兔染盲盒<i>1111</i></a></li>
                         <li><a href="javascript:;"><span>4</span>兔兔染盲盒<i>1111</i></a></li>
@@ -337,7 +260,14 @@
 
         </div>
     </div>
-
+    <!-- img遮盖罩 -->
+    <div id="image-cover-modal" class="image-cover-modal">
+        <img id="image-cover-image" class="image-cover-modal-content">
+        <div id="image-cover-caption"></div>
+        <div id="return" title="返回">&times;</div>
+        <div id="load"><a href="" download="" title="查看原图" target="_blank">+</a></div>
+        <div id="rightRotate" title="向右旋转">O</div>
+    </div>
 </body>
 
 </html>

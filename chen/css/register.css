@@ -17,6 +17,8 @@ body {
     justify-content: center;
     align-items: center;
     background: rgba(248, 243, 255);
+    background: url(../img/signIn3.jpg) no-repeat;
+    background-size: 100% 100%;
     /* background: linear-gradient(to right, rgb(67, 89, 206), rgb(249, 200, 115), rgb(202, 84, 188));  */
 }
 
@@ -36,12 +38,13 @@ body {
 .card {
     position: absolute;
     top: 50%;
+    left: 42%;
     transform: translateY(-50%);
     width: 685px;
     /* height: 300px; */
     border-radius: 20px;
     padding: 20px 25px 18px 25px;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, .1));
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255));
     /*设置模糊*/
     backdrop-filter: blur(8px);
     /* box-shadow: 10px 10px 20px rgba(0, 0, 0, .2s); */

@@ -136,6 +136,13 @@
     font-size: 16px;
 }
 
+.forumthree {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgb(133, 144, 166);
+}
+
 .navShow .ring .ringContent span:nth-child(3),
 .navShow .person .personContent span:last-child {
     border-radius: 0 0 20px 20px;
@@ -172,6 +179,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    background: #ccc;
     overflow: hidden;
 }
 
@@ -197,26 +205,18 @@
     width: 1345px;
     /* min-height: 1500px; */
     margin: 150px auto;
+    padding: 0 45px;
     /* border: 1px solid rgba(88, 89, 161, 1); */
     border-radius: 30px;
     font-family: 'Open Sans',
         sans-serif;
 }
 
-.banner div.leftC {
-    /* width: 65px; */
-    /* height: 100%; */
-    padding-top: 25px;
-    background: #fff;
-    border-radius: 28px 0 0 0;
-}
 
 .banner div.centerC {
-    position: absolute;
-    left: 7%;
+    position: relative;
+    left: 0;
     width: 926px;
-    /* height: 100%; */
-    /* background: rgb(119, 224, 231); */
 }
 
 .banner div.centerC .say {
@@ -351,15 +351,7 @@
     letter-spacing: 2px;
 }
 
-.AtTip {
-    font-weight: bold;
-    color: rgb(194, 128, 255);
-}
 
-.HtTip {
-    font-weight: bold;
-    color: darkorange;
-}
 
 .banner div.centerC .say .spare .fuWenBen img {
     width: 24px;
@@ -486,36 +478,41 @@
 /* @我面板 */
 .banner div.centerC .say .spareIcon .huaTiban,
 .banner div.centerC .say .spareIcon .Atme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     top: 41px;
     left: 225px;
     width: 100px;
     /* height: 100px; */
+    padding: 5px;
     background: rgb(217, 168, 201);
     /* border: 1px solid #ccc; */
     border-radius: 10px;
     z-index: 999;
 }
 
+.banner div.centerC .say .spareIcon .Atme li,
+.banner div.centerC .say .spareIcon .huaTiban li {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.banner div.centerC .say .spareIcon .Atme li:hover,
+.banner div.centerC .say .spareIcon .huaTiban li:hover {
+    background: #f3e7ff;
+}
+
+
 .banner div.centerC .say .spareIcon .huaTiban {
     left: 340px;
-}
-
-.banner div.centerC .say .spareIcon .huaTiban select,
-.banner div.centerC .say .spareIcon .Atme select {
-    width: 100%;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    background: rgb(217, 168, 201);
-}
-
-.banner div.centerC .say .spareIcon select option {
-    width: 100%;
-    height: 30px;
-    outline: none;
-    border: none;
 }
 
 .banner div.centerC .say .spareIcon .facePrint ul {
@@ -536,20 +533,29 @@
     height: 100%;
 }
 
+
 .banner div.rightC {
+    position: relative;
+    top: 0;
+    right: 0;
     width: 300px;
-    height: 1000px;
     /* background: rgb(119, 171, 231); */
     border-radius: 0 28px 0 0;
 }
 
 .banner div.centerC .hotNewH {
     width: 100%;
-    margin: 0px 0 15px 0;
-    padding: 10px 5px;
+    margin: 0px 0 20px 0;
+    padding: 10px 30px;
     background: #ccc;
     background: rgb(194, 128, 255, .1);
     font-weight: bold;
+    border-radius: 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    box-shadow: 2px 2px 2px rgb(218, 169, 202);
+
 }
 
 .banner div.centerC .hotNewBody {
@@ -566,9 +572,12 @@
     padding: 20px 20px 11px 20px;
     margin-bottom: 30px;
     /* background: radial-gradient(rgb(194, 128, 255), transparent); */
-    border-radius: 5px;
+    border-radius: 15px;
     /* border: 3px solid darkorange; */
-    border: 3px solid rgba(194, 128, 255, .4)
+    border: 3px solid rgba(194, 128, 255, .4);
+    box-shadow: 0 0 10px rgb(218, 169, 202);
+    /* box-shadow: 0 0 4px rgb(253, 180, 19); */
+    border: 1px solid rgba(255, 255, 255)
 }
 
 .banner div.centerC .hotNewBody .forum .aurther {
@@ -576,6 +585,8 @@
     display: flex;
     width: 100%;
     height: 80px;
+    padding: 0 30px;
+    margin-top: 10px;
     /* background: rgb(88, 169, 206); */
 }
 
@@ -583,7 +594,7 @@
     width: 80px;
     height: 100%;
     margin-right: 15px;
-    /* background: rgb(65, 161, 137); */
+    background: #ccc;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -594,7 +605,7 @@
 }
 
 .banner div.centerC .hotNewBody .forum .aurther .anName {
-    margin-top: 19px;
+    margin-top: 17px;
     /* background: pink; */
     font-family: 'Open Sans Bold',
         'Open Sans Regular',
@@ -602,19 +613,21 @@
         sans-serif;
     font-weight: 700;
     font-size: 22px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
 }
 
 .banner div.centerC .hotNewBody .forum .aurther .anTime {
     font-family: 'Open Sans',
         sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #7F7F7F;
 }
 
 .banner div.centerC .hotNewBody .forum .aurther .gz {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -622,20 +635,21 @@
     width: 64px;
     height: 30px;
     font-size: 13px;
-    color: rgba(194, 128, 255, 1);
-    border: 1px solid rgba(194, 128, 255, 1);
-    /* color: darkorange;
-    border: 1px solid darkorange; */
+    background: rgba(217, 168, 201);
+    /* border: 1px solid rgba(194, 128, 255, 1); */
     border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
 }
 
 .banner div.centerC .hotNewBody .forum .aurtherSay,
 .banner div.centerC .hotNewBody .forum .aurtherTmg,
 .banner div.centerC .hotNewBody .forum .forumFooter {
-    width: 80%;
+    width: 82%;
     /* background: #fff; */
-    margin: 20px 20px 20px 64px;
+    margin: 20px auto;
 }
 
 
@@ -645,6 +659,7 @@
     line-height: 35px;
     font-size: 18px;
     word-wrap: break-word;
+    padding-left: 5px;
 }
 
 .banner div.centerC .hotNewBody .forum .aurtherSay p img {
@@ -652,7 +667,18 @@
     vertical-align: text-top;
 }
 
+.AtTip {
+    font-weight: bold;
+    color: rgb(194, 128, 255);
+}
+
+.HtTip {
+    font-weight: bold;
+    color: darkorange;
+}
+
 .banner div.centerC .hotNewBody .forum .aurtherTmg {
+    width: 710px;
     display: flex;
     flex-wrap: wrap;
     /* height: 200px; */
@@ -726,11 +752,13 @@
 }
 
 .banner div.centerC .hotNewBody .forum .forumFooter .pl {
-    left: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .banner div.centerC .hotNewBody .forum .forumFooter .aixin {
-    left: 81%;
+    right: 0;
+    transform: translate(-50%, -50%);
 }
 
 .banner div.centerC .hotNewBody .forum .forumFooter .aixin span {
@@ -738,7 +766,7 @@
 }
 
 .banner div.centerC .hotNewBody .forum .discuss {
-    display: none;
+    /* display: none; */
     width: 100%;
     /* height: 50px; */
     padding-top: 20px;
@@ -752,8 +780,9 @@
     width: 100%;
     /* height: 116px; */
     padding-left: 80px;
+    padding-bottom: 20px;
     /* background: rgb(52, 133, 165); */
-    border-bottom: 1px solid #ccc;
+
 }
 
 .banner div.centerC .hotNewBody .forum .discuss .disSelf .dsPhoto,
@@ -769,6 +798,11 @@
     overflow: hidden;
 }
 
+.banner div.centerC .hotNewBody .forum .discuss .disOther ul.doUl>li.doli {
+    margin-bottom: 30px;
+}
+
+
 .banner div.centerC .hotNewBody .forum .discuss .disOther li.doli span.dlPhoto {
     left: -68px;
 }
@@ -780,15 +814,26 @@
 }
 
 .banner div.centerC .hotNewBody .forum .discuss .disSelf #disSelf {
-    width: 99%;
-    height: 57px;
+    width: 100%;
+    min-height: 57px;
+    padding: 10px 0;
     padding-left: 20px;
-    line-height: 57px;
+    line-height: 32px;
     border: 2px solid orange;
     border: 2px solid rgb(194, 128, 255);
     border-radius: 13px;
-    font-size: 20px;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 18px;
     outline: none;
+    color: rgb(134, 134, 134);
+    resize: none;
+    letter-spacing: 2px;
+}
+
+.banner div.centerC .hotNewBody .forum .discuss .disSelf #disSelf img {
+    width: 25px;
+    vertical-align: text-top;
 }
 
 .banner div.centerC .hotNewBody .forum .discuss .disSelf .dsButton {
@@ -797,6 +842,7 @@
     height: 50px;
     margin-top: 7px;
     /* background: rgb(63, 197, 175); */
+    z-index: 1;
 }
 
 .banner div.centerC .hotNewBody .forum .discuss .disSelf .dsButton>div {
@@ -840,11 +886,43 @@
     cursor: pointer;
 }
 
+.banner div.centerC .hotNewBody .forum .discuss .disSelf .dsButton .facePrint {
+    position: absolute;
+    top: 212px;
+    left: -7px;
+    width: 79%;
+    min-height: 282px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.banner div.centerC .discuss .disSelf .dsButton .facePrint ul {
+    width: 100%;
+    height: 100%;
+}
+
+.banner div.centerC .discuss .disSelf .dsButton .facePrint ul li {
+    list-style: none;
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+.banner div.centerC .discuss .disSelf .dsButton .facePrint ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
 /* 他人评论 */
 .banner div.centerC .hotNewBody .forum .discuss .disOther {
     width: 100%;
     /* height: 100px; */
     padding-left: 80px;
+    border-top: 1px solid #ccc;
     /* background: rgb(196, 92, 161); */
 }
 
@@ -890,6 +968,7 @@
     padding-right: 22px;
     /* 强制不换行 */
     white-space: nowrap;
+    margin-top: 5px;
     /* text-shadow: 1px 1px 3px darkorange; */
 }
 
@@ -897,92 +976,171 @@
     width: 100%;
     /* background: #fff; */
     line-height: 27px;
+    margin-top: 5px;
     color: rgb(117, 117, 117);
     border-radius: 5px;
 }
 
+.banner div.centerC .hotNewBody .forum .discuss .disOther li.doli .dlContent img {
+    width: 25px;
+    vertical-align: bottom;
+}
+
 .banner div.centerC .hotNewBody .forum .discuss .disOther li.doli .dlTime {
     font-size: 15px;
-    padding: 9px 9px 9px 0px;
+    padding: 2px 9px 2px 0px;
     /* background: #679; */
     color: rgb(149, 149, 149);
+    margin-top: 2px;
 }
 
 .banner div.centerC .hotNewBody .forum .discuss .disOther ul.liInUl {
     border-radius: 7px;
     background: rgb(3, 3, 3, .1);
     padding: 10px;
+    margin-top: 10px;
 }
 
 
 /* 右边 */
-.rightC .bearContent {
+.rightC .notice {
     position: relative;
     width: 100%;
-    height: 150px;
-    background: rgb(238, 232, 255);
-    /* border-radius: 0 29px 0 0; */
+    height: 220px;
+    background: rgb(250, 234, 180);
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 2px rgb(217, 168, 201);
+    background: url(../img/notice4.png) no-repeat 88px 163px;
+    background: url(../img/notice4.png) rgb(250, 234, 180) no-repeat 88px 163px;
+    background-size: 185px;
 }
 
-.bear {
+.rightC .notice .noticeKp {
+    width: 76px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid rgba(194, 128, 255, 1);
+    border-radius: 5px;
+    color: rgba(194, 128, 255, 1);
+}
+
+.rightC .make {
+    position: relative;
+    width: 100%;
+    min-height: 248px;
+    background: #fff;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 1px solid rgb(250, 234, 180);
+    box-shadow: 0px 0px 2px rgb(250, 234, 180);
+    overflow: hidden;
+}
+
+.rightC .make .makeH {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    line-height: 50px;
+    background: rgb(250, 236, 194);
+    font-weight: bold;
+    color: rgba(0, 0, 0, .7);
+    font-size: 18px;
+}
+
+.rightC .make .makeBtn {
     position: absolute;
-    top: 50%;
+    padding: 5px 10px;
+    top: 12px;
+    right: 15px;
+    background: rgb(253, 180, 19);
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.rightC .make .makeBody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+.rightC .make .makeBody .hand {
+    width: 120px;
+    height: 156px;
+    background: pink;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgb(250, 236, 194)
+}
+
+.rightC .make .makeBody .hand p.handP {
+    width: 100%;
+    height: 129px;
+    background: yellow;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.rightC .make .makeBody .hand p.handP img {
+    width: 100%;
+    height: 100%;
+}
+
+.rightC .make .makeBody .hand p.handTime {
+    width: 100%;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .4);
+    text-align: center;
+    background: rgb(250, 236, 194);
+}
+
+
+.rightC .make .makeBody li:nth-last-of-type(-n+2) {
+    margin-bottom: 0;
+}
+
+.rightC .make .tip {
+    position: absolute;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
-    height: 100px;
-    background: url(../img/bear.png) no-repeat;
-    animation: bear 0.5s steps(8) infinite;
-}
-
-@keyframes bear {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: -1600px 0;
-    }
-}
-
-.rightC .data {
-    display: flex;
-    width: 100%;
-    height: 70px;
-    padding: 0 5px;
-    background: rgb(255, 255, 255);
-    border-radius: 0 0 5px 5px;
-}
-
-.rightC .data>div {
-    flex: 1;
-}
-
-.rightC .data>div>p {
-    width: 100%;
+    font-size: 15px;
+    color: rgba(0, 0, 0, .7);
+    font-weight: bold;
     text-align: center;
 }
 
-.rightC .data>div>p:nth-child(1) {
-    height: 42px;
-    padding-top: 8px;
-    font-family: 'Open Sans SemiBold',
-        'Open Sans Regular',
-        'Open Sans',
-        sans-serif;
-    font-weight: 600;
-    line-height: 50px;
-    color: #000000;
-    font-size: 23px;
+.rightC .make .tip .none {
+    position: relative;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
-.rightC .data>div>p:nth-child(2) {
-    height: 30px;
-    line-height: 30px;
-    font-family: 'Open Sans',
-        sans-serif;
-    font-weight: 400;
-    color: #AAAAAA;
+.rightC .make .tip .none img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.rightC .notice .noticeNew {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+    line-height: 25px;
 }
 
 .rightC .hotTalk {
@@ -991,6 +1149,8 @@
     margin-top: 20px;
     background: rgb(34, 172, 114);
     background: rgb(243, 231, 255);
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .rightC .hotTalk .hotTalkH,
@@ -999,6 +1159,8 @@
     width: 100%;
     height: 50px;
     padding-left: 20px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .7);
     font-size: 18px;
     line-height: 50px;
     background: #fff;
@@ -1053,6 +1215,14 @@
     font-size: 15px;
 }
 
+.rightC .hotTalk .hotTalkB li a p#hTp {
+    width: 200px;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .rightC .hotTalk .hotTalkB li:hover {
     background: rgba(133, 144, 166, .4);
 }
@@ -1075,10 +1245,11 @@
 
 .rightC .hotTalk .hotTalkB li a i {
     position: absolute;
+    top: 0;
     right: 0px;
     height: 100%;
     font-style: normal;
-    color: #ccc;
+    color: rgba(0, 0, 0, .6);
 }
 
 .rightC .hotTalk .allnew {
@@ -1094,4 +1265,88 @@
     text-align: center;
     line-height: 50px;
     color: rgb(147, 147, 147);
+}
+
+/* img遮罩 */
+
+.image-cover-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    position: fixed;
+    z-index: 30;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 550px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(37, 39, 42);
+    transition: opacity ease 0.3s;
+    pointer-events: none;
+}
+
+.model-shown {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.image-cover-modal-content {
+    display: block;
+    max-width: 100%;
+    max-height: 80%;
+}
+
+#image-cover-caption {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    background: rgb(8, 8, 9);
+}
+
+#return,
+#load,
+#rightRotate {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#load {
+    left: 750px;
+}
+
+#load a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+}
+
+#rightRotate {
+    left: 700px;
+}
+
+@media only screen and (max-width: 45rem) {
+    .image-cover-modal-content {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }

@@ -2,6 +2,35 @@ body {
     background: rgba(255, 255, 255);
 }
 
+.nav .return {
+    position: fixed;
+
+}
+
+.nav .return {
+    position: absolute;
+    top: 21px;
+    left: 12px;
+}
+
+.icon-return:before {
+    content: "\eb11";
+}
+
+.icon-return:before {
+    font-size: 33px;
+    color: rgb(202, 171, 235);
+}
+
+.icon-return:hover:before {
+    color: rgba(132, 0, 255, 1);
+}
+
+
+.bigNew {
+    margin-top: 100px;
+}
+
 .readH {
     display: flex;
     justify-content: center;
@@ -9,7 +38,8 @@ body {
     width: 1345px;
     height: 200px;
     margin: 26px auto;
-    height: 247px;
+    /* height: 247px; */
+    height: 130px;
     background-color: rgba(127, 101, 166, 1);
     border: 1px solid rgba(88, 89, 161, 1);
     border-radius: 30px;
@@ -32,7 +62,8 @@ body {
 .readH .guard {
     position: absolute;
     left: 50%;
-    top: 302px;
+    /* top: 302px; */
+    top: 280px;
     transform: translateX(-50%);
     width: 1273px;
     height: 94px;
@@ -64,14 +95,17 @@ body {
 
 .readH .guard>div:nth-child(3) {
     left: 47%;
-    top:88%
+    top: 88%
 }
+
 .readH .guard>div:nth-child(4) {
     left: 63%;
 }
+
 .readH .guard>div:nth-child(5) {
     left: 80%;
 }
+
 .readH .guard>div select {
     position: absolute;
     left: 0px;
@@ -92,7 +126,7 @@ body {
 .readB {
     width: 893px;
     /* height: 900px; */
-    margin: 90px auto;
+    margin: 162px auto;
     /* background: pink; */
 }
 

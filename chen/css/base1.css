@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tnl8ot');
+    src: url('../fonts/icomoon.eot?tnl8ot#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?tnl8ot') format('truetype'),
+        url('../fonts/icomoon.woff?tnl8ot') format('woff'),
+        url('../fonts/icomoon.svg?tnl8ot#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PingFangSC-Regular, Helvetica, Arial, Microsoft Yahei, sans-serif;
+}
+
+body {
+    background-color: #f8f3ff;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .45);
+    /* clip-path CSS 属性可以创建一个只有元素的部分区域可以显示的剪切区域。 */
+    clip-path: circle(1px at calc(100%) 0);
+    transition: all .5s ease;
+    z-index: 100;
+}
+
+.mask ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.mask ul li {
+    margin: 15px 0;
+}
+
+.mask ul li a {
+    position: relative;
+    padding: 5px 50px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43.5px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 30px #7d68a9;
+    z-index: 2;
+    letter-spacing: 6px;
+}
+
+.mask ul li a::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    transform: scaleY(0);
+    transition: .3s ease;
+    z-index: -1;
+}
+
+.mask ul li a:hover {
+    color: #bbaaaf;
+}
+
+.mask ul li a:hover:after {
+    transform: scaleY(1);
+}
+
+.nav {
+    top: 0;
+    left: 0;
+    color: #f8f3ff;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+.nav .logo {
+    margin-left: 20px;
+    padding-left: 36px;
+    padding-top: 10px;
+    width: 330px;
+    height: 50px;
+    line-height: 60px;
+    float: left;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 40px;
+    cursor: context-menu;
+    color: #f8f3ff;
+    text-shadow: #7d68a9 1px 1px 10px;
+    font-family: 'Eras Bold ITC';
+}
+
+.navbutton {
+    position: relative;
+    padding-top: 24px;
+    float: right;
+    height: 50px;
+    width: 50px;
+    padding-right: 70px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.navbutton span {
+    display: block;
+    width: 40px;
+    height: 8px;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+    background-color: #f8f3ff;
+    box-shadow: #7d68a9 1px 1px 10px;
+}
+
+.navbutton .span1 {
+    box-sizing: content-box;
+    margin-bottom: 8px;
+}
